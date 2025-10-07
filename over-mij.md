@@ -6,14 +6,16 @@ permalink: /over-mij/
 
 # Over mij
 
-Ik ben Emine, holistisch massagetherapeut in opleiding en oprichter van Lotus Moments. Mijn praktijk is ontstaan vanuit de wens om mensen ruimte te geven voor herstel, verstilling en zachte transformatie.
+Vanuit een diepe interesse in het lichaam, ontspanning en innerlijke balans volg ik sinds februari 2025 de vierjarige opleiding tot Lichaamsgerichte Therapeut aan de Holos Academie in Utrecht.
+Daar leer ik wat ik eigenlijk intuïtief al wist: dat lichaam en geest één geheel vormen en dat wat je voelt, denkt of meemaakt zich vaak ook in het lichaam laat zien.
 
-Na jaren in de creatieve sector merkte ik hoeveel onze hectische levens van ons vragen. Ik volg momenteel een opleiding in holistische massagetechnieken en verdiep me in lichaamsgericht werk en nervous system regulation. In elke sessie combineer ik intuïtieve aanraking met aandacht voor ademhaling en energetische afstemming.
+In mijn massages combineer ik de holistische visie van Holos met een intuïtieve manier van aanraken.
+Soms vraagt het lichaam om zachtheid, soms juist om stevigheid — ik stem me af op wat op dat moment nodig is.
+Niet met het doel om iets te fixen, maar om ruimte te geven aan wat er is.
+Door met open aandacht aan te raken, ontstaat ontspanning, bewustwording en herstel — van binnenuit.
 
-Wat je van mij mag verwachten:
+Tijdens de massage werk ik met natuurlijke oliën die je zelf kunt kiezen — afgestemd op wat jij op dat moment nodig hebt.
+Zo wordt elke behandeling een moment dat echt bij jou past.
 
-- Een warme, veilige setting waarin je helemaal mag landen.
-- Behandelingen op maat, afgestemd op wat jouw lichaam communiceert.
-- Een rustige, zachte benadering zonder oordeel of haast.
-
-Wil je ervaren wat een sessie voor jou kan betekenen? Plan een moment via Calendly. Na je boeking ontvang je het adres en alle praktische informatie zodat je ontspannen kunt aankomen.
+Mijn massages zijn rustig, warm en met volle aanwezigheid.
+Ze nodigen je uit om te voelen wat er in jouw lichaam leeft, zodat je dichter bij jezelf kunt komen.
