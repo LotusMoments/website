@@ -2,7 +2,7 @@
 layout: home
 title: Home
 hero_title: Welkom bij Lotus Moments
-hero_intro: "Eén sessie van 90 minuten waarin je intake, holistische massage en nabespreking krijgt. Alles in jouw tempo, met volle aandacht voor jouw lichaam en zenuwstelsel."
+hero_intro: "Holistische massage – momenten om bewust te voelen en te openen voor wat je lichaam je vertelt."
 lotus:
   title: De betekenis van de lotus
   paragraphs:
