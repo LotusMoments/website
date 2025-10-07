@@ -1,18 +1,15 @@
-- naam: Holistische ontspanningsmassage
-  duur: 75 min
-  omschrijving: >
-    Een volledige lichaamsmassage met warme olie en aandacht voor ademhaling. Helpt je zenuwstelsel kalmeren
-    en brengt je terug naar zachtheid en rust.
-  resultaat: Diepe ontspanning, vrijer ademhalen en een helder gevoel in lichaam en geest.
-- naam: Restorative bodywork
+- naam: Lotus Moment sessie
   duur: 90 min
   omschrijving: >
-    Op maat gemaakte sessie waarin massage wordt gecombineerd met energetische technieken en zachte stretches.
-    Jij bepaalt het tempo; er is ruimte voor stilte en integratie.
-  resultaat: Verlichting van spanning, verbeterde doorstroming en hernieuwde vitaliteit.
-- naam: Zwangerschapsmassage
-  duur: 60 min
-  omschrijving: >
-    Voor mama’s (to be) die hun lichaam willen ondersteunen tijdens de zwangerschap.
-    We werken in comfortabele zijligging met extra kussens.
-  resultaat: Minder druk op rug en bekken, betere nachtrust en meer verbinding met je baby.
+    Eén behandeling met drie fases zodat je volledig kunt landen: een zachte intake, een intuïtieve massage en integratie.
+  resultaat: Je stapt helder, gegrond en met een ontspannen zenuwstelsel weer naar buiten.
+  fases:
+    - titel: Aankomen & intake
+      duur: 15 min
+      omschrijving: We stemmen af hoe het met je gaat, wat je lichaam aangeeft en waar je behoefte ligt.
+    - titel: Massage
+      duur: 60 min
+      omschrijving: Holistische massage op maat met warme olie, ademhaling en energetische afstemming.
+    - titel: Nabespreken & afronden
+      duur: 15 min
+      omschrijving: Tijd om rustig bij te komen, inzichten te delen en samen de behandeling af te ronden.

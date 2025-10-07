@@ -42,6 +42,17 @@ layout: default
         {% if treatment.resultaat %}
         <p><strong>Resultaat:</strong> {{ treatment.resultaat }}</p>
         {% endif %}
+        {% if treatment.fases %}
+        <ul class="treatment-steps">
+          {% for fase in treatment.fases %}
+          <li>
+            <span class="step-title">{{ fase.titel }}</span>
+            <span class="step-duration">{{ fase.duur }}</span>
+            <p>{{ fase.omschrijving }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
       </article>
       {% endfor %}
     </div>
@@ -64,14 +75,14 @@ layout: default
 <section class="sections calendly" id="calendly">
   <div class="container">
     <h2 class="section-title">Boek je moment</h2>
-    <p>Bekijk direct beschikbaarheid en kies een moment dat voor jou werkt. Je ontvangt na het boeken alle praktische informatie in je inbox.</p>
+    <p>Plan jouw Lotus Moment van 90 minuten: intake, massage en nabespreking in één afspraak. Je ontvangt na het boeken alle praktische informatie in je inbox.</p>
     <a
       class="cta-btn"
       href="{{ site.social_links.calendly }}"
       target="_blank"
       rel="noopener"
     >
-      Open Calendly
+      Plan je sessie
     </a>
   </div>
 </section>
