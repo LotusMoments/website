@@ -1,0 +1,26 @@
+title: Lotus Moments
+description: Holistische massagepraktijk in Nederland
+lang: nl
+timezone: Europe/Amsterdam
+url: https://wijnand.github.io/lotus_moments
+baseurl: ""
+
+collections:
+  pages:
+    output: true
+
+theme: null
+markdown: kramdown
+permalink: pretty
+
+social_links:
+  calendly: https://calendly.com/lotus-moments
+  instagram: https://www.instagram.com/lotus.moments
+
+nav_links:
+  - title: Home
+    url: /
+  - title: Over mij
+    url: /over-mij/
+  - title: Boek nu
+    url: https://calendly.com/lotus-moments

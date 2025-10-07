@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>{{ page.hero_title }}</h1>
+    <p>{{ page.hero_intro }}</p>
+    <a class="cta-btn" href="{{ site.social_links.calendly }}" target="_blank" rel="noopener">
+      Plan een sessie
+    </a>
+  </div>
+</section>
+
+<section class="sections">
+  <div class="container">
+    <h2 class="section-title">Behandelingen</h2>
+    <div class="treatments-grid">
+      {% for treatment in site.data.behandelingen %}
+      <article class="treatment-card">
+        <span class="pill">{{ treatment.duur }}</span>
+        <h3>{{ treatment.naam }}</h3>
+        <p>{{ treatment.omschrijving }}</p>
+        {% if treatment.resultaat %}
+        <p><strong>Resultaat:</strong> {{ treatment.resultaat }}</p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if page.reviews %}
+<section class="sections">
+  <div class="container reviews">
+    {% for review in page.reviews %}
+    <blockquote>
+      “{{ review.quote }}”
+      <cite>{{ review.naam }}</cite>
+    </blockquote>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="sections calendly">
+  <div class="container">
+    <h2 class="section-title">Boek je moment</h2>
+    <p>Plan direct een behandeling via Calendly en ontvang daarna alle praktische informatie.</p>
+    <div
+      class="calendly-inline-widget"
+      data-url="{{ site.social_links.calendly }}"
+      style="min-width: 320px; height: 630px"
+    ></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  </div>
+</section>

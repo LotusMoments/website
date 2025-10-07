@@ -1,0 +1,31 @@
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark">Lotus</span>
+      <span class="brand-sub">Moments</span>
+    </a>
+    <nav class="nav">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-menu">
+        ☰
+      </button>
+      <ul id="site-menu" class="nav-list">
+        {% for link in site.nav_links %}
+        <li class="nav-item">
+          {% assign current = link.url | replace: site.baseurl, '' %}
+          {% if link.url contains 'http' %}
+          <a class="nav-link" href="{{ link.url }}" target="_blank" rel="noopener">
+            {{ link.title }}
+          </a>
+          {% else %}
+          <a
+            class="nav-link{% if current == page.url %} nav-link--active{% endif %}"
+            href="{{ link.url | relative_url }}"
+            >{{ link.title }}</a
+          >
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
