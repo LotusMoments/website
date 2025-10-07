@@ -285,3 +285,38 @@ body {
   padding-left: 1.25rem;
   line-height: 1.7;
 }
+
+@media (max-width: 540px) {
+  .site-header .container {
+    align-items: flex-start;
+  }
+
+  .brand-mark {
+    font-size: 1.15rem;
+  }
+
+  .brand-sub {
+    font-size: 0.75rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .treatment-card {
+    padding: 1.75rem;
+  }
+
+  .reviews {
+    padding: 2rem;
+  }
+
+  .page-wrapper {
+    padding: 3rem 0;
+  }
+}
