@@ -17,6 +17,19 @@ layout: default
   </div>
 </section>
 
+{% if page.lotus %}
+<section class="sections lotus" id="betekenis-van-de-lotus">
+  <div class="container lotus-card">
+    <h2 class="section-title">{{ page.lotus.title }}</h2>
+    <div class="lotus-copy">
+      {% for paragraph in page.lotus.paragraphs %}
+      <p>{{ paragraph }}</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="sections">
   <div class="container">
     <h2 class="section-title">Behandelingen</h2>
