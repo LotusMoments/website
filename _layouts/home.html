@@ -38,6 +38,9 @@ layout: default
       <article class="treatment-card">
         <span class="pill">{{ treatment.duur }}</span>
         <h3>{{ treatment.naam }}</h3>
+        {% if treatment.tarief %}
+        <p class="treatment-price"><strong>Tarief:</strong> {{ treatment.tarief }}</p>
+        {% endif %}
         <p>{{ treatment.omschrijving }}</p>
         {% if treatment.resultaat %}
         <p><strong>Resultaat:</strong> {{ treatment.resultaat }}</p>
