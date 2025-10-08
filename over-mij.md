@@ -6,16 +6,22 @@ permalink: /over-mij/
 
 # Over mij
 
+## Mijn pad naar holistische massage
+
 Vanuit een diepe interesse in het lichaam, ontspanning en innerlijke balans volg ik sinds februari 2025 de vierjarige opleiding tot Lichaamsgerichte Therapeut aan de Holos Academie in Utrecht.
-Daar leer ik wat ik eigenlijk intuïtief al wist: dat lichaam en geest één geheel vormen en dat wat je voelt, denkt of meemaakt zich vaak ook in het lichaam laat zien.
 
-In mijn massages combineer ik de holistische visie van Holos met een intuïtieve manier van aanraken.
-Soms vraagt het lichaam om zachtheid, soms juist om stevigheid — ik stem me af op wat op dat moment nodig is.
-Niet met het doel om iets te fixen, maar om ruimte te geven aan wat er is.
-Door met open aandacht aan te raken, ontstaat ontspanning, bewustwording en herstel — van binnenuit.
+Daar leer ik wat ik intuïtief al voelde: lichaam en geest vormen één geheel en alles wat je voelt, denkt of meemaakt laat zich ook in het lichaam zien.
 
-Tijdens de massage werk ik met natuurlijke oliën die je zelf kunt kiezen — afgestemd op wat jij op dat moment nodig hebt.
-Zo wordt elke behandeling een moment dat echt bij jou past.
+## Hoe ik werk tijdens een sessie
 
-Mijn massages zijn rustig, warm en met volle aanwezigheid.
-Ze nodigen je uit om te voelen wat er in jouw lichaam leeft, zodat je dichter bij jezelf kunt komen.
+Ik combineer de holistische visie van Holos met een intuïtieve manier van aanraken. Soms vraagt het lichaam om zachtheid, soms om stevigheid — ik stem me af op wat op dat moment nodig is. Niet om iets te fixen, maar om ruimte te geven aan wat er is. Zo ontstaat ontspanning, bewustwording en herstel, van binnenuit.
+
+Wat je tijdens een sessie kunt verwachten:
+
+- een rustig tempo waarin jij en je lichaam de leiding nemen;
+- warme, natuurlijke oliën die je zelf kunt kiezen op basis van wat je nodig hebt;
+- volledige aanwezigheid en aandacht, zodat je kunt voelen wat er in je lichaam leeft.
+
+## Een uitnodiging om te voelen
+
+Mijn massages nodigen je uit om te vertragen en dichter bij jezelf te komen. Je hoeft niets te forceren: je mag simpelweg ontvangen en opmerken. Vanuit die stilte ontstaat ruimte voor nieuwe beweging en inzicht.

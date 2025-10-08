@@ -2,7 +2,7 @@
 layout: home
 title: Home
 hero_title: Welkom bij Lotus Moments
-hero_intro: "Holistische massage – momenten om bewust te voelen en te openen voor wat je lichaam je vertelt."
+hero_intro: "Holistische massage – een moment om te voelen, te vertragen en te openen voor wat je lichaam je vertelt."
 lotus:
   title: De betekenis van de lotus
   paragraphs:
