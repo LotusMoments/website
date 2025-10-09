@@ -14,7 +14,7 @@ Vanuit die ervaring raakte ik geïnspireerd om zelf dit pad te gaan bewandelen. 
 
 ## Hoe ik werk tijdens een sessie
 
-Ik combineer de holistische visie van Holos met een intuïtieve manier van aanraken. Soms vraagt het lichaam om zachtheid, soms om stevigheid — ik stem me af op wat op dat moment nodig is. Niet om iets te fixen, maar om ruimte te geven aan wat er is. Zo ontstaat ontspanning, bewustwording en herstel, van binnenuit.
+Ik combineer de holistische visie van Holos met een intuïtieve manier van aanraken. Soms vraagt het lichaam om zachtheid, soms om stevigheid, en ik stem me af op wat op dat moment nodig is. Niet om iets te fixen, maar om ruimte te geven aan wat er is. Zo ontstaat ontspanning, bewustwording en herstel, van binnenuit.
 
 Wat je tijdens een sessie kunt verwachten:
 
