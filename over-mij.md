@@ -6,11 +6,11 @@ permalink: /over-mij/
 
 # Over mij
 
-## Mijn pad naar holistische massage
+## Mijn pad naar lichaamsgericht werken
 
-Vanuit een diepe interesse in het lichaam, ontspanning en innerlijke balans volg ik sinds februari 2025 de vierjarige opleiding tot Lichaamsgerichte Therapeut aan de Holos Academie in Utrecht.
+Mijn eerste kennismaking met lichaamsgerichte therapie kwam toen ik zelf een traject volgde bij een therapeut die haar opleiding bij Holos had afgerond. De manier waarop aanraking, aandacht en bewustwording samenkwamen, maakte diepe indruk op mij. Het bracht me dichter bij mezelf en liet me ervaren hoeveel wijsheid er in het lichaam besloten ligt.
 
-Daar leer ik wat ik intuïtief al voelde: lichaam en geest vormen één geheel en alles wat je voelt, denkt of meemaakt laat zich ook in het lichaam zien.
+Vanuit die ervaring raakte ik geïnspireerd om zelf dit pad te gaan bewandelen. Sinds februari 2025 volg ik de vierjarige opleiding tot Lichaamsgerichte Therapeut aan de Holos Academie in Utrecht. Daar leer ik wat ik intuïtief al voelde: dat lichaam en geest één geheel vormen, en dat wat je voelt, denkt of meemaakt zich ook in het lichaam laat zien.
 
 ## Hoe ik werk tijdens een sessie
 
