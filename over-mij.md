@@ -14,7 +14,7 @@ Daar leer ik wat ik intuïtief al voelde: lichaam en geest vormen één geheel e
 
 ## Hoe ik werk tijdens een sessie
 
-Ik combineer de holistische visie van Holos met een intuïtieve manier van aanraken. Soms vraagt het lichaam om zachtheid, soms om stevigheid — ik stem me af op wat op dat moment nodig is. Niet om iets te fixen, maar om ruimte te geven aan wat er is. Zo ontstaat ontspanning, bewustwording en herstel, van binnenuit.
+Ik combineer de holistische visie van Holos met een intuïtieve manier van aanraken. Soms vraagt het lichaam om zachtheid, soms om stevigheid, en ik stem me af op wat op dat moment nodig is. Niet om iets te fixen, maar om ruimte te geven aan wat er is. Zo ontstaat ontspanning, bewustwording en herstel, van binnenuit.
 
 Wat je tijdens een sessie kunt verwachten:
 
