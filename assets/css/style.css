@@ -174,7 +174,9 @@ body {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   box-shadow: 0 14px 32px rgba(207, 161, 111, 0.25);
 }
 
@@ -244,13 +246,25 @@ body {
   margin: 0;
 }
 
-.lotus-copy p:first-child::before {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-soft) 100%);
-  margin: 0 auto 2rem;
+
+.lotus-card-icon {
+  display: flex;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.75rem;
+  color: var(--accent);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(253, 248, 242, 0.95);
+  border: 1px solid rgba(207, 161, 111, 0.4);
+  box-shadow: 0 10px 22px rgba(207, 161, 111, 0.18);
+}
+
+.lotus-card-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }
 
 .treatments-grid {
@@ -259,6 +273,14 @@ body {
   gap: 2rem;
   max-width: 860px;
   margin: 0 auto;
+}
+
+.treatment-intro {
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  line-height: 1.85;
 }
 
 .treatment-card {
@@ -281,6 +303,11 @@ body {
   line-height: 1.65;
 }
 
+.treatment-price {
+  margin-top: 1.75rem;
+  color: var(--text);
+}
+
 .treatment-card .pill {
   display: inline-block;
   padding: 0.35rem 0.9rem;
@@ -295,7 +322,7 @@ body {
 .treatment-steps {
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0 0;
+  margin: 1.5rem 0 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -325,6 +352,36 @@ body {
   margin: 0.4rem 0 0;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+.pricing-detail {
+  display: inline;
+  color: var(--text-muted);
+  margin-left: 0.4rem;
+}
+
+.treatment-price {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  color: var(--text);
+}
+
+.cta-icon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+}
+
+.cta-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+  opacity: 0.9;
+}
+
+.section-cta {
+  margin: 2.5rem auto 0;
+  text-align: center;
 }
 
 .reviews {
@@ -370,6 +427,28 @@ body {
   gap: 0.75rem;
   align-items: center;
   text-align: center;
+}
+
+.footer-location {
+  max-width: 420px;
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.footer-lotus {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.45rem;
+  vertical-align: middle;
+  color: var(--accent);
+}
+
+.footer-lotus svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }
 
 .site-footer a {

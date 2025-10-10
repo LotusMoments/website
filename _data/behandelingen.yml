@@ -1,16 +1,18 @@
 - naam: Lotus Moment sessie
-  duur: 90 min
-  tarief: "Introductietarief: €35 per sessie (dit tarief wordt in de toekomst verhoogd)."
+  duur: 75 min
+  tarief: "Introductietarief: tijdelijk verlaagd tarief van 35 EUR per sessie."
   omschrijving: >
-    Eén behandeling met drie fases zodat je volledig kunt landen: een zachte intake, een intuïtieve massage en integratie.
+    Lotus Moment – een holistische massage waarin lichaam en geest samenkomen.
+    Tijdens de sessie geef je jezelf de ruimte om te voelen, te vertragen en bewust
+    aanwezig te zijn bij wat er nu in je lichaam gebeurt.
   resultaat: Je stapt helder, gegrond en met een ontspannen zenuwstelsel weer naar buiten.
   fases:
     - titel: Aankomen & intake
-      duur: 15 min
+      duur: 10 min
       omschrijving: We stemmen af hoe het met je gaat, wat je lichaam aangeeft en waar je behoefte ligt.
     - titel: Massage
-      duur: 60 min
+      duur: 55 min
       omschrijving: Holistische massage op maat met warme olie, ademhaling en energetische afstemming.
     - titel: Nabespreken & afronden
-      duur: 15 min
+      duur: 10 min
       omschrijving: Tijd om rustig bij te komen, inzichten te delen en samen de behandeling af te ronden.
