@@ -11,7 +11,7 @@ pricing_points:
   - "Dit tarief helpt mij ervaring op te doen en een fijne klantenbasis op te bouwen."
   - "Na afronding van het eerste studiejaar (april 2026) wordt het tarief rond 80 EUR per sessie."
   - "Vanaf dat moment kan mogelijk een deel van de behandeling via de aanvullende zorgverzekering vergoed worden."
-cta_label: Boek je moment
+cta_label: Boek jouw moment
 lotus:
   title: De betekenis van de lotus
   paragraphs:
