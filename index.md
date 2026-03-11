@@ -9,8 +9,7 @@ treatment_intro: >-
   aanwezig te zijn bij wat er nu in je lichaam gebeurt.
 pricing_points:
   - "Dit tarief helpt mij ervaring op te doen en een fijne klantenbasis op te bouwen."
-  - "Na afronding van het eerste studiejaar (april 2026) wordt het tarief rond 80 EUR per sessie."
-  - "Vanaf dat moment kan mogelijk een deel van de behandeling via de aanvullende zorgverzekering vergoed worden."
+  - "Ik werk momenteel nog vanuit huis, zodra ik een echte praktijkruimte buiten de deur huur wordt het tarief rond 80 EUR per sessie."
 cta_label: Boek jouw moment
 lotus:
   title: De betekenis van de lotus
