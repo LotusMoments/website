@@ -8,8 +8,8 @@ treatment_intro: >-
   Tijdens de sessie geef je jezelf de ruimte om te voelen, te vertragen en bewust
   aanwezig te zijn bij wat er nu in je lichaam gebeurt.
 pricing_points:
-  - "Dit tarief helpt mij ervaring op te doen en een fijne klantenbasis op te bouwen."
-  - "Ik werk momenteel nog vanuit huis, zodra ik een echte praktijkruimte buiten de deur huur wordt het tarief rond 80 EUR per sessie."
+  - "Dit tarief geeft mij de ruimte om ervaring op te doen en rustig een fijne klantenbasis op te bouwen."
+  - "Momenteel werk ik vanuit huis. Zodra de sessies plaatsvinden in een praktijkruimte buiten de deur zal het tarief worden aangepast."
 cta_label: Boek jouw moment
 lotus:
   title: De betekenis van de lotus
