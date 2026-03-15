@@ -78,9 +78,6 @@ layout: default
         <span class="pill">{{ treatment.duur }}</span>
         <h3>{{ treatment.naam }}</h3>
         <p>{{ treatment.omschrijving }}</p>
-        {% if treatment.resultaat %}
-        <p><strong>Resultaat:</strong> {{ treatment.resultaat }}</p>
-        {% endif %}
         {% if treatment.fases %}
         <ul class="treatment-steps">
           {% for fase in treatment.fases %}
