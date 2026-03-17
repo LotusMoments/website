@@ -4,7 +4,13 @@ layout: default
 
 <section class="hero">
   <div class="container">
-    <h1>{{ page.hero_title }}</h1>
+    <img
+      class="hero-logo"
+      src="{{ '/assets/images/logo_lotus.png' | relative_url }}"
+      alt="Lotus Moments – Massage &amp; Lichaamsbewustzijn"
+      width="296"
+      height="259"
+    />
     <p>{{ page.hero_intro }}</p>
     <a
       class="cta-btn"
@@ -13,22 +19,7 @@ layout: default
       rel="noopener"
     >
       <span class="cta-icon" aria-hidden="true">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 128 128"
-          role="presentation"
-          focusable="false"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
-          <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
-          <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
-          <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
-        </svg>
+        <img src="{{ '/assets/images/logo_lotus_icon.png' | relative_url }}" alt="" width="28" height="16" />
       </span>
       {{ page.cta_label | default: 'Boek jouw moment' }}
     </a>
@@ -40,22 +31,7 @@ layout: default
   <div class="container lotus-card">
     <h2 class="section-title">{{ page.lotus.title }}</h2>
     <span class="lotus-card-icon" aria-hidden="true">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 128 128"
-        role="presentation"
-        focusable="false"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
-        <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
-        <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
-        <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
-      </svg>
+      <img src="{{ '/assets/images/logo_lotus_icon.png' | relative_url }}" alt="" width="306" height="175" />
     </span>
     <div class="lotus-copy">
       {% for paragraph in page.lotus.paragraphs %}
@@ -106,22 +82,7 @@ layout: default
         rel="noopener"
       >
       <span class="cta-icon" aria-hidden="true">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 128 128"
-          role="presentation"
-          focusable="false"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
-          <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
-          <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
-          <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
-        </svg>
+        <img src="{{ '/assets/images/logo_lotus_icon.png' | relative_url }}" alt="" width="28" height="16" />
       </span>
         {{ page.cta_label | default: 'Boek jouw moment' }}
       </a>
