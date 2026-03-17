@@ -1,13 +1,29 @@
 <header class="site-header">
   <div class="container">
     <a class="brand" href="{{ '/' | relative_url }}">
-      <img
-        class="brand-logo"
-        src="{{ '/assets/images/logo_lotus_icon.png' | relative_url }}"
-        alt="Lotus Moments"
-        width="77"
-        height="44"
-      />
+      <span class="brand-icon" aria-hidden="true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 128 128"
+          role="presentation"
+          focusable="false"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <title>Lotus Moments</title>
+          <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
+          <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
+          <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
+          <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-mark">Lotus</span>
+        <span class="brand-sub">Moments</span>
+      </span>
     </a>
     <nav class="nav">
       <button

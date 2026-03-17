@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-hero_title: Welkom bij
+hero_title: Welkom bij Lotus Moments
 hero_intro: "Holistische massage, een moment om te voelen, te vertragen en te openen voor wat je lichaam je vertelt."
 treatment_intro: >-
   Lotus Moment, een holistische massage waarin lichaam en geest samenkomen.
