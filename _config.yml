@@ -13,6 +13,8 @@ theme: null
 markdown: kramdown
 permalink: pretty
 
+goatcounter_url: "https://lotus-moments.goatcounter.com/count"
+
 social_links:
   calendly: https://calendly.com/emine314/30min
 

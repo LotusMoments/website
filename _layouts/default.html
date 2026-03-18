@@ -26,5 +26,9 @@
       {{ content }}
     </main>
     {% include footer.html %}
+    {% if jekyll.environment == "production" %}
+    <script data-goatcounter="{{ site.goatcounter_url }}"
+            async src="//gc.zgo.at/count.js"></script>
+    {% endif %}
   </body>
 </html>
