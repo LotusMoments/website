@@ -173,27 +173,6 @@
     }
 
     /* Background swatches */
-    .bg-row {
-      display: flex;
-      gap: 0.6rem;
-    }
-
-    .bg-swatch {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      cursor: pointer;
-      border: 3px solid transparent;
-      flex-shrink: 0;
-      transition: transform 0.1s, border-color 0.15s;
-    }
-
-    .bg-swatch.active { border-color: white; }
-    .bg-swatch[data-bg="warm"]  { background: linear-gradient(135deg, #f5f0e8, #f3d6c6); }
-    .bg-swatch[data-bg="dark"]  { background: linear-gradient(135deg, #2c1f14, #3f3226); }
-    .bg-swatch[data-bg="gold"]  { background: linear-gradient(135deg, #cfa16f, #b07d4a); }
-    .bg-swatch[data-bg="soft"]  { background: linear-gradient(135deg, #fdf8f2, #e4d9c8); }
-    .bg-swatch[data-bg="olive"] { background: linear-gradient(135deg, #c5cdb2, #a5ad8a); }
 
     /* Inputs */
     textarea, input[type="text"] {
@@ -243,10 +222,10 @@
       min-height: 100%;
     }
 
-    /* The square post — responsive */
+    /* Portrait post — 4:5 ratio (Instagram staand formaat) */
     .post {
-      width: min(92vw, 540px);
-      height: min(92vw, 540px);
+      width: min(88vw, 432px);
+      aspect-ratio: 4 / 5;
       flex-shrink: 0;
       position: relative;
       overflow: hidden;
@@ -254,17 +233,13 @@
       box-shadow: 0 24px 60px rgba(0,0,0,0.55);
     }
 
-    /* Background variants */
-    .post[data-bg="warm"]  { background: linear-gradient(150deg, #f3d6c6 0%, #f5f0e8 45%, #fdf8f2 100%); color: #3f3226; }
-    .post[data-bg="dark"]  { background: linear-gradient(150deg, #2c1f14 0%, #3f3226 100%); color: #fdf8f2; }
-    .post[data-bg="gold"]  { background: linear-gradient(150deg, #cfa16f 0%, #b07d4a 100%); color: #fff; }
-    .post[data-bg="soft"]  { background: linear-gradient(150deg, #fdf8f2 0%, #e4d9c8 100%); color: #3f3226; }
-    .post[data-bg="olive"] { background: linear-gradient(150deg, #c5cdb2 0%, #a5ad8a 100%); color: #2c1f14; }
+    /* Background */
+    .post { background: linear-gradient(140deg, #f4e2d5 0%, #f5f0e8 60%); color: #3f3226; }
 
-    /* Scale post contents proportionally */
+    /* Scale post contents proportionally — base canvas 1080×1350 scaled down */
     .post-scaler {
-      width: 540px;
-      height: 540px;
+      width: 1080px;
+      height: 1350px;
       transform-origin: top left;
     }
 
@@ -273,7 +248,7 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      padding: 44px 48px;
+      padding: 88px 96px;
       position: relative;
     }
 
@@ -281,49 +256,28 @@
     .post-corner {
       position: absolute;
       bottom: 0; right: 0;
-      width: 120px; height: 120px;
+      width: 240px; height: 240px;
       pointer-events: none;
       opacity: 0.06;
     }
     .post-corner svg { width: 100%; height: 100%; }
-    .post[data-bg="dark"] .post-corner,
-    .post[data-bg="gold"] .post-corner { opacity: 0.08; }
 
-    /* Logo */
-    .post-logo {
+    /* Brand top — used by all non-quote templates */
+    .post-brand-top {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
+      padding-bottom: 12px;
     }
 
-    .post-logo-icon {
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
+    .tpl-quote .post-brand-top { display: none; }
+
+    .post-brand-top .post-brand-circle {
+      width: 150px; height: 150px;
     }
 
-    .post[data-bg="dark"] .post-logo-icon,
-    .post[data-bg="gold"] .post-logo-icon  { background: rgba(255,255,255,0.12); }
-    .post[data-bg="warm"] .post-logo-icon,
-    .post[data-bg="soft"] .post-logo-icon,
-    .post[data-bg="olive"] .post-logo-icon { background: rgba(207,161,111,0.18); }
-
-    .post-logo-icon svg { width: 18px; height: 18px; }
-    .post[data-bg="dark"] .post-logo-icon svg,
-    .post[data-bg="gold"] .post-logo-icon svg  { fill: rgba(255,255,255,0.75); }
-    .post[data-bg="warm"] .post-logo-icon svg,
-    .post[data-bg="soft"] .post-logo-icon svg,
-    .post[data-bg="olive"] .post-logo-icon svg { fill: #b07d4a; }
-
-    .post-logo-text {
-      font-family: "Playfair Display", serif;
-      font-size: 0.78rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      opacity: 0.6;
-    }
+    .post-brand-top .post-brand-circle svg { width: 74px; height: 74px; }
 
     /* Post body */
     .post-body {
@@ -332,49 +286,108 @@
       flex-direction: column;
     }
 
-    /* QUOTE */
-    .tpl-quote .post-body { justify-content: center; align-items: center; text-align: center; padding: 1rem 0; }
-    .tpl-quote .post-quote-mark { font-family: "Playfair Display", serif; font-size: 5rem; line-height: 0.6; opacity: 0.18; margin-bottom: 1rem; }
-    .tpl-quote .post-main-text { font-family: "Playfair Display", serif; font-style: italic; font-size: 1.4rem; line-height: 1.5; max-width: 380px; }
-    .tpl-quote .post-sub-text { margin-top: 1.25rem; font-size: 0.82rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.5; }
+    /* QUOTE — centered logo + big italic text */
+    .tpl-quote .post-inner { padding: 80px 88px 72px; }
+    .tpl-quote .post-logo { display: none; }
+
+    .tpl-quote .post-body { justify-content: center; align-items: center; text-align: center; gap: 10%; }
+
+    .tpl-quote .post-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      padding-top: 1rem;
+    }
+
+    /* Brand circle — shared */
+    .post-brand-circle {
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .post-brand-circle { background: linear-gradient(135deg, #cfa16f 0%, #f3d6c6 100%); }
+    .post-brand-circle svg { fill: #fdf8f2; }
+
+    /* Quote: large circle */
+    .tpl-quote .post-brand-circle { width: 208px; height: 208px; }
+    .tpl-quote .post-brand-circle svg { width: 104px; height: 104px; }
+
+    /* Brand name — shared */
+    .post-brand-name {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      line-height: 1;
+    }
+
+    .post-brand-name strong {
+      font-family: "Playfair Display", serif;
+      font-weight: 400;
+      font-size: 3.2rem;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+    }
+
+    .post-brand-name span {
+      font-size: 1.64rem;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      opacity: 0.5;
+    }
+
+    .tpl-quote .post-eyebrow {
+      font-size: 1.64rem;
+      letter-spacing: 0.18em;
+      opacity: 0.5;
+      align-self: center;
+    }
+
+    .tpl-quote .post-main-text {
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: 3.1rem;
+      line-height: 1.55;
+      max-width: 800px;
+      text-align: center;
+    }
 
     /* TIP */
-    .tpl-tip .post-body { justify-content: flex-end; padding-bottom: 0.5rem; }
-    .tpl-tip .post-eyebrow { font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.5; margin-bottom: 0.6rem; }
-    .tpl-tip .post-main-text { font-family: "Playfair Display", serif; font-size: 1.9rem; line-height: 1.2; margin-bottom: 1rem; }
-    .tpl-tip .post-sub-text { font-size: 0.98rem; line-height: 1.65; opacity: 0.75; }
+    .tpl-tip .post-body { justify-content: center; gap: 0; }
+    .tpl-tip .post-eyebrow { font-size: 1.5rem; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.45; margin-bottom: 1rem; }
+    .tpl-tip .post-main-text { font-family: "Playfair Display", serif; font-size: 4.4rem; line-height: 1.2; margin-bottom: 1.7rem; }
+    .tpl-tip .post-sub-text { font-size: 2.1rem; line-height: 1.7; opacity: 0.72; }
 
     /* AANKONDIGING */
-    .tpl-announce .post-body { justify-content: center; gap: 1.25rem; }
+    .tpl-announce .post-body { justify-content: center; gap: 2.5rem; }
     .tpl-announce .post-pill {
       display: inline-block;
-      padding: 0.3rem 0.9rem;
+      padding: 0.6rem 1.8rem;
       border-radius: 999px;
-      font-size: 0.78rem;
+      font-size: 1.56rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       font-weight: 600;
       align-self: flex-start;
     }
-    .post[data-bg="dark"] .post-pill,
-    .post[data-bg="gold"] .post-pill  { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.85); }
-    .post[data-bg="warm"] .post-pill,
-    .post[data-bg="soft"] .post-pill,
-    .post[data-bg="olive"] .post-pill { background: rgba(207,161,111,0.18); color: #b07d4a; }
-    .tpl-announce .post-main-text { font-family: "Playfair Display", serif; font-size: 2.2rem; line-height: 1.15; }
-    .tpl-announce .post-sub-text { font-size: 1rem; line-height: 1.65; opacity: 0.7; }
+    .post-pill { background: rgba(180,130,110,0.14); color: #9e6040; }
+    .tpl-announce .post-main-text { font-family: "Playfair Display", serif; font-size: 5rem; line-height: 1.15; }
+    .tpl-announce .post-sub-text { font-size: 2.1rem; line-height: 1.7; opacity: 0.68; }
 
     /* PRIJS */
-    .tpl-prijs .post-body { justify-content: center; gap: 0.4rem; }
-    .tpl-prijs .post-eyebrow { font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.5; }
-    .tpl-prijs .post-main-text { font-family: "Playfair Display", serif; font-size: 2rem; line-height: 1.15; margin-bottom: 0.25rem; }
-    .tpl-prijs .post-price-box { display: flex; align-items: baseline; gap: 0.35rem; margin: 0.15rem 0; }
-    .tpl-prijs .post-price-amount { font-family: "Playfair Display", serif; font-size: 3.2rem; line-height: 1; }
-    .tpl-prijs .post-price-unit { font-size: 0.9rem; letter-spacing: 0.08em; opacity: 0.6; }
-    .tpl-prijs .post-sub-text { font-size: 0.95rem; line-height: 1.6; opacity: 0.65; margin-top: 0.15rem; }
+    .tpl-prijs .post-body { justify-content: center; gap: 0.8rem; }
+    .tpl-prijs .post-eyebrow { font-size: 1.5rem; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.45; }
+    .tpl-prijs .post-main-text { font-family: "Playfair Display", serif; font-size: 4.4rem; line-height: 1.15; margin-bottom: 0.5rem; }
+    .tpl-prijs .post-price-box { display: flex; align-items: baseline; gap: 0.7rem; margin: 0.3rem 0; }
+    .tpl-prijs .post-price-amount { font-family: "Playfair Display", serif; font-size: 7.2rem; line-height: 1; }
+    .tpl-prijs .post-price-unit { font-size: 1.8rem; letter-spacing: 0.08em; opacity: 0.55; }
+    .tpl-prijs .post-sub-text { font-size: 2rem; line-height: 1.65; opacity: 0.62; margin-top: 0.3rem; }
 
     /* Post footer */
-    .post-footer { font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.35; text-align: right; }
+    .post-footer { font-size: 1.44rem; letter-spacing: 0.22em; text-transform: uppercase; opacity: 0.3; text-align: right; }
 
     /* ── DESKTOP: side by side ── */
     @media (min-width: 800px) {
@@ -441,25 +454,15 @@
       </div>
     </div>
 
-    <div class="ctrl-group">
-      <span class="ctrl-label">Achtergrond</span>
-      <div class="bg-row">
-        <div class="bg-swatch active" data-bg="warm" title="Warm crème"></div>
-        <div class="bg-swatch" data-bg="dark" title="Donker"></div>
-        <div class="bg-swatch" data-bg="gold" title="Goud"></div>
-        <div class="bg-swatch" data-bg="soft" title="Zacht neutraal"></div>
-        <div class="bg-swatch" data-bg="olive" title="Olijfgroen"></div>
-      </div>
-    </div>
 
     <!-- QUOTE fields -->
     <div class="fields" id="fields-quote">
       <div class="ctrl-group">
-        <span class="ctrl-label">Citaat</span>
-        <textarea id="q-main" rows="4" placeholder="Jouw quote hier…">Een moment voor jezelf is geen luxe — het is noodzaak.</textarea>
+        <span class="ctrl-label">Tekst</span>
+        <textarea id="q-main" rows="4" placeholder="Jouw tekst hier…">Een moment voor jezelf is geen luxe — het is noodzaak.</textarea>
       </div>
       <div class="ctrl-group">
-        <span class="ctrl-label">Naam / bron</span>
+        <span class="ctrl-label">Naam / bron (optioneel)</span>
         <input id="q-sub" type="text" placeholder="bijv. naam, of leeg laten" />
       </div>
     </div>
@@ -538,8 +541,8 @@
             </svg>
           </div>
 
-          <div class="post-logo">
-            <div class="post-logo-icon">
+          <div class="post-brand-top">
+            <div class="post-brand-circle">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                 <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/>
                 <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/>
@@ -547,12 +550,28 @@
                 <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/>
               </svg>
             </div>
-            <span class="post-logo-text">Lotus Moments</span>
+            <div class="post-brand-name">
+              <strong>Lotus</strong>
+              <span>Moments</span>
+            </div>
           </div>
 
           <!-- QUOTE -->
           <div class="post-body" id="body-quote">
-            <span class="post-quote-mark" aria-hidden="true">"</span>
+            <div class="post-brand">
+              <div class="post-brand-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                  <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/>
+                  <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/>
+                  <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/>
+                  <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/>
+                </svg>
+              </div>
+              <div class="post-brand-name">
+                <strong>Lotus</strong>
+                <span>Moments</span>
+              </div>
+            </div>
             <p class="post-main-text" id="disp-q-main">Een moment voor jezelf is geen luxe — het is noodzaak.</p>
             <span class="post-sub-text" id="disp-q-sub"></span>
           </div>
@@ -594,8 +613,7 @@
     // ── Scale post contents to fit the square ──
     function scalePost() {
       const scaler = document.getElementById('post-scaler');
-      const size = post.offsetWidth;
-      const scale = size / 540;
+      const scale = post.offsetWidth / 1080;
       scaler.style.transform = `scale(${scale})`;
     }
     scalePost();
@@ -638,14 +656,6 @@
 
     tplBtns.forEach(btn => btn.addEventListener('click', () => setTemplate(btn.dataset.tpl)));
 
-    // ── Background ──
-    const swatches = document.querySelectorAll('.bg-swatch');
-    swatches.forEach(sw => {
-      sw.addEventListener('click', () => {
-        post.dataset.bg = sw.dataset.bg;
-        swatches.forEach(s => s.classList.toggle('active', s === sw));
-      });
-    });
 
     // ── Live field sync ──
     function bind(inputId, displayId, transform) {
