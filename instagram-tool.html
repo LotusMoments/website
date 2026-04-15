@@ -175,7 +175,7 @@
     /* Background swatches */
 
     /* Inputs */
-    textarea, input[type="text"] {
+    textarea, input[type="search"] {
       width: 100%;
       background: rgba(253, 248, 242, 0.05);
       border: 1px solid var(--ui-border);
@@ -188,10 +188,9 @@
       resize: vertical;
       outline: none;
       transition: border-color 0.15s;
-      -webkit-appearance: none;
     }
 
-    textarea:focus, input:focus {
+    textarea:focus, input[type="search"]:focus {
       border-color: rgba(207, 161, 111, 0.45);
     }
 
@@ -473,7 +472,7 @@
       </div>
       <div class="ctrl-group">
         <span class="ctrl-label">Naam / bron (optioneel)</span>
-        <input id="q-sub" type="text" placeholder="bijv. naam, of leeg laten" />
+        <input id="q-sub" type="search" placeholder="bijv. naam, of leeg laten" />
       </div>
     </div>
 
@@ -481,11 +480,11 @@
     <div class="fields" id="fields-tip" hidden>
       <div class="ctrl-group">
         <span class="ctrl-label">Label (klein, boven)</span>
-        <input id="t-eyebrow" type="text" value="Tip" />
+        <input id="t-eyebrow" type="search" value="Tip" />
       </div>
       <div class="ctrl-group">
         <span class="ctrl-label">Titel</span>
-        <input id="t-main" type="text" value="Zo maak jij meer ruimte voor rust" />
+        <input id="t-main" type="search" value="Zo maak jij meer ruimte voor rust" />
       </div>
       <div class="ctrl-group">
         <span class="ctrl-label">Tekst</span>
@@ -497,7 +496,7 @@
     <div class="fields" id="fields-announce" hidden>
       <div class="ctrl-group">
         <span class="ctrl-label">Badge</span>
-        <input id="a-pill" type="text" value="Nieuw" />
+        <input id="a-pill" type="search" value="Nieuw" />
       </div>
       <div class="ctrl-group">
         <span class="ctrl-label">Hoofdtekst</span>
@@ -513,19 +512,19 @@
     <div class="fields" id="fields-prijs" hidden>
       <div class="ctrl-group">
         <span class="ctrl-label">Label (klein, boven)</span>
-        <input id="p-eyebrow" type="text" value="Behandeling" />
+        <input id="p-eyebrow" type="search" value="Behandeling" />
       </div>
       <div class="ctrl-group">
         <span class="ctrl-label">Naam</span>
-        <input id="p-main" type="text" value="Holistische Massage" />
+        <input id="p-main" type="search" value="Holistische Massage" />
       </div>
       <div class="ctrl-group">
         <span class="ctrl-label">Prijs</span>
-        <input id="p-price" type="text" value="€48" />
+        <input id="p-price" type="search" value="€48" />
       </div>
       <div class="ctrl-group">
         <span class="ctrl-label">Eenheid</span>
-        <input id="p-unit" type="text" value="per sessie · 75 min" />
+        <input id="p-unit" type="search" value="per sessie · 75 min" />
       </div>
       <div class="ctrl-group">
         <span class="ctrl-label">Omschrijving</span>
