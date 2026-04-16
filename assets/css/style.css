@@ -19,6 +19,10 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #7a5c44;
+}
+
 body {
   margin: 0;
   font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -121,6 +125,7 @@ body {
 .nav-link {
   text-decoration: none;
   color: var(--text-muted);
+  font-family: "Raleway", sans-serif;
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -156,11 +161,11 @@ body {
 
 /* === HERO === */
 .hero {
-  min-height: calc(88vh - 76px);
+  min-height: calc(60vh - 76px);
   display: flex;
   align-items: center;
   background: linear-gradient(140deg, rgba(243, 214, 198, 0.55) 0%, var(--bg) 60%);
-  padding: 5rem 0;
+  padding: 3rem 0;
 }
 
 .hero-split {
@@ -182,7 +187,7 @@ body {
   font-size: clamp(2.6rem, 4.5vw, 4.4rem);
   line-height: 1.12;
   margin: 0;
-  color: var(--text);
+  color: #7a5c44;
 }
 
 .hero-content p {
@@ -302,7 +307,7 @@ body {
 
 /* === LOTUS SECTION === */
 .lotus-section {
-  padding: 6.5rem 0;
+  padding: 3rem 0;
   background: var(--neutral);
 }
 
@@ -354,7 +359,6 @@ body {
   font-size: clamp(1.9rem, 3vw, 2.8rem);
   line-height: 1.15;
   margin: 0 0 2rem;
-  color: var(--text);
 }
 
 .lotus-text p {
@@ -370,7 +374,7 @@ body {
 
 /* === TREATMENTS SECTION === */
 .treatments-section {
-  padding: 6.5rem 0;
+  padding: 3rem 0;
   background: var(--bg);
 }
 
@@ -384,7 +388,6 @@ body {
   font-weight: 500;
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   margin: 0 0 1.25rem;
-  color: var(--text);
 }
 
 .section-header p {
@@ -417,7 +420,6 @@ body {
   font-weight: 500;
   font-size: 1.65rem;
   margin: 0;
-  color: var(--text);
 }
 
 .pill {
@@ -560,7 +562,7 @@ body {
 }
 
 .page-content h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   margin: 0 0 2.5rem;
@@ -568,11 +570,10 @@ body {
 }
 
 .page-content h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 1.55rem;
   margin: 3rem 0 1rem;
-  color: var(--text);
   border-top: 1px solid rgba(63, 50, 38, 0.1);
   padding-top: 1.75rem;
 }
@@ -847,7 +848,7 @@ body {
 
   .lotus-section,
   .treatments-section {
-    padding: 4.5rem 0;
+    padding: 3rem 0;
   }
 
   .treatment {
