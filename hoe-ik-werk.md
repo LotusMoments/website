@@ -2,6 +2,7 @@
 layout: page
 title: Hoe ik werk
 permalink: /hoe-ik-werk/
+description: "Ontdek hoe een holistische massagesessie bij Lotus Moments eruitziet: een rustig tempo, warme olie en volledige aandacht voor wat jouw lichaam nodig heeft."
 ---
 
 <h1 style="text-align: center;">Hoe ik werk</h1>

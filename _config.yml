@@ -2,7 +2,7 @@ title: Lotus Moments
 description: Holistische massagepraktijk in Nederland
 lang: nl
 timezone: Europe/Amsterdam
-url: https://wijnand.github.io/lotus_moments
+url: https://lotusmoments.nl
 baseurl: ""
 
 collections:
@@ -10,6 +10,9 @@ collections:
     output: true
 
 theme: null
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 markdown: kramdown
 permalink: pretty
 

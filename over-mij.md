@@ -2,6 +2,7 @@
 layout: page
 title: Over mij
 permalink: /over-mij/
+description: "Lees meer over Emine en haar pad naar lichaamsgericht werken. Sinds 2025 volgt zij de opleiding tot Lichaamsgerichte Therapeut aan de Holos Academie in Utrecht."
 ---
 
 <h1 style="text-align: center;">Over mij</h1>
