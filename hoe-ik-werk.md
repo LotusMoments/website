@@ -10,7 +10,8 @@ description: "Ontdek hoe een holistische massagesessie bij Lotus Moments eruitzi
 <div markdown="1" style="display: flex; gap: 2rem; align-items: flex-start;">
 
 <div style="flex: 0 0 200px; position: sticky; top: 100px; align-self: flex-start; padding-top: 1.2rem;">
-<img src="/assets/emine2.jpg" alt="Emine" style="width: 100%; max-height: calc(100vh - 100px - 2rem); object-fit: cover; object-position: top; border-radius: 8px; display: block;">
+<img src="/assets/emine2.jpg" alt="Emine" style="width: 100%; border-radius: 8px; display: block; margin-bottom: 1rem;">
+<img src="/assets/ruimte.jpg" alt="" style="width: 100%; border-radius: 8px; display: block;">
 </div>
 
 <div markdown="1" style="flex: 1; min-width: 0;">
