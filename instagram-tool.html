@@ -201,6 +201,28 @@
     /* Field groups per template */
     .fields { display: flex; flex-direction: column; gap: 1.25rem; }
 
+    /* Font size slider */
+    .size-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .size-row input[type="range"] {
+      flex: 1;
+      accent-color: var(--accent);
+      cursor: pointer;
+      height: 4px;
+    }
+
+    .size-val {
+      font-size: 0.82rem;
+      color: var(--ui-muted);
+      width: 2.8rem;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
     /* Hint */
     .hint {
       font-size: 0.85rem;
@@ -474,6 +496,13 @@
         <span class="ctrl-label">Naam / bron (optioneel)</span>
         <input id="q-sub" type="search" placeholder="bijv. naam, of leeg laten" />
       </div>
+      <div class="ctrl-group">
+        <span class="ctrl-label">Lettergrootte</span>
+        <div class="size-row">
+          <input type="range" id="q-size" min="60" max="140" value="100" step="5" />
+          <span class="size-val" id="q-size-val">100%</span>
+        </div>
+      </div>
     </div>
 
     <!-- TIP fields -->
@@ -490,6 +519,13 @@
         <span class="ctrl-label">Tekst</span>
         <textarea id="t-sub" rows="4">Plan één moment per maand in voor jezelf. Niet als beloning, maar als basisbehoefte.</textarea>
       </div>
+      <div class="ctrl-group">
+        <span class="ctrl-label">Lettergrootte</span>
+        <div class="size-row">
+          <input type="range" id="t-size" min="60" max="140" value="100" step="5" />
+          <span class="size-val" id="t-size-val">100%</span>
+        </div>
+      </div>
     </div>
 
     <!-- ANNOUNCE fields -->
@@ -505,6 +541,13 @@
       <div class="ctrl-group">
         <span class="ctrl-label">Subtekst</span>
         <textarea id="a-sub" rows="3">Plan je moment via de link in de bio.</textarea>
+      </div>
+      <div class="ctrl-group">
+        <span class="ctrl-label">Lettergrootte</span>
+        <div class="size-row">
+          <input type="range" id="a-size" min="60" max="140" value="100" step="5" />
+          <span class="size-val" id="a-size-val">100%</span>
+        </div>
       </div>
     </div>
 
@@ -529,6 +572,13 @@
       <div class="ctrl-group">
         <span class="ctrl-label">Omschrijving</span>
         <textarea id="p-sub" rows="3">Diep ontspannen met een warme, rustgevende massage op maat.</textarea>
+      </div>
+      <div class="ctrl-group">
+        <span class="ctrl-label">Lettergrootte</span>
+        <div class="size-row">
+          <input type="range" id="p-size" min="60" max="140" value="100" step="5" />
+          <span class="size-val" id="p-size-val">100%</span>
+        </div>
       </div>
     </div>
 
@@ -693,6 +743,23 @@
     bind('p-price',   'disp-p-price');
     bind('p-unit',    'disp-p-unit');
     bind('p-sub',     'disp-p-sub');
+
+    // ── Font size sliders ──
+    function bindSize(sliderId, displayId, defaultRem) {
+      const slider = document.getElementById(sliderId);
+      const valEl  = document.getElementById(sliderId + '-val');
+      const disp   = document.getElementById(displayId);
+      slider.addEventListener('input', () => {
+        const pct = parseInt(slider.value);
+        valEl.textContent = pct + '%';
+        disp.style.fontSize = (defaultRem * pct / 100).toFixed(2) + 'rem';
+      });
+    }
+
+    bindSize('q-size', 'disp-q-main', 3.1);
+    bindSize('t-size', 'disp-t-main', 4.4);
+    bindSize('a-size', 'disp-a-main', 5.0);
+    bindSize('p-size', 'disp-p-main', 4.4);
   </script>
 </body>
 </html>
