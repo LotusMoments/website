@@ -370,7 +370,8 @@ img {
 .opener p:first-of-type::first-letter,
 .about-txt p:first-of-type::first-letter,
 .hoework-txt p:first-of-type::first-letter,
-.detail .detail-lede::first-letter {
+.detail .detail-lede::first-letter,
+.contact-intro::first-letter {
   font-family: 'Fraunces', serif;
   font-weight: 300;
   font-size: 4.5rem;
