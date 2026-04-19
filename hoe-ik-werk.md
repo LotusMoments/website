@@ -1,35 +1,40 @@
 ---
 layout: page
 title: Hoe ik werk
+eyebrow: De sessie
 permalink: /hoe-ik-werk/
 description: "Ontdek hoe een holistische massagesessie bij Lotus Moments eruitziet: een rustig tempo, warme olie en volledige aandacht voor wat jouw lichaam nodig heeft."
 ---
 
-<h1 style="text-align: center;">Hoe ik werk</h1>
+<section class="hoework-section">
+  <div class="container">
+    <div class="hoework-grid">
 
-<div markdown="1" style="display: flex; gap: 2rem; align-items: flex-start;">
+      <div class="hoework-imgs">
+        <img src="/assets/emine2.jpg" alt="Emine">
+        <img src="/assets/ruimte.jpg" alt="Praktijkruimte">
+      </div>
 
-<div style="flex: 0 0 200px; position: sticky; top: 100px; align-self: flex-start; padding-top: 1.2rem;">
-<img src="/assets/emine2.jpg" alt="Emine" style="width: 100%; border-radius: 8px; display: block; margin-bottom: 1rem;">
-<img src="/assets/ruimte.jpg" alt="" style="width: 100%; border-radius: 8px; display: block;">
-</div>
+      <div class="hoework-txt">
 
-<div markdown="1" style="flex: 1; min-width: 0;">
+        <h2>Hoe ik werk tijdens een sessie</h2>
 
-## Hoe ik werk tijdens een sessie
+        <p>Ik werk vanuit de holistische visie van Holos en stem mijn behandeling af op wat jouw lichaam op dat moment nodig heeft. Ieder lichaam is anders. Waar de één behoefte heeft aan zachtheid, heeft de ander juist meer stevigheid nodig.</p>
 
-Ik werk vanuit de holistische visie van Holos en stem mijn behandeling af op wat jouw lichaam op dat moment nodig heeft. Ieder lichaam is anders. Waar de één behoefte heeft aan zachtheid, heeft de ander juist meer stevigheid nodig.
+        <p>Daarin kijk ik niet alleen naar wat ik voel in het lichaam, maar ook naar jouw persoonlijke voorkeur. Samen stemmen we af wat voor jou prettig en passend is.</p>
 
-Daarin kijk ik niet alleen naar wat ik voel in het lichaam, maar ook naar jouw persoonlijke voorkeur. Samen stemmen we af wat voor jou prettig en passend is.
+        <p>Niet om iets te fixen, maar om ruimte te geven aan wat er is. Van daaruit kan ontspanning, bewustwording en herstel ontstaan, van binnenuit.</p>
 
-Niet om iets te fixen, maar om ruimte te geven aan wat er is. Van daaruit kan ontspanning, bewustwording en herstel ontstaan, van binnenuit.
+        <p>Wat je tijdens een sessie kunt verwachten:</p>
 
-Wat je tijdens een sessie kunt verwachten:
+        <ul>
+          <li>een rustig tempo waarin jij en je lichaam mogen volgen wat er ontstaat</li>
+          <li>warme olie, zodat je lichaam makkelijker kan ontspannen</li>
+          <li>zachte materialen en een warme setting, zodat je lichaam zich veilig en comfortabel kan voelen</li>
+          <li>volledige aandacht en aanwezigheid, zodat er ruimte is om te voelen wat er in je lichaam leeft</li>
+        </ul>
 
-- een rustig tempo waarin jij en je lichaam mogen volgen wat er ontstaat
-- warme olie, zodat je lichaam makkelijker kan ontspannen
-- zachte materialen en een warme setting, zodat je lichaam zich veilig en comfortabel kan voelen
-- volledige aandacht en aanwezigheid, zodat er ruimte is om te voelen wat er in je lichaam leeft
-
-</div>
-</div>
+      </div>
+    </div>
+  </div>
+</section>

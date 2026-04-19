@@ -1,58 +1,47 @@
-<header class="site-header">
+<header class="masthead">
   <div class="container">
-    <a class="brand" href="{{ '/' | relative_url }}">
-      <span class="brand-icon" aria-hidden="true">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 128 128"
-          role="presentation"
-          focusable="false"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="6"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <title>Lotus Moments</title>
-          <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
-          <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
-          <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
-          <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
+    <div class="mast-row">
+      <div class="mast-meta">Holistische Praktijk · Deventer</div>
+      <a class="mast-logo" href="{{ '/' | relative_url }}">
+        <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/>
+          <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/>
+          <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/>
+          <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/>
         </svg>
-      </span>
-      <span class="brand-text">
-        <span class="brand-mark">Lotus</span>
-        <span class="brand-sub">Moments</span>
-      </span>
-    </a>
-    <nav class="nav">
+        <span class="mast-name">Lotus Moments</span>
+      </a>
+      <div class="mast-meta mast-right">Holistische Praktijk · Deventer</div>
       <button
         class="nav-toggle"
         type="button"
         aria-label="Menu"
         aria-expanded="false"
-        aria-controls="site-menu"
-      >
-        ☰
-      </button>
-      <ul id="site-menu" class="nav-list">
-        {% for link in site.nav_links %}
-        <li class="nav-item">
-          {% assign current = link.url | replace: site.baseurl, '' %}
-          {% if link.url contains 'http' %}
-          <a class="nav-link" href="{{ link.url }}" target="_blank" rel="noopener">
-            {{ link.title }}
-          </a>
-          {% else %}
-          <a
-            class="nav-link{% if current == page.url %} nav-link--active{% endif %}"
-            href="{{ link.url | relative_url }}"
-            >{{ link.title }}</a
-          >
-          {% endif %}
-        </li>
-        {% endfor %}
-      </ul>
+        aria-controls="site-nav"
+      >☰</button>
+    </div>
+    <nav id="site-nav" class="nav-strip">
+      {% for link in site.nav_links %}
+        {% assign current = link.url | replace: site.baseurl, '' %}
+        {% if link.url contains 'http' %}
+          <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.title }}</a>
+        {% else %}
+          <a href="{{ link.url | relative_url }}"{% if current == page.url %} class="act"{% endif %}>{{ link.title }}</a>
+        {% endif %}
+      {% endfor %}
     </nav>
   </div>
 </header>
+
+<script>
+  (function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+    toggle.addEventListener('click', function () {
+      var open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !open);
+      nav.classList.toggle('nav-strip--open');
+    });
+  })();
+</script>

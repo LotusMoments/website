@@ -1,0 +1,73 @@
+name: Deploy preview to GitHub Pages
+
+on:
+  push:
+    branches: ["redesign"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch (live site)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-src
+
+      - name: Checkout redesign branch (preview)
+        uses: actions/checkout@v4
+        with:
+          ref: redesign
+          path: preview-src
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+          working-directory: main-src
+
+      - name: Build live site
+        working-directory: main-src
+        run: bundle exec jekyll build --destination ${{ github.workspace }}/output
+        env:
+          JEKYLL_ENV: production
+
+      - name: Install preview dependencies
+        working-directory: preview-src
+        run: bundle install
+
+      - name: Build preview site
+        working-directory: preview-src
+        run: bundle exec jekyll build --config _config.yml,_config_preview.yml --destination ${{ github.workspace }}/output/preview
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload combined artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: output
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

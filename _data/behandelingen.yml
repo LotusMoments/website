@@ -1,5 +1,8 @@
 - naam: Lotus Moment sessie
+  tagline: Holistische massage — lichaam & geest
   duur: 70 min
+  prijs: "€ 48"
+  status: beschikbaar
   tarief: "Introductietarief: tijdelijk verlaagd tarief van 48 EUR per sessie."
   omschrijving: >
     Lotus Moment – een holistische massage waarin lichaam en geest samenkomen.
@@ -15,3 +18,17 @@
     - titel: Nabespreken & afronden
       duur: 5 min
       omschrijving: Neem even de tijd om na te voelen en rustig terug te komen voordat je weer verder gaat met je dag.
+
+- naam: Prenatale massage
+  tagline: Zachte aandacht tijdens zwangerschap
+  duur: 60 min
+  status: binnenkort
+
+- naam: Postnatale zorg
+  tagline: Herstel & bekrachtiging
+  duur: 75 min
+  status: binnenkort
+
+- naam: Cycluszorg
+  tagline: Afgestemd op jouw ritme
+  status: in_ontwikkeling

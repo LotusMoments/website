@@ -1,64 +1,42 @@
-<footer class="site-footer">
-  <div class="container footer-content">
-    <div class="footer-brand">
-      <a href="{{ '/' | relative_url }}" class="footer-brand-logo">
-        <span class="brand-icon" aria-hidden="true">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 128 128"
-            focusable="false"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="6"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
-            <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
-            <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
-            <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
-          </svg>
-        </span>
-        <span class="footer-brand-name">Lotus Moments</span>
-      </a>
-      <p class="footer-tagline">Holistische massagepraktijk<br>Deventer</p>
-    </div>
-
-    <div class="footer-divider" aria-hidden="true">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 128 128"
-        focusable="false"
-      >
-        <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
-        <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
-        <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
-        <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
+<footer class="ft">
+  <div class="container">
+    <div class="ft-top">
+      <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/>
+        <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/>
+        <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/>
+        <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/>
       </svg>
+      <h3>Lotus Moments</h3>
+      <div class="sub">Est. 2026 · Deventer</div>
     </div>
 
-    <div class="footer-links-col">
-      <a href="mailto:info@lotusmoments.nl">info@lotusmoments.nl</a>
-      {% if site.social_links.calendly %}
-      <a href="{{ site.social_links.calendly }}" target="_blank" rel="noopener">Boek een sessie</a>
-      {% endif %}
-      <p class="footer-location">Wijk De Vijfhoek, Deventer</p>
+    <div class="ft-grid">
+      <div class="ft-col">
+        <h4>Over de praktijk</h4>
+        <p class="tag">Een holistische praktijk voor vrouwen — rust, veerkracht en ruimte om te ontvouwen.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Contact</h4>
+        <a href="mailto:info@lotusmoments.nl">info@lotusmoments.nl</a>
+        <a href="https://wa.me/31683059532" target="_blank" rel="noopener">06 83 05 95 32</a>
+        <a href="https://www.instagram.com/lotusmoments.nl/" target="_blank" rel="noopener">@lotusmoments.nl</a>
+        <p>Wijk De Vijfhoek · Deventer</p>
+      </div>
+      <div class="ft-col">
+        <h4>Navigatie</h4>
+        {% for link in site.nav_links %}
+          {% if link.url contains 'http' %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.title }}</a>
+          {% else %}
+            <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
-  </div>
 
-  <div class="container footer-bottom">
-    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Alle rechten voorbehouden.</p>
+    <div class="ft-bot">
+      &copy; {{ site.time | date: '%Y' }} {{ site.title }} &middot; Alle rechten voorbehouden
+    </div>
   </div>
 </footer>
-
-<script>
-  const toggle = document.querySelector(".nav-toggle");
-  const menu = document.querySelector("#site-menu");
-  if (toggle && menu) {
-    toggle.addEventListener("click", () => {
-      const expanded = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", !expanded);
-      menu.classList.toggle("nav-list--open");
-    });
-  }
-</script>
