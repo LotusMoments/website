@@ -2,7 +2,7 @@ name: Deploy preview to GitHub Pages
 
 on:
   push:
-    branches: ["redesign"]
+    branches: ["redesign", "redesign_2"]
   workflow_dispatch:
 
 permissions:
@@ -30,6 +30,12 @@ jobs:
           ref: redesign
           path: preview-src
 
+      - name: Checkout redesign_2 branch (preview 2)
+        uses: actions/checkout@v4
+        with:
+          ref: redesign_2
+          path: preview2-src
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -50,6 +56,16 @@ jobs:
       - name: Build preview site
         working-directory: preview-src
         run: bundle exec jekyll build --config _config.yml,_config_preview.yml --destination ${{ github.workspace }}/output/preview
+        env:
+          JEKYLL_ENV: production
+
+      - name: Install preview2 dependencies
+        working-directory: preview2-src
+        run: bundle install
+
+      - name: Build preview2 site
+        working-directory: preview2-src
+        run: bundle exec jekyll build --config _config.yml,_config_preview2.yml --destination ${{ github.workspace }}/output/preview2
         env:
           JEKYLL_ENV: production
 

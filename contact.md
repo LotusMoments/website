@@ -9,7 +9,16 @@ description: "Neem contact op met Lotus Moments via WhatsApp, e-mail of Instagra
 <section class="contact-section">
   <div class="container">
 
-    <p class="contact-intro">Heb je een vraag of wil je een sessie inplannen? Neem gerust contact op — ik reageer zo snel mogelijk.</p>
+    <p class="contact-intro">Voel je je aangesproken door wat je hier hebt gelezen, of wil je gewoon weten of het iets voor je is? Je bent van harte welkom om contact op te nemen. Er is geen drempel — alleen een open uitnodiging.</p>
+
+    <div class="contact-reach">
+      <span class="eyebrow">Je kunt me bereiken voor</span>
+      <ul>
+        <li>Het inplannen van een sessie</li>
+        <li>Vragen over de behandelingen of wat je kunt verwachten</li>
+        <li>Een massage als cadeau geven aan iemand die je lief is</li>
+      </ul>
+    </div>
 
     <div class="contact-cards">
 

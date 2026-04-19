@@ -1,15 +1,16 @@
 /* === DESIGN TOKENS === */
 :root {
-  --bg:              #f0ead8;
-  --cream:           #f8f2e3;
-  --paper:           #ede5d0;
-  --ink:             #35312a;
-  --ink-soft:        #6f6759;
-  --sage:            #8a9470;
-  --sage-deep:       #5d6b48;
-  --terracotta:      #b66a4a;
-  --terracotta-deep: #8d4828;
-  --gold:            #c49a62;
+  --bg:              #f5f0e8;
+  --cream:           #fdf8f2;
+  --paper:           #e4d9c8;
+  --ink:             #3f3226;
+  --ink-soft:        #6b5a4b;
+  --sage:            #cfa16f;
+  --sage-deep:       #b07d4a;
+  --terracotta:      #cfa16f;
+  --terracotta-deep: #b07d4a;
+  --gold:            #cfa16f;
+  --blush:           #f3d6c6;
 }
 
 /* === RESET === */
@@ -60,7 +61,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(240, 234, 216, .92);
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
@@ -156,6 +157,7 @@ img {
   padding: 4.5rem 0 5rem;
   position: relative;
   overflow: hidden;
+  background: radial-gradient(ellipse at 25% 55%, color-mix(in srgb, var(--blush) 45%, transparent) 0%, transparent 65%);
 }
 
 .hero-bg-lotus {
@@ -288,7 +290,7 @@ img {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 3.5rem 2rem;
+  padding: 1.8rem 2rem;
   color: var(--sage);
 }
 
@@ -365,7 +367,10 @@ img {
   margin: 0 auto 1.2rem;
 }
 
-.opener p:first-of-type::first-letter {
+.opener p:first-of-type::first-letter,
+.about-txt p:first-of-type::first-letter,
+.hoework-txt p:first-of-type::first-letter,
+.detail .detail-lede::first-letter {
   font-family: 'Fraunces', serif;
   font-weight: 300;
   font-size: 4.5rem;
@@ -617,6 +622,17 @@ img {
   flex-wrap: wrap;
 }
 
+.price-label {
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  font-size: .68rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--terracotta-deep);
+  margin-bottom: .3rem;
+  font-weight: 500;
+}
+
 .price-row .pb {
   font-family: 'Fraunces', serif;
   font-size: 2.6rem;
@@ -693,7 +709,7 @@ img {
 
 /* === PULL QUOTE === */
 .pullquote {
-  padding: 6rem 2rem;
+  padding: 3rem 2rem;
   text-align: center;
   background: var(--bg);
   position: relative;
@@ -861,6 +877,18 @@ img {
 }
 
 /* === PAGE HEAD === */
+.page-bg-lotus {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 260px;
+  color: var(--sage);
+  opacity: .09;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .page-head {
   padding: 4rem 0 3rem;
   background: var(--cream);
@@ -905,7 +933,7 @@ img {
 }
 
 .page-wrapper {
-  padding: 4rem 0 6rem;
+  padding: 1.5rem 0 5rem;
 }
 
 .page-content {
@@ -971,7 +999,7 @@ img {
 
 /* === ABOUT GRID (Over mij) === */
 .about-section {
-  padding: 4rem 0 6rem;
+  padding: 1.5rem 0 5rem;
 }
 
 .about-grid {
@@ -1019,7 +1047,7 @@ img {
 
 /* === HOE IK WERK === */
 .hoework-section {
-  padding: 4rem 0 6rem;
+  padding: 1.5rem 0 5rem;
 }
 
 .hoework-grid {
@@ -1087,15 +1115,34 @@ img {
 
 /* === CONTACT === */
 .contact-section {
-  padding: 4rem 0 6rem;
+  padding: 1.5rem 0 5rem;
 }
 
 .contact-intro {
   text-align: center;
   max-width: 520px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
   color: var(--ink-soft);
   line-height: 1.8;
+}
+
+.contact-reach {
+  text-align: center;
+  max-width: 420px;
+  margin: 0 auto 3rem;
+}
+
+.contact-reach .eyebrow {
+  display: block;
+  margin-bottom: .8rem;
+}
+
+.contact-reach ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 2;
 }
 
 .contact-cards {

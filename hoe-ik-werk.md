@@ -17,6 +17,7 @@ description: "Ontdek hoe een holistische massagesessie bij Lotus Moments eruitzi
 
       <div class="hoework-txt">
 
+        <span class="eyebrow">Werkwijze</span>
         <h2>Hoe ik werk tijdens een sessie</h2>
 
         <p>Ik werk vanuit de holistische visie van Holos en stem mijn behandeling af op wat jouw lichaam op dat moment nodig heeft. Ieder lichaam is anders. Waar de één behoefte heeft aan zachtheid, heeft de ander juist meer stevigheid nodig.</p>
@@ -37,4 +38,9 @@ description: "Ontdek hoe een holistische massagesessie bij Lotus Moments eruitzi
       </div>
     </div>
   </div>
+</section>
+
+<section class="pullquote">
+  <blockquote>Niet om iets te fixen, maar om ruimte te geven aan wat er is.</blockquote>
+  <div class="cite">— Lotus Moments</div>
 </section>

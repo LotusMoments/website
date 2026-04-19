@@ -16,6 +16,7 @@ description: "Lees meer over Emine en haar pad naar lichaamsgericht werken. Sind
 
       <div class="about-txt">
 
+        <span class="eyebrow">Mijn verhaal</span>
         <h2>Mijn pad naar lichaamsgericht werken</h2>
 
         <p>Mijn eerste kennismaking met lichaamsgerichte therapie was toen ik zelf een traject volgde bij een therapeut die haar opleiding bij Holos had gedaan.
@@ -54,4 +55,9 @@ description: "Lees meer over Emine en haar pad naar lichaamsgericht werken. Sind
       </div>
     </div>
   </div>
+</section>
+
+<section class="pullquote">
+  <blockquote>Het bracht me dichter bij mezelf dan ik in lange tijd was geweest.</blockquote>
+  <div class="cite">— Emine</div>
 </section>
