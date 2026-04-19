@@ -158,26 +158,16 @@ img {
   overflow: hidden;
 }
 
-.leaf-deco {
+.hero-bg-lotus {
   position: absolute;
+  top: 50%;
+  right: -80px;
+  transform: translateY(-50%);
+  width: 640px;
   color: var(--sage);
-  opacity: .22;
+  opacity: .10;
   pointer-events: none;
   z-index: 0;
-}
-
-.leaf-1 {
-  top: -30px;
-  right: -40px;
-  width: 300px;
-  transform: rotate(20deg);
-}
-
-.leaf-2 {
-  bottom: -40px;
-  left: -60px;
-  width: 260px;
-  transform: rotate(-25deg) scaleX(-1);
 }
 
 .hero .container {
