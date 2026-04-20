@@ -9,7 +9,7 @@ description: "Neem contact op met Lotus Moments via WhatsApp, e-mail of Instagra
 <section class="contact-section">
   <div class="container">
 
-    <p class="contact-intro">Voel je je aangesproken door wat je hier hebt gelezen, of wil je gewoon weten of het iets voor je is? Je bent van harte welkom om contact op te nemen. Er is geen drempel — alleen een open uitnodiging.</p>
+    <p class="contact-intro">Voel je je aangesproken door wat je hier hebt gelezen, of wil je gewoon weten of het iets voor je is? Je bent van harte welkom om contact op te nemen. Er is geen drempel, alleen een open uitnodiging.</p>
 
     <div class="contact-reach">
       <span class="eyebrow">Je kunt me bereiken voor</span>

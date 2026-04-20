@@ -603,6 +603,7 @@ img {
 }
 
 .phase-e .d {
+  display: none;
   font-size: .7rem;
   letter-spacing: .3em;
   text-transform: uppercase;

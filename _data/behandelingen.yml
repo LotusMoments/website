@@ -1,5 +1,5 @@
 - naam: Lotus Moment sessie
-  tagline: Holistische massage — lichaam & geest
+  tagline: Holistische massage voor lichaam en geest
   duur: 70 min
   prijs: "€ 48"
   status: beschikbaar
@@ -9,12 +9,13 @@
     Tijdens de sessie geef je jezelf de ruimte om te voelen, te vertragen en bewust
     aanwezig te zijn bij wat er nu in je lichaam gebeurt.
   fases:
-    - titel: Aankomen & intake
-      duur: 10 min
+    - titel: Aankomen
       omschrijving: We stemmen kort af hoe het met je gaat, wat je lichaam aangeeft en waar jouw behoefte ligt.
-    - titel: Massage
-      duur: 55 min
-      omschrijving: Een massage op maat met warme olie, aandacht voor ademhaling en diepe ontspanning van lichaam en geest.
-    - titel: Nabespreken & afronden
-      duur: 5 min
-      omschrijving: Neem even de tijd om na te voelen en rustig terug te komen voordat je weer verder gaat met je dag.
+    - titel: De massage
+      omschrijving: Een massage op maat met warme olie, aandacht voor de ademhaling en ruimte voor wat het lichaam te vertellen heeft.
+    - titel: Navoelen
+      omschrijving: Neem even de tijd om te voelen wat er in je lichaam is verschoven, en kom rustig terug voordat je weer verder gaat.
+
+- naam: Er is meer onderweg
+  tagline: Nieuwe behandelingen worden binnenkort onthuld
+  status: binnenkort
