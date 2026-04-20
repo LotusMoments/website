@@ -117,8 +117,8 @@ layout: default
     {% endif %}
 
     <div class="price-row">
+      {% if hoofdsessie.tarief %}<span class="price-label">Introductietarief</span>{% endif %}
       <div class="pb">
-        {% if hoofdsessie.tarief %}<span class="price-label">Introductietarief</span>{% endif %}
         {{ hoofdsessie.prijs }}<small>{{ hoofdsessie.duur }}</small>
       </div>
       {% if page.pricing_points %}
