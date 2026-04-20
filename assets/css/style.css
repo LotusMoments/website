@@ -1301,10 +1301,16 @@ img {
 @media (max-width: 600px) {
   .mast-row {
     padding-bottom: .8rem;
+    padding-right: 2.5rem;
   }
 
   .nav-toggle {
     display: block;
+  }
+
+  .mast-name {
+    font-size: 1.1rem;
+    letter-spacing: .18em;
   }
 
   .nav-strip {
