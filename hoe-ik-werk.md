@@ -11,7 +11,6 @@ description: "Ontdek hoe een holistische massagesessie bij Lotus Moments eruitzi
     <div class="hoework-grid">
 
       <div class="hoework-imgs">
-        <img src="/assets/emine2.jpg" alt="Emine">
         <img src="/assets/ruimte.jpg" alt="Praktijkruimte">
       </div>
 

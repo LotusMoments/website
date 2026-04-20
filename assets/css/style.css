@@ -1040,6 +1040,15 @@ img {
   margin-bottom: 1.5rem;
 }
 
+.about-sig {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--terracotta-deep) !important;
+  margin-top: 2rem;
+  letter-spacing: .02em;
+}
+
 /* === HOE IK WERK === */
 .hoework-section {
   padding: 1.5rem 0 5rem;
