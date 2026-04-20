@@ -35,7 +35,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
   color: var(--ink);
   margin: 0;
@@ -105,7 +105,7 @@ img {
 }
 
 .mast-name {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.45rem;
   letter-spacing: .28em;
   text-transform: uppercase;
@@ -372,7 +372,7 @@ img {
 .hoework-txt p:first-of-type::first-letter,
 .detail .detail-lede::first-letter,
 .contact-intro::first-letter {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 300;
   font-size: 4.5rem;
   float: left;
@@ -443,7 +443,7 @@ img {
 }
 
 .idx-num {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.4rem;
   color: var(--terracotta);
@@ -488,7 +488,7 @@ img {
 }
 
 .idx-meta .price {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.7rem;
   color: var(--terracotta-deep);
   line-height: 1.05;
@@ -578,7 +578,7 @@ img {
 }
 
 .phase-e .pn {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.25rem;
   color: var(--terracotta);
@@ -635,7 +635,7 @@ img {
 }
 
 .price-row .pb {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 2.6rem;
   color: var(--terracotta-deep);
   font-style: italic;
@@ -740,7 +740,7 @@ img {
 }
 
 .pullquote blockquote {
-  font-family: 'Fraunces', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.9rem, 3.8vw, 3rem);
   line-height: 1.3;
   color: var(--ink);
