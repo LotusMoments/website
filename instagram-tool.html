@@ -7,7 +7,7 @@
   <title>Instagram Tool · Lotus Moments</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg: #f5f0e8;
@@ -30,7 +30,7 @@
 
     html, body {
       height: 100%;
-      font-family: "Source Sans 3", -apple-system, sans-serif;
+      font-family: "Work Sans", -apple-system, sans-serif;
       background: var(--ui-bg);
       color: var(--ui-text);
       -webkit-tap-highlight-color: transparent;
@@ -68,9 +68,9 @@
     }
 
     .topbar-name {
-      font-family: "Playfair Display", serif;
-      font-size: 0.95rem;
-      letter-spacing: 0.15em;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 1rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
     }
 
@@ -286,19 +286,23 @@
     /* Brand top — used by all non-quote templates */
     .post-brand-top {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
       gap: 20px;
-      padding-bottom: 12px;
+      padding-bottom: 32px;
     }
 
     .tpl-quote .post-brand-top { display: none; }
 
-    .post-brand-top .post-brand-circle {
-      width: 150px; height: 150px;
+    .post-brand-top .post-brand-mark {
+      width: 52px; height: 52px;
+      flex-shrink: 0;
     }
 
-    .post-brand-top .post-brand-circle svg { width: 74px; height: 74px; }
+    .post-brand-top .post-brand-mark svg {
+      width: 52px; height: 52px;
+      fill: #b07d4a;
+    }
 
     /* Post body */
     .post-body {
@@ -317,47 +321,32 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 28px;
+      gap: 32px;
       padding-top: 1rem;
     }
 
-    /* Brand circle — shared */
-    .post-brand-circle {
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
+    /* Brand mark — shared (no circle, just the lotus SVG) */
+    .post-brand-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex-shrink: 0;
     }
 
-    .post-brand-circle { background: linear-gradient(135deg, #cfa16f 0%, #f3d6c6 100%); }
-    .post-brand-circle svg { fill: #fdf8f2; }
+    .post-brand-mark svg { fill: #b07d4a; }
 
-    /* Quote: large circle */
-    .tpl-quote .post-brand-circle { width: 208px; height: 208px; }
-    .tpl-quote .post-brand-circle svg { width: 104px; height: 104px; }
+    /* Quote: larger mark */
+    .tpl-quote .post-brand-mark { width: 96px; height: 96px; }
+    .tpl-quote .post-brand-mark svg { width: 96px; height: 96px; }
 
     /* Brand name — shared */
     .post-brand-name {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2px;
-      line-height: 1;
-    }
-
-    .post-brand-name strong {
-      font-family: "Playfair Display", serif;
+      font-family: "Cormorant Garamond", serif;
       font-weight: 400;
-      font-size: 3.2rem;
-      letter-spacing: 0.38em;
+      font-size: 1.75rem;
+      letter-spacing: 0.32em;
       text-transform: uppercase;
-    }
-
-    .post-brand-name span {
-      font-size: 1.64rem;
-      letter-spacing: 0.5em;
-      text-transform: uppercase;
-      opacity: 0.5;
+      line-height: 1;
     }
 
     .tpl-quote .post-eyebrow {
@@ -368,7 +357,7 @@
     }
 
     .tpl-quote .post-main-text {
-      font-family: "Playfair Display", serif;
+      font-family: "Cormorant Garamond", serif;
       font-style: italic;
       font-size: 3.1rem;
       line-height: 1.55;
@@ -380,7 +369,7 @@
     /* TIP */
     .tpl-tip .post-body { justify-content: center; gap: 0; }
     .tpl-tip .post-eyebrow { font-size: 1.5rem; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.45; margin-bottom: 1rem; }
-    .tpl-tip .post-main-text { font-family: "Playfair Display", serif; font-size: 4.4rem; line-height: 1.2; margin-bottom: 1.7rem; }
+    .tpl-tip .post-main-text { font-family: "Cormorant Garamond", serif; font-size: 4.4rem; line-height: 1.2; margin-bottom: 1.7rem; }
     .tpl-tip .post-sub-text { font-size: 2.1rem; line-height: 1.7; opacity: 0.72; white-space: pre-line; }
 
     /* AANKONDIGING */
@@ -396,15 +385,15 @@
       align-self: flex-start;
     }
     .post-pill { background: rgba(180,130,110,0.14); color: #9e6040; }
-    .tpl-announce .post-main-text { font-family: "Playfair Display", serif; font-size: 5rem; line-height: 1.15; white-space: pre-line; }
+    .tpl-announce .post-main-text { font-family: "Cormorant Garamond", serif; font-size: 5rem; line-height: 1.15; white-space: pre-line; }
     .tpl-announce .post-sub-text { font-size: 2.1rem; line-height: 1.7; opacity: 0.68; white-space: pre-line; }
 
     /* PRIJS */
     .tpl-prijs .post-body { justify-content: center; gap: 0.8rem; }
     .tpl-prijs .post-eyebrow { font-size: 1.5rem; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.45; }
-    .tpl-prijs .post-main-text { font-family: "Playfair Display", serif; font-size: 4.4rem; line-height: 1.15; margin-bottom: 0.5rem; white-space: pre-line; }
+    .tpl-prijs .post-main-text { font-family: "Cormorant Garamond", serif; font-size: 4.4rem; line-height: 1.15; margin-bottom: 0.5rem; white-space: pre-line; }
     .tpl-prijs .post-price-box { display: flex; align-items: baseline; gap: 0.7rem; margin: 0.3rem 0; }
-    .tpl-prijs .post-price-amount { font-family: "Playfair Display", serif; font-size: 7.2rem; line-height: 1; }
+    .tpl-prijs .post-price-amount { font-family: "Cormorant Garamond", serif; font-size: 7.2rem; line-height: 1; }
     .tpl-prijs .post-price-unit { font-size: 1.8rem; letter-spacing: 0.08em; opacity: 0.55; }
     .tpl-prijs .post-sub-text { font-size: 2rem; line-height: 1.65; opacity: 0.62; margin-top: 0.3rem; white-space: pre-line; }
 
@@ -602,7 +591,7 @@
           </div>
 
           <div class="post-brand-top">
-            <div class="post-brand-circle">
+            <div class="post-brand-mark">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                 <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/>
                 <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/>
@@ -610,16 +599,13 @@
                 <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/>
               </svg>
             </div>
-            <div class="post-brand-name">
-              <strong>Lotus</strong>
-              <span>Moments</span>
-            </div>
+            <span class="post-brand-name">Lotus Moments</span>
           </div>
 
           <!-- QUOTE -->
           <div class="post-body" id="body-quote">
             <div class="post-brand">
-              <div class="post-brand-circle">
+              <div class="post-brand-mark">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                   <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/>
                   <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/>
@@ -627,10 +613,7 @@
                   <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/>
                 </svg>
               </div>
-              <div class="post-brand-name">
-                <strong>Lotus</strong>
-                <span>Moments</span>
-              </div>
+              <span class="post-brand-name">Lotus Moments</span>
             </div>
             <p class="post-main-text" id="disp-q-main">Een moment voor jezelf is geen luxe — het is noodzaak.</p>
             <span class="post-sub-text" id="disp-q-sub"></span>
