@@ -1222,9 +1222,9 @@ img {
 
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -1278,6 +1278,12 @@ img {
   color: var(--terracotta-deep);
   font-weight: 500;
 }
+
+/* Trustpilot */
+.trustpilot-section {
+  padding: 2rem 0 4rem;
+}
+
 
 /* === RESPONSIVE === */
 @media (max-width: 900px) {

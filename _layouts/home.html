@@ -76,7 +76,7 @@ layout: default
           <h4>{{ behandeling.naam }}</h4>
           {% if behandeling.tagline %}<div class="tagline">{{ behandeling.tagline }}</div>{% endif %}
         </div>
-        <div class="idx-desc">{{ behandeling.omschrijving | default: "" | truncatewords: 20 }}</div>
+        <div class="idx-desc">{{ behandeling.omschrijving | default: "" | split: ". " | first | append: "." }}</div>
         <div class="idx-meta">
           <span class="dur">{{ behandeling.duur | default: "—" }}</span>
           <span class="price">{{ behandeling.prijs | default: "—" }}</span>
@@ -166,3 +166,12 @@ layout: default
   </div>
 </section>
 {% endif %}
+
+<!-- Trustpilot -->
+<section class="trustpilot-section">
+  <div class="container">
+    <div class="trustpilot-widget" data-locale="nl-NL" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="69e79f1e8873f1377897dd7b" data-style-height="52px" data-style-width="100%" data-token="b4088fe7-cc55-45b7-a1cd-d035641c443b">
+      <a href="https://nl.trustpilot.com/review/lotusmoments.nl" target="_blank" rel="noopener">Trustpilot</a>
+    </div>
+  </div>
+</section>
