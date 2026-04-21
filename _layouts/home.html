@@ -146,3 +146,23 @@ layout: default
   <blockquote>Zelfs uit de moeilijkste omstandigheden kan iets moois ontstaan.</blockquote>
   <div class="cite">— De Lotus</div>
 </section>
+
+<!-- Reviews -->
+{% if site.data.reviews.size > 0 %}
+<section class="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <span class="eyebrow">Ervaringen</span>
+      <h2>Wat vrouwen zeggen</h2>
+    </div>
+    <div class="reviews-grid">
+      {% for review in site.data.reviews %}
+      <blockquote class="review-card">
+        <p>{{ review.tekst }}</p>
+        <footer>— {{ review.naam }}</footer>
+      </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
