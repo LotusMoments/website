@@ -1,0 +1,148 @@
+---
+permalink: /profielfoto/
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Profielfoto · Lotus Moments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:              #f5f0e8;
+      --ink:             #3f3226;
+      --ink-soft:        #6b5a4b;
+      --terracotta:      #cfa16f;
+      --terracotta-deep: #b07d4a;
+      --blush:           #f3d6c6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: #d8cfc0;
+      font-family: "Work Sans", sans-serif;
+      color: var(--ink);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .screen-note {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-align: center;
+      line-height: 1.6;
+      max-width: 30em;
+    }
+
+    /* 540px hier = 1080px na screenshot op retina / 2× zoom */
+    .profile-wrap {
+      width: 540px;
+      height: 540px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 6px var(--bg),
+        0 0 0 10px var(--terracotta),
+        0 20px 60px -20px rgba(44, 31, 20, 0.5);
+      flex-shrink: 0;
+
+      /* zelfde achtergrond als voorkant visitekaartje */
+      background:
+        radial-gradient(circle at 85% 15%, rgba(243, 214, 198, 0.55), transparent 55%),
+        radial-gradient(circle at 15% 90%, rgba(207, 161, 111, 0.15), transparent 55%),
+        var(--bg);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .logo-svg {
+      width: 110px;
+      height: 110px;
+      fill: var(--terracotta-deep);
+      margin-bottom: 16px;
+    }
+
+    .logo-divider {
+      width: 60px;
+      height: 1.5px;
+      background: var(--terracotta);
+      opacity: 0.55;
+      margin-bottom: 16px;
+    }
+
+    .logo-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 34px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+      white-space: nowrap;
+      margin-bottom: 10px;
+    }
+
+    .logo-sub {
+      font-family: "Work Sans", sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    .variant-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      text-align: center;
+      margin-top: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+<p class="screen-note">
+  Profielfoto · Instagram &amp; WhatsApp Business<br>
+  Maak een screenshot en sla op als PNG
+</p>
+
+<div>
+  <div class="profile-wrap">
+    <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
+      <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
+      <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
+      <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
+      <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
+    </svg>
+    <div class="logo-divider"></div>
+    <span class="logo-name">Lotus Moments</span>
+    <span class="logo-sub">Holistische massagepraktijk</span>
+  </div>
+  <p class="variant-label">Instagram &amp; WhatsApp Business</p>
+</div>
+
+</body>
+</html>
