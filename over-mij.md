@@ -11,7 +11,7 @@ description: "Lees meer over Emine en haar pad naar lichaamsgericht werken. Sind
     <div class="about-grid">
 
       <div class="about-img">
-        <img src="/assets/emine2.jpg" alt="Emine aan het masseren">
+        <img src="/assets/emine1.jpg" alt="Emine Bayyurt – Lotus Moments">
       </div>
 
       <div class="about-txt">
