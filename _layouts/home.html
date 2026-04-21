@@ -76,7 +76,7 @@ layout: default
           <h4>{{ behandeling.naam }}</h4>
           {% if behandeling.tagline %}<div class="tagline">{{ behandeling.tagline }}</div>{% endif %}
         </div>
-        <div class="idx-desc">{{ behandeling.omschrijving | default: "" | split: ". " | first | append: "." }}</div>
+        <div class="idx-desc">{{ behandeling.omschrijving | default: "" }}</div>
         <div class="idx-meta">
           <span class="dur">{{ behandeling.duur | default: "—" }}</span>
           <span class="price">{{ behandeling.prijs | default: "—" }}</span>
