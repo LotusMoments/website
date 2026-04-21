@@ -11,27 +11,24 @@ sitemap: false
   <title>Flyer · Lotus Moments</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg:              #f5f0e8;
-      --cream:           #fdf8f2;
-      --paper:           #e4d9c8;
-      --ink:             #3f3226;
-      --ink-soft:        #6b5a4b;
-      --terracotta:      #cfa16f;
-      --terracotta-deep: #b07d4a;
-      --blush:           #f3d6c6;
+      --bg:              #f0ead8;
+      --cream:           #f8f2e3;
+      --paper:           #ede5d0;
+      --ink:             #35312a;
+      --ink-soft:        #6f6759;
+      --terracotta:      #b66a4a;
+      --terracotta-deep: #8d4828;
+      --gold:            #c49a62;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     html, body {
-      background: #d8cfc0;
-    }
-
-    body {
-      font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #c5bfb0;
+      font-family: "Work Sans", sans-serif;
       color: var(--ink);
       min-height: 100vh;
       padding: 3rem 1.5rem;
@@ -44,7 +41,6 @@ sitemap: false
     }
 
     .screen-note {
-      font-family: "Work Sans", sans-serif;
       font-size: 0.85rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -58,381 +54,318 @@ sitemap: false
     .flyer {
       width: 105mm;
       height: 148mm;
-      background: var(--bg);
+      display: flex;
+      flex-direction: row;
+      background: var(--cream);
       box-shadow: 0 20px 60px -20px rgba(44, 31, 20, 0.45), 0 2px 8px rgba(44, 31, 20, 0.08);
       border-radius: 3px;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      position: relative;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
 
-    /* === FOTO BOVEN: ruimte === */
-    .flyer-photo-top {
-      position: relative;
-      height: 42mm;
+    /* === LINKER KOLOM: FOTO === */
+    .flyer-col-photo {
+      width: 44mm;
       flex-shrink: 0;
+      position: relative;
       overflow: hidden;
     }
 
-    .flyer-photo-top img {
+    .flyer-col-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 40%;
+      object-position: 45% 48%;
       display: block;
+      filter: brightness(1.06) contrast(0.94) saturate(0.96);
     }
 
-    /* gradient overlay onderaan foto */
-    .flyer-photo-top::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(44, 31, 20, 0.08) 0%,
-        rgba(245, 240, 232, 0.95) 100%
-      );
-    }
 
-    /* logo bovenop foto */
-    .photo-logo {
-      position: absolute;
-      top: 5mm;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
+    /* === RECHTER KOLOM: INHOUD === */
+    .flyer-col-content {
+      flex: 1;
       display: flex;
       flex-direction: column;
+      padding: 6mm 5mm 5mm 4mm;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* lotus watermark */
+    .flyer-col-content::before {
+      content: "";
+      position: absolute;
+      right: -5mm;
+      bottom: 18mm;
+      width: 38mm;
+      height: 38mm;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 128 128' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z' fill='%23b66a4a'/%3E%3Cpath d='M32 34c0 18 8 28 32 34-6-16-16-26-32-34z' fill='%23b66a4a'/%3E%3Cpath d='M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z' fill='%23b66a4a'/%3E%3Cpath d='M22 72c18 6 36 6 84 0-32 24-52 24-84 0z' fill='%23b66a4a'/%3E%3C/svg%3E") center/contain no-repeat;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    /* === LOGO === */
+    .col-logo {
+      display: flex;
       align-items: center;
       gap: 1.5mm;
+      margin-bottom: 5mm;
     }
 
-    .photo-logo svg {
-      width: 11mm;
-      height: 11mm;
-      fill: var(--cream);
-      filter: drop-shadow(0 1px 3px rgba(44,31,20,0.35));
-    }
-
-    .photo-logo-name {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 5mm;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: 0.1em;
-      color: var(--cream);
-      text-shadow: 0 1px 4px rgba(44,31,20,0.5);
-      white-space: nowrap;
-    }
-
-    /* === MIDDEN: portrait + tekst === */
-    .flyer-mid {
-      padding: 0 7mm 4mm;
+    .col-logo svg {
+      width: 6mm;
+      height: 6mm;
+      fill: var(--ink);
       flex-shrink: 0;
     }
 
-    /* Emine foto + intro naast elkaar */
-    .portrait-row {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 4mm;
-      align-items: start;
-      margin-bottom: 4mm;
+    .col-logo-name {
+      font-size: 2.4mm;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--ink);
     }
 
-    .portrait-img {
-      width: 18mm;
-      height: 18mm;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      border: 0.5mm solid rgba(207, 161, 111, 0.5);
-      box-shadow: 0 0 0 1mm var(--bg);
-      flex-shrink: 0;
-    }
-
-    .intro-text {
-      padding-top: 1mm;
-    }
-
-    .intro-name {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 5.5mm;
-      font-weight: 400;
+    /* === KICKER === */
+    .col-kicker {
+      font-size: 1.8mm;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
       color: var(--terracotta-deep);
       display: block;
-      line-height: 1;
+      margin-bottom: 2mm;
     }
 
-    .intro-title {
-      display: block;
-      font-family: "Work Sans", sans-serif;
-      font-size: 2.3mm;
-      font-weight: 400;
-      color: var(--ink-soft);
-      margin-top: 1mm;
-      line-height: 1.4;
-    }
-
-    .intro-quote {
-      display: block;
-      font-family: "Cormorant Garamond", serif;
+    /* === HEADLINE === */
+    .col-headline {
+      font-family: "Fraunces", serif;
+      font-size: 8mm;
+      font-weight: 300;
       font-style: italic;
-      font-size: 2.6mm;
-      color: var(--ink-soft);
-      margin-top: 1.5mm;
-      line-height: 1.4;
+      font-variation-settings: 'opsz' 120;
+      color: var(--ink);
+      line-height: 1.1;
+      margin-bottom: 3mm;
     }
 
-    /* divider */
-    .mid-divider {
-      width: 100%;
-      height: 0.3mm;
-      background: linear-gradient(90deg, var(--terracotta), transparent);
-      opacity: 0.4;
+    .col-headline em {
+      font-style: italic;
+      color: #b07d4a;
+    }
+
+    /* === GOUDEN LIJN === */
+    .col-rule {
+      width: 12mm;
+      height: 0.4mm;
+      background: var(--gold);
+      opacity: 0.7;
+      margin-bottom: 3mm;
+    }
+
+    /* === BESCHRIJVING === */
+    .col-body {
+      font-size: 2.5mm;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--ink-soft);
       margin-bottom: 4mm;
     }
 
-    /* behandeling blok */
-    .treatment-block {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 2mm;
-      align-items: start;
+    /* === SESSIE INFO === */
+    .col-session {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5mm;
+      margin-bottom: 3mm;
     }
 
-    .treatment-label {
-      font-family: "Work Sans", sans-serif;
-      font-size: 1.9mm;
+    .col-session-name {
+      font-family: "Fraunces", serif;
+      font-style: italic;
+      font-variation-settings: 'opsz' 120;
+      font-size: 3.2mm;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .col-session-meta {
+      font-size: 2.2mm;
+      font-weight: 300;
+      color: var(--ink-soft);
+    }
+
+    /* === FASES === */
+    .col-phases {
+      display: flex;
+      flex-direction: column;
+      gap: 1mm;
+      margin-bottom: 3mm;
+    }
+
+    .col-phase {
+      display: flex;
+      gap: 1.5mm;
+      font-size: 2.2mm;
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.5;
+    }
+
+    .col-phase-num {
+      font-family: "Fraunces", serif;
+      font-style: italic;
+      font-variation-settings: 'opsz' 120;
+      color: var(--gold);
+      flex-shrink: 0;
+      width: 3mm;
+    }
+
+    /* === LOTUS CITAAT === */
+    .col-quote {
+      font-family: "Fraunces", serif;
+      font-style: italic;
+      font-variation-settings: 'opsz' 120;
+      font-size: 2.4mm;
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      padding-left: 2mm;
+      border-left: 0.6mm solid var(--gold);
+      margin-bottom: auto;
+      opacity: 0.85;
+    }
+
+    /* === CONTACT === */
+    .col-contact {
+      border-top: 0.3mm solid rgba(196, 154, 98, 0.3);
+      padding-top: 3mm;
+    }
+
+    .col-contact-label {
+      font-size: 1.7mm;
       font-weight: 600;
-      letter-spacing: 0.32em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--terracotta-deep);
       display: block;
       margin-bottom: 1.5mm;
     }
 
-    .treatment-name {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 5mm;
-      font-weight: 400;
-      font-style: italic;
-      color: var(--ink);
-      display: block;
-      line-height: 1.1;
-      margin-bottom: 1mm;
-    }
-
-    .treatment-meta {
-      font-family: "Work Sans", sans-serif;
-      font-size: 2.5mm;
-      font-weight: 300;
-      color: var(--ink-soft);
-    }
-
-    .treatment-price {
-      font-family: "Cormorant Garamond", serif;
-      font-size: 6mm;
-      font-weight: 400;
-      color: var(--terracotta-deep);
-      line-height: 1;
-      text-align: right;
-    }
-
-    .treatment-price-note {
-      font-family: "Work Sans", sans-serif;
-      font-size: 2mm;
-      font-weight: 300;
-      font-style: italic;
-      color: var(--ink-soft);
-      text-align: right;
-      display: block;
-      margin-top: 0.5mm;
-    }
-
-    .treatment-body {
-      grid-column: 1 / -1;
-      font-family: "Work Sans", sans-serif;
-      font-size: 2.7mm;
-      font-weight: 300;
-      line-height: 1.55;
-      color: var(--ink-soft);
-      margin-top: 2mm;
-    }
-
-    /* === CONTACT === */
-    .flyer-contact {
-      margin-top: auto;
-      border-top: 0.3mm solid rgba(207, 161, 111, 0.3);
-      padding: 3.5mm 7mm;
-      background:
-        radial-gradient(circle at 100% 100%, rgba(243, 214, 198, 0.35), transparent 60%),
-        var(--bg);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 4mm;
-      align-items: center;
-    }
-
-    .contact-label {
-      font-family: "Work Sans", sans-serif;
-      font-size: 1.9mm;
-      font-weight: 600;
-      letter-spacing: 0.32em;
-      text-transform: uppercase;
-      color: var(--terracotta-deep);
-      margin-bottom: 2.5mm;
-      display: block;
-    }
-
-    .contact-items {
+    .col-contact-items {
       display: flex;
       flex-direction: column;
-      gap: 1.3mm;
+      gap: 1.2mm;
     }
 
-    .contact-item {
+    .col-contact-item {
       display: flex;
       align-items: center;
-      gap: 1.8mm;
-      font-family: "Work Sans", sans-serif;
-      font-size: 2.7mm;
+      gap: 1.5mm;
+      font-size: 2.4mm;
       font-weight: 400;
       color: var(--ink);
       text-decoration: none;
     }
 
-    .contact-icon {
-      width: 3mm;
-      height: 3mm;
+    .col-contact-item svg {
+      width: 2.8mm;
+      height: 2.8mm;
       color: var(--terracotta-deep);
       flex-shrink: 0;
     }
 
-    .qr-block {
+    .col-qr {
+      margin-top: 2mm;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 1mm;
+      gap: 2mm;
     }
 
-    .qr-block img {
-      width: 17mm;
-      height: 17mm;
+    .col-qr img {
+      width: 14mm;
+      height: 14mm;
       display: block;
     }
 
-    .qr-label {
-      font-family: "Work Sans", sans-serif;
-      font-size: 1.8mm;
+    .col-qr-label {
+      font-size: 1.6mm;
       font-weight: 500;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--ink-soft);
-      text-align: center;
+      line-height: 1.4;
     }
 
     /* === PRINT === */
-    @page {
-      size: 105mm 148mm;
-      margin: 0;
-    }
+    @page { size: 105mm 148mm; margin: 0; }
 
     @media print {
-      html, body {
-        background: #fff;
-        padding: 0;
-        margin: 0;
-        min-height: auto;
-      }
+      html, body { background: #fff; padding: 0; margin: 0; min-height: auto; }
       .screen-note { display: none; }
-      .flyer {
-        box-shadow: none;
-        border-radius: 0;
-        width: 105mm;
-        height: 148mm;
-        margin: 0;
-      }
+      .flyer { box-shadow: none; border-radius: 0; width: 105mm; height: 148mm; margin: 0; }
     }
   </style>
 </head>
 <body>
 
-<p class="screen-note">
-  A6 flyer · 105 × 148 mm · druk op ⌘ P om naar PDF te printen
-</p>
+<p class="screen-note">A6 flyer · 105 × 148 mm · druk op ⌘ P om naar PDF te printen</p>
 
 <div class="flyer">
 
-  <!-- FOTO RUIMTE + LOGO -->
-  <div class="flyer-photo-top">
-    <img src="/assets/ruimte.jpg" alt="Behandelruimte Lotus Moments">
-    <div class="photo-logo">
+  <!-- FOTO LINKS -->
+  <div class="flyer-col-photo">
+    <img src="/assets/emine2.jpg" alt="Emine Bayyurt – Lotus Moments">
+  </div>
+
+  <!-- INHOUD RECHTS -->
+  <div class="flyer-col-content">
+
+    <!-- Logo -->
+    <div class="col-logo">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
-        <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
-        <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
-        <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
-        <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
+        <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/>
+        <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/>
+        <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/>
+        <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/>
       </svg>
-      <span class="photo-logo-name">Lotus Moments</span>
-    </div>
-  </div>
-
-  <!-- MIDDEN: portrait + behandeling -->
-  <div class="flyer-mid">
-
-    <div class="portrait-row">
-      <img class="portrait-img" src="/assets/emine1.jpg" alt="Emine Bayyurt">
-      <div class="intro-text">
-        <span class="intro-name">Emine</span>
-        <span class="intro-title">Holistisch Masseur voor Vrouwen</span>
-        <span class="intro-quote">Ruimte voor wat je lichaam te vertellen heeft</span>
-      </div>
+      <span class="col-logo-name">Lotus Moments</span>
     </div>
 
-    <div class="mid-divider"></div>
+    <!-- Kicker + Headline -->
+    <span class="col-kicker">Voor vrouwen</span>
+    <h1 class="col-headline">Vertragen,<br>voelen,<br><em>ontvouwen.</em></h1>
 
-    <div class="treatment-block">
-      <div>
-        <span class="treatment-label">Behandeling</span>
-        <span class="treatment-name">Lotus Moment sessie</span>
-        <span class="treatment-meta">70 minuten · Wijk De Vijfhoek, Deventer</span>
-      </div>
-      <div>
-        <div class="treatment-price">€ 48</div>
-        <span class="treatment-price-note">introductietarief</span>
-      </div>
-      <p class="treatment-body">
-        Een holistische massage op maat met warme olie, aandacht voor de
-        ademhaling en ruimte voor wat je lichaam te vertellen heeft.
-      </p>
+    <!-- Gouden lijn -->
+    <div class="col-rule"></div>
+
+    <!-- Beschrijving -->
+    <p class="col-body">Lotus Moment — een holistische massage waarin lichaam en geest samenkomen. Tijdens de sessie geef je jezelf de ruimte om te voelen, te vertragen en bewust aanwezig te zijn bij wat er nu in je lichaam gebeurt.</p>
+
+    <!-- Fases -->
+    <div class="col-phases">
+      <div class="col-phase"><span class="col-phase-num">i.</span><span>Aankomen — kort afstemmen wat je lichaam aangeeft.</span></div>
+      <div class="col-phase"><span class="col-phase-num">ii.</span><span>De massage — op maat, met warme olie en aandacht voor de ademhaling.</span></div>
+      <div class="col-phase"><span class="col-phase-num">iii.</span><span>Navoelen — de tijd om te voelen wat er verschoven is.</span></div>
     </div>
 
-  </div>
+    <!-- Citaat -->
+    <p class="col-quote">Zelfs uit de moeilijkste omstandigheden kan iets moois ontstaan.</p>
 
-  <!-- CONTACT -->
-  <div class="flyer-contact">
-    <div>
-      <span class="contact-label">Contact & reserveren</span>
-      <div class="contact-items">
-        <a class="contact-item" href="https://wa.me/31683059532">
-          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <!-- Contact -->
+    <div class="col-contact">
+      <span class="col-contact-label">Boek jouw moment</span>
+      <div class="col-contact-items">
+        <a class="col-contact-item" href="https://wa.me/31683059532">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>
           06 83 05 95 32
         </a>
-        <a class="contact-item" href="mailto:info@lotusmoments.nl">
-          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-          </svg>
-          info@lotusmoments.nl
-        </a>
-        <a class="contact-item" href="https://www.instagram.com/lotusmoments.nl/">
-          <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <a class="col-contact-item" href="https://www.instagram.com/lotusmoments.nl/">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
             <circle cx="12" cy="12" r="4"/>
             <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
@@ -440,13 +373,13 @@ sitemap: false
           @lotusmoments.nl
         </a>
       </div>
+      <div class="col-qr">
+        <img src="/assets/qr-lotusmoments.svg" alt="QR-code naar lotusmoments.nl">
+        <span class="col-qr-label">Scan voor<br>lotusmoments.nl</span>
+      </div>
     </div>
-    <div class="qr-block">
-      <img src="/assets/qr-lotusmoments.svg" alt="QR-code naar lotusmoments.nl">
-      <div class="qr-label">lotusmoments.nl</div>
-    </div>
-  </div>
 
+  </div>
 </div>
 
 </body>
