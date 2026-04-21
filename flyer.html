@@ -56,9 +56,9 @@ sitemap: false
       height: 148mm;
       display: flex;
       flex-direction: row;
+      align-items: stretch;
       background: var(--cream);
       box-shadow: 0 20px 60px -20px rgba(44, 31, 20, 0.45), 0 2px 8px rgba(44, 31, 20, 0.08);
-      border-radius: 3px;
       overflow: hidden;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
@@ -70,11 +70,15 @@ sitemap: false
       flex-shrink: 0;
       position: relative;
       overflow: hidden;
+      background: #4a3728;
+      transform: translateZ(0);
     }
 
     .flyer-col-photo img {
-      width: 100%;
-      height: 100%;
+      position: absolute;
+      top: -2px; left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
       object-fit: cover;
       object-position: 45% 48%;
       display: block;
@@ -90,6 +94,17 @@ sitemap: false
       padding: 6mm 5mm 5mm 4mm;
       position: relative;
       overflow: hidden;
+    }
+
+    /* gradiënt om helle randen in foto te maskeren */
+    .flyer-col-photo::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(44,31,20,0.45) 0%, transparent 18%),
+        linear-gradient(to top,    rgba(44,31,20,0.45) 0%, transparent 18%);
+      pointer-events: none;
     }
 
     /* lotus watermark */
