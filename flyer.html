@@ -71,30 +71,29 @@ sitemap: false
       position: relative;
       overflow: hidden;
       background: #4a3728;
-      transform: translateZ(0);
     }
 
     .flyer-col-photo img {
       position: absolute;
-      top: -2px; left: -2px; right: -2px; bottom: -2px;
-      width: calc(100% + 4px);
-      height: calc(100% + 4px);
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: 45% 48%;
       display: block;
       filter: brightness(1.06) contrast(0.94) saturate(0.96);
     }
 
-    /* gradiënt om helle randen in foto te maskeren */
     .flyer-col-photo::after {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(to bottom, rgba(44,31,20,0.45) 0%, transparent 18%),
-        linear-gradient(to top,    rgba(44,31,20,0.45) 0%, transparent 18%);
+        linear-gradient(to bottom, rgba(44,31,20,0.25) 0%, transparent 10%),
+        linear-gradient(to top,    rgba(44,31,20,0.25) 0%, transparent 10%);
       pointer-events: none;
     }
+
 
     /* === RECHTER KOLOM: INHOUD === */
     .flyer-col-content {
@@ -197,15 +196,39 @@ sitemap: false
       font-weight: 300;
       color: var(--terracotta);
       line-height: 1.55;
-      margin-bottom: 4mm;
+      margin-bottom: 2mm;
+    }
+
+    /* === SESSIE INFO === */
+    .col-session {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5mm;
+      margin-bottom: 2mm;
+    }
+
+    .col-session-name {
+      font-family: "Fraunces", serif;
+      font-style: italic;
+      font-variation-settings: 'opsz' 120;
+      font-size: 4mm;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .col-session-meta {
+      font-size: 2.5mm;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: var(--ink-soft);
     }
 
     /* === FASES === */
     .col-phases {
       display: flex;
       flex-direction: column;
-      gap: 1.5mm;
-      margin-bottom: 4mm;
+      gap: 1mm;
+      margin-bottom: 3mm;
     }
 
     .col-phase {
@@ -249,19 +272,19 @@ sitemap: false
       color: var(--gold);
       padding-left: 2.5mm;
       margin-top: 1.5mm;
-      margin-bottom: 4mm;
+      margin-bottom: 2mm;
     }
 
     /* === DECORATIEVE SECTIE === */
     .col-deco {
       flex: 1;
-      min-height: 16mm;
+      min-height: 6mm;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 2mm;
-      margin-bottom: 4mm;
+      gap: 1.5mm;
+      margin-bottom: 2mm;
     }
 
     .col-deco svg {
@@ -295,7 +318,7 @@ sitemap: false
     /* === CONTACT === */
     .col-contact {
       border-top: 0.3mm solid rgba(196, 154, 98, 0.3);
-      padding-top: 4mm;
+      padding-top: 2.5mm;
     }
 
     .col-contact-label {
@@ -311,7 +334,7 @@ sitemap: false
     .col-contact-items {
       display: flex;
       flex-direction: column;
-      gap: 1.5mm;
+      gap: 1mm;
     }
 
     .col-contact-item {
@@ -332,15 +355,15 @@ sitemap: false
     }
 
     .col-qr {
-      margin-top: 3mm;
+      margin-top: 2mm;
       display: flex;
       align-items: center;
-      gap: 3mm;
+      gap: 2.5mm;
     }
 
     .col-qr img {
-      width: 18mm;
-      height: 18mm;
+      width: 14mm;
+      height: 14mm;
       display: block;
     }
 
@@ -401,6 +424,12 @@ sitemap: false
     <!-- Voor wie -->
     <p class="col-voor-wie">Of je nu komt met stress, vermoeidheid of gewoon de behoefte om even bij jezelf te zijn. Je bent welkom.</p>
 
+    <!-- Sessie info -->
+    <div class="col-session">
+      <span class="col-session-name">Lotus Moment sessie</span>
+      <span class="col-session-meta">70 minuten</span>
+    </div>
+
     <!-- Fases -->
     <div class="col-phases">
       <div class="col-phase"><span class="col-phase-num">i.</span><span>Aankomen: kort afstemmen wat je lichaam aangeeft.</span></div>
@@ -420,8 +449,6 @@ sitemap: false
         <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/>
         <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/>
       </svg>
-      <span class="col-deco-title">Lotus Moment sessie</span>
-      <span class="col-deco-meta">70 minuten</span>
     </div>
 
     <!-- Contact -->
