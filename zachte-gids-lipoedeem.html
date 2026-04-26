@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zachter leven met lipoedeem — Lotus Moments</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f5f0e8;
+  --text: #3f3226;
+  --muted: #6b5a4b;
+  --accent: #cfa16f;
+  --accent-dk: #b07d4a;
+  --soft: #f3d6c6;
+  --neutral: #fdf8f2;
+  --neutral-s: #e4d9c8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: #cfc5b2;
+  color: var(--text);
+  line-height: 1.7;
+  hyphens: none;
+  -webkit-hyphens: none;
+}
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  background: var(--bg);
+  margin: 8mm auto;
+  padding: 18mm 20mm 26mm;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+}
+
+/* Cover */
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  padding: 0;
+}
+.cover-header {
+  padding: 10mm 20mm 6mm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.cover-header svg { fill: var(--accent-dk); }
+.cover-header span {
+  font-family: 'Raleway', sans-serif;
+  font-size: 10pt;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cover-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16mm 24mm 6mm;
+  position: relative;
+  overflow: hidden;
+}
+.cover-body::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10mm;
+  transform: translateX(-50%);
+  width: 160mm;
+  height: 160mm;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 128 128' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z' fill='%23cfa16f'/%3E%3Cpath d='M32 34c0 18 8 28 32 34-6-16-16-26-32-34z' fill='%23cfa16f'/%3E%3Cpath d='M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z' fill='%23cfa16f'/%3E%3Cpath d='M22 72c18 6 36 6 84 0-32 24-52 24-84 0z' fill='%23cfa16f'/%3E%3C/svg%3E") center/contain no-repeat;
+  opacity: 0.10;
+  pointer-events: none;
+}
+.cover-author {
+  font-family: 'Raleway', sans-serif;
+  font-size: 8pt;
+  color: var(--accent);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 6mm;
+}
+.cover h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34pt;
+  color: #8b6347;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.18;
+  margin: 0 0 5mm;
+}
+.cover-rule {
+  width: 30mm;
+  height: 1px;
+  background: var(--accent);
+  margin: 5mm auto;
+}
+.cover-subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 11pt;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 5mm;
+}
+.cover-tagline {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 10pt;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 120mm;
+  margin: 0 auto;
+}
+.cover-footer {
+  padding: 8mm 20mm 10mm;
+  border-top: 1px solid var(--neutral-s);
+}
+.cover-footer p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 8pt;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Band */
+.band {
+  background: rgba(207,161,111,0.12);
+  border-bottom: 1.5px solid var(--accent);
+  margin: -18mm -20mm 8mm;
+  padding: 5mm 20mm;
+  display: flex;
+  align-items: center;
+  gap: 3mm;
+}
+.band h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 15pt;
+  color: var(--accent-dk);
+  font-weight: 600;
+  margin: 0;
+}
+.ch-num {
+  font-family: 'Raleway', sans-serif;
+  font-size: 9pt;
+  font-weight: 600;
+  opacity: 0.55;
+  margin-right: 3mm;
+}
+
+/* Typography */
+p { font-size: 9.5pt; margin-bottom: 4mm; color: var(--text); }
+h3 { font-family: 'Playfair Display', serif; font-size: 12pt; color: var(--accent-dk); margin: 5mm 0 2mm; font-weight: 600; }
+ul, ol { padding-left: 5mm; margin-bottom: 4mm; }
+li { font-size: 9.5pt; margin-bottom: 2mm; }
+hr { border: none; border-top: 1px solid var(--neutral-s); margin: 6mm 0; }
+a { color: var(--accent-dk); }
+
+/* Boxes */
+.box {
+  border-radius: 3px;
+  padding: 4mm 5mm;
+  margin: 4mm 0;
+}
+.box-soft { background: #fdf3ec; border-left: 3px solid var(--accent); }
+.box-quote {
+  background: transparent;
+  border-left: 3px solid var(--accent);
+  padding: 3mm 6mm;
+  margin: 5mm 0;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 11.5pt;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* Steps */
+.step {
+  display: flex;
+  gap: 4mm;
+  align-items: flex-start;
+  margin: 4mm 0;
+}
+.step-num {
+  width: 7mm;
+  height: 7mm;
+  min-width: 7mm;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  margin-top: 0.5mm;
+}
+.step-body h3 { margin-top: 0; }
+
+/* Section title */
+.stitle {
+  border-bottom: 1px solid var(--neutral-s);
+  padding-bottom: 2mm;
+  margin: 5mm 0 3mm;
+}
+.stitle h3 { margin: 0; }
+
+/* Page number */
+.pgnum {
+  position: absolute;
+  bottom: 10mm;
+  right: 20mm;
+  font-family: 'Raleway', sans-serif;
+  font-size: 7pt;
+  color: var(--accent);
+  opacity: 0.6;
+}
+
+/* Habit rows */
+.habit-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 3mm;
+  margin: 3mm 0;
+  font-size: 9.5pt;
+}
+.habit-icon { font-size: 11pt; min-width: 6mm; }
+
+/* Signature */
+.signature {
+  font-family: 'Playfair Display', serif;
+  font-size: 14pt;
+  color: var(--accent-dk);
+  font-style: italic;
+  margin-top: 5mm;
+}
+.signature-sub {
+  font-family: 'Raleway', sans-serif;
+  font-size: 8pt;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  margin-top: 1mm;
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="page cover">
+  <div class="cover-header">
+    <svg width="16" height="16" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+      <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/>
+      <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/>
+      <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/>
+      <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/>
+    </svg>
+    <span>Lotus Moments</span>
+  </div>
+  <div class="cover-body">
+    <div class="cover-author">Emine · Lotus Moments</div>
+    <h1>Zachter leven<br>met lipoedeem</h1>
+    <div class="cover-rule"></div>
+    <div class="cover-subtitle">Een zachte gids</div>
+    <div class="cover-tagline">Voor vrouwen die moe zijn van de strijd<br>en klaar zijn voor een andere aanpak</div>
+  </div>
+  <div class="cover-footer">
+    <p>Lotus Moments · Holistische Massagepraktijk · Deventer · lotusmoments.nl</p>
+  </div>
+</div>
+
+<!-- H01: VOORWOORD -->
+<div class="page">
+  <div class="band"><h2><span class="ch-num">01</span> Voorwoord</h2></div>
+
+  <p>Deze gids is voor jou gemaakt.</p>
+
+  <p>Voor de vrouwen die weten hoe het voelt om je lichaam niet te begrijpen. Die alles hebben geprobeerd. Die hard voor zichzelf zijn geweest — en toch niet de resultaten zagen die ze hoopten.</p>
+
+  <p>Voor de vrouwen die ergens diep van binnen voelen: <em>het moet anders kunnen.</em></p>
+
+  <hr>
+
+  <p>Ik heb lipoedeem. Ik weet hoe het voelt om elke spiegel te vermijden. Hoe vermoeiend het is om steeds opnieuw te beginnen met diëten, bewegen, proberen. En hoe anders het voelt als je stopt met vechten tegen je lichaam — en begint met luisteren.</p>
+
+  <p>Dat keerpunt was voor mij het begin van alles. Niet meer harder proberen. Maar zachter worden. En vanuit die ervaring ben ik holistisch massagetherapeut geworden — om andere vrouwen te helpen datzelfde te vinden.</p>
+
+  <hr>
+
+  <div class="box-quote">
+    "Wat je in handen hebt, is geen dieetschema.<br>Geen weekplan. Geen lijstje met dingen die jij 'moet'.<br>Het is een zachte hand op je schouder."
+  </div>
+
+  <p>Lees wat je nodig hebt. Sla over wat niet bij je past. Er is geen goede of foute manier.</p>
+
+  <div style="margin-top:8mm">
+    <div class="signature">Liefs, Emine</div>
+    <div class="signature-sub">Lotus Moments · Holistische massagepraktijk · Deventer</div>
+  </div>
+
+  <div class="pgnum">2</div>
+</div>
+
+<!-- H02: WAT IS LIPOEDEEM -->
+<div class="page">
+  <div class="band"><h2><span class="ch-num">02</span> Wat is lipoedeem?</h2></div>
+
+  <p>Lipoedeem is een chronische aandoening van het bindweefsel en de vetcellen. Het treft bijna uitsluitend vrouwen en begint vaak bij hormonale veranderingen — puberteit, zwangerschap of de overgang.</p>
+
+  <div class="box box-soft" style="margin:5mm 0">
+    <p style="margin:0"><strong>Het is niet jouw schuld.</strong> Lipoedeem is geen gevolg van te veel eten of te weinig bewegen. Jouw lichaam werkt gewoon anders — en dat verdient begrip, geen oordeel.</p>
+  </div>
+
+  <div class="stitle"><h3>Wat je misschien herkent</h3></div>
+
+  <div class="habit-row"><div class="habit-icon">🌸</div><div>Zware of dikke benen die niet weggaan, wat je ook doet</div></div>
+  <div class="habit-row"><div class="habit-icon">🌸</div><div>Pijn of drukgevoeligheid in je benen of armen</div></div>
+  <div class="habit-row"><div class="habit-icon">🌸</div><div>Een opgeblazen gevoel dat erger wordt bij warmte of stress</div></div>
+  <div class="habit-row"><div class="habit-icon">🌸</div><div>Een duidelijk verschil tussen je boven- en onderlichaam</div></div>
+  <div class="habit-row"><div class="habit-icon">🌸</div><div>Snel blauwe plekken krijgen</div></div>
+
+  <hr>
+
+  <div class="stitle"><h3>Wat lipoedeem beïnvloedt</h3></div>
+
+  <p>Lipoedeem wordt beïnvloed door hormonen, stress, slaap, voeding en beweging. Niet één ding maakt het beter — en niet één ding maakt het slechter. Het is een samenspel.</p>
+
+  <p>Dat is precies waarom een zachte, holistische aanpak werkt. Niet één oplossing, maar zachte aandacht voor het geheel.</p>
+
+  <div class="pgnum">3</div>
+</div>
+
+<!-- H03: WAAROM ZACHTHEID WERKT -->
+<div class="page">
+  <div class="band"><h2><span class="ch-num">03</span> Waarom zachtheid werkt</h2></div>
+
+  <p>Dit klinkt misschien gek: <em>zachter zijn voor jezelf helpt echt.</em> Niet als cliché. Maar letterlijk, in je lichaam.</p>
+
+  <div class="stitle"><h3>Wat stress doet</h3></div>
+
+  <p>Wanneer je gestrest bent — ook als je het niet bewust voelt — zet je lichaam zich schrap. Je zenuwstelsel gaat in de 'aan'-stand. Je spieren spannen zich aan. En je lymfesysteem, dat overtollig vocht afvoert, werkt trager.</p>
+
+  <p>Bij lipoedeem betekent meer stress: meer zwelling, meer pijn, meer vastzitten.</p>
+
+  <div class="box box-soft" style="margin:5mm 0">
+    <p style="margin:0"><strong>Rust is geen luiheid. Rust is therapie.</strong><br>Als je lichaam in rust is, kan het zichzelf herstellen. Vocht stroomt vrijer. Ontstekingen dalen. Je voelt je lichter.</p>
+  </div>
+
+  <div class="stitle"><h3>Waarom "harder je best doen" niet werkt</h3></div>
+
+  <p>Intensief sporten, streng diëten, jezelf dwingen — dit zet je lichaam onder extra stress. En meer stress maakt lipoedeem erger, niet beter.</p>
+
+  <p>Dat is niet zwak zijn. Dat is gewoon hoe lipoedeem werkt.</p>
+
+  <div class="box-quote">
+    "Je hoeft je lichaam niet te overwinnen.<br>Je mag er vrede mee sluiten."
+  </div>
+
+  <p>Zachtheid — in beweging, voeding, gedachten — activeert het rustende deel van je zenuwstelsel. Dat deel dat jouw lymfe laat stromen. Dat deel dat heling mogelijk maakt.</p>
+
+  <div class="pgnum">4</div>
+</div>
+
+<!-- H04: DE BASIS -->
+<div class="page">
+  <div class="band"><h2><span class="ch-num">04</span> De basis: minder doen, meer voelen</h2></div>
+
+  <p>Dit is de kern van alles wat ik je wil meegeven.</p>
+
+  <div class="box-quote">
+    "Meer doen is niet altijd beter.<br>Meer voelen wel."
+  </div>
+
+  <div class="stitle"><h3>Vertragen</h3></div>
+  <p>We leven snel. We eten snel. We gaan snel verder. Maar jouw lichaam heeft ruimte nodig — om te verwerken, te herstellen, te bewegen. Geef het die ruimte. Niet als een taak, maar als een keuze.</p>
+
+  <div class="stitle"><h3>Luisteren</h3></div>
+  <p>Wat zegt jouw lichaam vandaag? Is het moe? Gespannen? Zwaar? Begin daar. Niet met wat je 'zou moeten' voelen of doen — maar met wat er nu is.</p>
+  <p>Je lichaam weet veel. Het vraagt alleen om aandacht.</p>
+
+  <div class="stitle"><h3>Niet pushen</h3></div>
+  <p>Als iets te veel voelt, is het te veel. Er is geen prijs voor doorzetten als je lichaam een pauze vraagt. Pauze nemen is niet opgeven — het is luisteren.</p>
+
+  <hr>
+
+  <div class="box box-soft">
+    <p style="margin:0">In de rest van deze gids laat ik je zien hoe dat er in de praktijk uit kan zien. Niet als een schema — maar als zachte suggesties, voor de dagen dat het goed gaat én de dagen dat het minder gaat.</p>
+  </div>
+
+  <div class="pgnum">5</div>
+</div>
+
+<!-- H05: 3 ZACHTE STAPPEN deel 1 -->
+<div class="page">
+  <div class="band"><h2><span class="ch-num">05</span> 3 zachte stappen die helpen</h2></div>
+
+  <p>Dit zijn de drie dingen die ik zelf doe. Die ik aanraad aan iedere vrouw met lipoedeem. Simpel, zonder gedoe — en ze werken ook als je ze niet elke dag doet.</p>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body">
+      <h3>Ademhaling</h3>
+      <p>Leg je hand op je buik. Adem langzaam in door je neus — voel je buik opkomen. Adem langzaam en volledig uit door je mond.</p>
+      <p>Twee minuten. Dat is genoeg.</p>
+      <p>Diep ademhalen activeert je rustende zenuwstelsel. Het stimuleert je lymfesysteem. En het verlaagt cortisol — het stresshormoon dat lipoedeem verergert.</p>
+      <div class="box box-soft" style="margin-top:3mm">
+        <p style="margin:0;font-size:9pt"><strong>Wanneer?</strong> 's Ochtends voor je opstaat, of 's avonds in bed. Of gewoon wanneer je eraan denkt.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="step" style="margin-top:5mm">
+    <div class="step-num">2</div>
+    <div class="step-body">
+      <h3>Benen omhoog</h3>
+      <p>Ga liggen en leg je benen omhoog — tegen de muur, op een kussen, op de leuning van de bank. Wat werkt voor jou.</p>
+      <p>Vijf minuten is genoeg. Tien is mooi meegenomen.</p>
+      <p>Dit helpt het lymfevocht terug omhoog te stromen. Je benen voelen lichter. Het zwellinggevoel neemt af.</p>
+      <div class="box box-soft" style="margin-top:3mm">
+        <p style="margin:0;font-size:9pt"><strong>Tip:</strong> Combineer met ademhaling, of luister naar een podcast. Geen aparte moeite nodig.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pgnum">6</div>
+</div>
+
+<!-- H05: 3 ZACHTE STAPPEN deel 2 -->
+<div class="page">
+  <div class="band"><h2><span class="ch-num">05</span> 3 zachte stappen — vervolg</h2></div>
+
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body">
+      <h3>Zachte aanraking</h3>
+      <p>Raak je benen zacht aan. Geen techniek nodig. Geen druk. Gewoon je handen op je huid — en rustig bewegen.</p>
+      <p>Begin bij je liezen. Maak kleine, lichte cirkelbewegingen. Werk dan langzaam naar beneden: bovenbeen → knie → onderbeen → enkel.</p>
+      <p>De druk is zo licht dat het bijna niets voelt. Dat is precies goed — lymfemassage werkt heel oppervlakkig.</p>
+      <div class="box box-soft" style="margin-top:3mm">
+        <p style="margin:0;font-size:9pt"><strong>Wanneer?</strong> 5 minuten per been voor het slapengaan. Op de bank, in bed — het maakt niet uit.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="stitle"><h3>Wil je meer dan zelfmassage?</h3></div>
+
+  <p>Bij Lotus Moments bied ik holistische massage aan, specifiek gericht op vrouwen met lipoedeem. Zachte lymfedrainage, aandacht voor jouw lichaam — zonder druk of oordeel.</p>
+
+  <div class="box box-soft">
+    <p style="margin:0">🌸 <strong>Lotus Moments · Deventer</strong><br>
+    <a href="https://lotusmoments.nl">lotusmoments.nl</a> &nbsp;·&nbsp; <a href="https://calendly.com/emine314/30min">Afspraak inplannen</a></p>
+  </div>
+
+  <div class="pgnum">7</div>
+</div>
+
+<!-- H06: ONDERSTEUNING IN JE DAG -->
+<div class="page">
+  <div class="band"><h2><span class="ch-num">06</span> Ondersteuning in je dag</h2></div>
+
+  <p>Geen dagschema. Geen verplichtingen. Alleen kleine dingen die je dag wat zachter maken — als je er aan toe bent.</p>
+
+  <div class="stitle"><h3>Wandelen</h3></div>
+  <p>Kort en rustig. Een blokje om, naar de winkel, door het park. Beweging stimuleert je lymfesysteem — maar alleen als het niet voelt als straf. Doe het wanneer het fijn is, laat het staan als het te veel is.</p>
+
+  <div class="stitle"><h3>Rustmomenten</h3></div>
+  <p>Gewoon even zitten. Niet scrollen, niet regelen, alleen zijn. Twee minuten mag al. Je zenuwstelsel laadt op. Je lymfe stroomt. Je hoofd wordt stiller.</p>
+
+  <div class="stitle"><h3>Water drinken</h3></div>
+  <p>Simpel, maar het werkt. Voldoende water helpt je lymfesysteem. Warm water met citroen 's ochtends is een zachte manier om de dag te beginnen.</p>
+
+  <div class="stitle"><h3>Voeding — zonder regels</h3></div>
+  <p>Geen dieet. Geen verboden. Alleen een paar zachte richtingen als je bewustere keuzes wilt maken:</p>
+
+  <div class="habit-row"><div class="habit-icon">🥦</div><div>Meer groenten en gezonde vetten (avocado, olijfolie, noten)</div></div>
+  <div class="habit-row"><div class="habit-icon">🐟</div><div>Vette vis, eieren of peulvruchten als basis van je maaltijd</div></div>
+  <div class="habit-row"><div class="habit-icon">🍬</div><div>Minder suiker en bewerkt eten — niet nooit, maar minder</div></div>
+  <div class="habit-row"><div class="habit-icon">🫖</div><div>Kruidenthee of warm water in plaats van veel cafeïne</div></div>
+
+  <div class="box box-soft" style="margin-top:4mm">
+    <p style="margin:0">Dit zijn suggesties — geen regels. En zeker geen reden voor schuldgevoel als het een dag niet lukt.</p>
+  </div>
+
+  <div class="pgnum">8</div>
+</div>
+
+<!-- H07: OMGAAN MET JE LICHAAM -->
+<div class="page">
+  <div class="band"><h2><span class="ch-num">07</span> Omgaan met je lichaam</h2></div>
+
+  <p>Dit is misschien het moeilijkste hoofdstuk. En tegelijk het belangrijkste.</p>
+
+  <div class="box-quote">
+    "Je lichaam werkt anders.<br>Het werkt niet verkeerd."
+  </div>
+
+  <div class="stitle"><h3>Acceptatie — stap voor stap</h3></div>
+  <p>Acceptatie betekent niet dat je blij moet zijn met lipoedeem. Het betekent dat je stopt met oorlog voeren met je eigen lichaam. Dat je de energie die je besteedde aan schaamte, teruggeeft aan jezelf.</p>
+  <p>Dat gaat niet van de ene op de andere dag. Maar elke dag een klein beetje zachter kijken telt.</p>
+
+  <div class="stitle"><h3>Geen schuldgevoel</h3></div>
+  <p>Je hebt lipoedeem niet verdiend. Het is er gewoon. Slechte dagen zijn geen bewijs dat je het fout doet — het zijn gewoon slechte dagen.</p>
+  <p>Eet je iets wat niet ideaal is? Geen straf. Geen reset. Gewoon de volgende maaltijd, met zachtheid.</p>
+
+  <div class="stitle"><h3>Zachter kijken</h3></div>
+  <p>Probeer je lichaam eens te bekijken met de ogen die je zou gebruiken voor een goede vriendin. Wat zou je haar zeggen? Waarschijnlijk iets heel anders dan wat je normaal tegen jezelf zegt.</p>
+
+  <div class="box box-soft" style="margin-top:4mm">
+    <p style="margin:0"><em>Jouw lichaam draagt je elke dag. Het doet zijn best. Het verdient zachtheid — van jou.</em></p>
+  </div>
+
+  <div class="pgnum">9</div>
+</div>
+
+<!-- H08: JOUW ZACHTE START -->
+<div class="page">
+  <div class="band"><h2><span class="ch-num">08</span> Jouw zachte start</h2></div>
+
+  <p>Je hebt deze gids gelezen. Misschien voel je al meer rust. Misschien ook wat overweldiging — want ook dit zijn allemaal dingen die je 'kunt doen'.</p>
+
+  <p>Dus laten we het heel klein houden.</p>
+
+  <div class="box box-soft" style="margin:5mm 0;padding:5mm 6mm">
+    <h3 style="margin-top:0;margin-bottom:3mm">Kies 1 ding</h3>
+    <p style="margin-bottom:2mm">Niet alles. Eén.</p>
+    <p style="margin:0">Welke van de drie stappen voelt het meest aanlokkelijk?</p>
+  </div>
+
+  <div class="step">
+    <div class="step-num">1</div>
+    <div class="step-body"><p style="margin:0">Twee minuten diep ademhalen</p></div>
+  </div>
+  <div class="step">
+    <div class="step-num">2</div>
+    <div class="step-body"><p style="margin:0">Benen omhoog leggen</p></div>
+  </div>
+  <div class="step">
+    <div class="step-num">3</div>
+    <div class="step-body"><p style="margin:0">Zachte aanraking — even je benen rustig aanraken</p></div>
+  </div>
+
+  <hr>
+
+  <p>Doe dat ding drie keer deze week. Niet elke dag. Niet perfect. Gewoon drie keer.</p>
+
+  <p>Als het lukt: mooi. Als het er maar één wordt: ook goed. Als het niet lukt: de week daarna gewoon opnieuw.</p>
+
+  <div class="box-quote">
+    "Klein beginnen is niet weinig doen.<br>Het is slim beginnen."
+  </div>
+
+  <div class="pgnum">10</div>
+</div>
+
+<!-- H09: AFSLUITING -->
+<div class="page">
+  <div class="band"><h2><span class="ch-num">09</span> Tot slot</h2></div>
+
+  <p>Je bent aan het einde van deze gids. Maar dit is niet het einde — het is een begin.</p>
+
+  <p>Een begin van een andere manier van omgaan met je lichaam. Zachter. Rustiger. Met meer begrip en minder oordeel.</p>
+
+  <div class="box-quote">
+    "Je hoeft je lichaam niet te fixen.<br>Je mag ermee in verbinding komen."
+  </div>
+
+  <p>Dat is wat ik jou het meest toewens. Niet perfecte benen. Niet een leven zonder klachten. Maar een leven waarin je je lichaam kunt aanraken zonder afkeer. Waarin een slechte dag geen bewijs is van falen. Waarin zachtheid vanzelf wordt.</p>
+
+  <hr>
+
+  <div class="stitle"><h3>🌸 Lotus Moments</h3></div>
+
+  <p>Als je meer wilt — meer begeleiding, een gesprek, of gewoon een uur volledig voor jezelf — ben ik er.</p>
+
+  <p>Bij Lotus Moments bied ik holistische massage aan voor vrouwen met lipoedeem. Geen oordeel. Geen druk. Alleen aandacht voor jouw lichaam, op jouw tempo.</p>
+
+  <div style="margin:5mm 0;display:grid;grid-template-columns:1fr 1fr;gap:2mm 6mm;font-size:9.5pt">
+    <div>🌐 <a href="https://lotusmoments.nl">lotusmoments.nl</a></div>
+    <div>📱 06 83 05 95 32</div>
+    <div>📸 @lotusmoments.nl</div>
+    <div>📧 info@lotusmoments.nl</div>
+  </div>
+
+  <div class="box box-soft">
+    <p style="margin:0">Wil je een afspraak maken? Dat kan via <a href="https://calendly.com/emine314/30min">calendly.com/emine314/30min</a> — of stuur me gewoon een berichtje. 🌿</p>
+  </div>
+
+  <div style="margin-top:8mm">
+    <div class="signature">Liefs, Emine</div>
+    <div class="signature-sub">Lotus Moments · Holistische massagepraktijk · Deventer</div>
+  </div>
+
+  <div class="pgnum">11</div>
+</div>
+
+</body>
+</html>
