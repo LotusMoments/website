@@ -15,15 +15,18 @@
   --soft: var(--blush);
   --neutral: var(--cream);
   --neutral-s: var(--paper);
+  --dark: var(--ink);
+  --green: #5a7a5c;
 }
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; hyphens: none !important; -webkit-hyphens: none !important; -moz-hyphens: none !important; -ms-hyphens: none !important; }
 body {
   font-family: var(--font-body);
   background: #cfc5b2;
   color: var(--text);
-  line-height: 1.7;
+  line-height: 1.65;
   hyphens: none;
   -webkit-hyphens: none;
+  counter-reset: pgnum 0;
 }
 .page {
   width: 210mm;
@@ -34,15 +37,31 @@ body {
   position: relative;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+  counter-increment: pgnum;
 }
+.page::after {
+  content: counter(pgnum);
+  position: absolute;
+  bottom: 9mm;
+  right: 20mm;
+  font-family: var(--font-body);
+  font-size: 9pt;
+  font-weight: 600;
+  color: var(--accent-dk);
+  opacity: 0.9;
+}
+.cover { counter-increment: none; }
+.cover::after { content: none; }
 
-/* Cover */
+/* ─── COVER ─── */
 .cover {
+  background: var(--bg);
   display: flex;
   flex-direction: column;
   align-items: stretch;
   text-align: center;
   padding: 0;
+  gap: 0;
 }
 .cover-header {
   padding: 10mm 20mm 6mm;
@@ -100,56 +119,106 @@ body {
   margin: 0 0 5mm;
 }
 .cover-rule {
-  width: 30mm;
-  height: 1px;
+  width: 28mm;
+  height: 1.5px;
   background: var(--accent);
-  margin: 5mm auto;
+  margin: 0 auto 5mm;
 }
 .cover-subtitle {
-  font-family: var(--font-body);
-  font-size: 11pt;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--muted);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 16pt;
+  color: var(--accent-dk);
   margin-bottom: 5mm;
 }
 .cover-tagline {
   font-family: var(--font-body);
   font-size: 10pt;
   color: var(--muted);
-  line-height: 1.6;
-  max-width: 120mm;
-  margin: 0 auto;
+  letter-spacing: 0.2px;
+}
+.cover-deco {
+  margin-top: 10mm;
+  opacity: 0.13;
 }
 .cover-footer {
-  padding: 8mm 20mm 10mm;
+  padding: 6mm 20mm 10mm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5mm;
   border-top: 1px solid var(--neutral-s);
 }
-.cover-footer p {
+.cover-footer-name {
+  font-family: var(--font-heading);
+  font-size: 11pt;
+  color: var(--text);
+  font-weight: 400;
+}
+.cover-footer-contact {
   font-family: var(--font-body);
-  font-size: 8pt;
-  color: var(--accent);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 7.5pt;
+  color: var(--muted);
+  letter-spacing: 0.8px;
 }
 
-/* Band */
+/* ─── TYPOGRAPHY ─── */
+h2 {
+  font-family: var(--font-heading);
+  font-size: 17pt;
+  color: var(--accent-dk);
+  font-weight: 400;
+  margin-bottom: 5mm;
+  line-height: 1.2;
+}
+h3 {
+  font-family: var(--font-heading);
+  font-size: 12pt;
+  color: var(--text);
+  margin: 4mm 0 2.5mm;
+}
+h4 {
+  font-family: var(--font-body);
+  font-size: 8pt;
+  color: var(--accent-dk);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin: 3mm 0 1.5mm;
+}
+p { margin-bottom: 3mm; font-size: 9.5pt; }
+ul, ol { padding-left: 5mm; margin-bottom: 3mm; }
+li { margin-bottom: 1.5mm; font-size: 9.5pt; }
+strong { color: var(--accent-dk); font-weight: 600; }
+em { color: var(--muted); font-style: italic; }
+
+/* ─── INHOUDSOPGAVE ─── */
+.toc-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 3mm;
+  padding: 2.5mm 0;
+  border-bottom: 1px dotted var(--neutral-s);
+}
+.toc-title { font-size: 9.5pt; color: var(--text); }
+.toc-dots { flex: 1; border-bottom: 1px dotted var(--neutral-s); margin-bottom: 1px; }
+.toc-page { font-family: var(--font-body); font-size: 8pt; color: var(--accent-dk); font-weight: 600; flex-shrink: 0; }
+.toc-section { font-family: var(--font-body); font-size: 7pt; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; margin: 5mm 0 1.5mm; }
+
+/* ─── PAGE BAND ─── */
 .band {
-  background: rgba(207,161,111,0.12);
+  background: rgba(207, 161, 111, 0.12);
   border-bottom: 1.5px solid var(--accent);
-  margin: -18mm -20mm 8mm;
+  margin: -18mm -20mm 7mm;
   padding: 5mm 20mm;
   display: flex;
   align-items: center;
   gap: 3mm;
 }
-.band h2 {
-  font-family: var(--font-heading);
-  font-size: 15pt;
-  color: var(--accent-dk);
-  font-weight: 600;
-  margin: 0;
-}
+.band h2 { color: var(--accent-dk); font-size: 15pt; margin: 0; }
+.band-icon { font-size: 16pt; }
+.band .band-icon svg { fill: var(--accent-dk); opacity: 0.65; }
 .ch-num {
   font-family: var(--font-body);
   font-size: 9pt;
@@ -158,78 +227,189 @@ body {
   margin-right: 3mm;
 }
 
-/* Typography */
-p { font-size: 9.5pt; margin-bottom: 4mm; color: var(--text); }
-h3 { font-family: var(--font-heading); font-size: 12pt; color: var(--accent-dk); margin: 5mm 0 2mm; font-weight: 600; }
-ul, ol { padding-left: 5mm; margin-bottom: 4mm; }
-li { font-size: 9.5pt; margin-bottom: 2mm; }
-hr { border: none; border-top: 1px solid var(--neutral-s); margin: 6mm 0; }
-a { color: var(--accent-dk); }
+/* ─── SECTION TITLE ─── */
+.stitle {
+  border-left: 3px solid var(--accent);
+  padding-left: 4mm;
+  margin: 6mm 0 4mm;
+}
+.stitle h3 { color: var(--accent-dk); margin: 0; font-size: 11pt; }
 
-/* Boxes */
+/* ─── BOXES ─── */
 .box {
-  border-radius: 3px;
+  background: var(--neutral);
+  border: 1px solid var(--neutral-s);
+  border-left: 3px solid var(--accent);
   padding: 4mm 5mm;
   margin: 4mm 0;
+  border-radius: 0 4px 4px 0;
 }
-.box-soft { background: #fdf3ec; border-left: 3px solid var(--accent); }
-.box-quote {
-  background: transparent;
-  border-left: 3px solid var(--accent);
-  padding: 3mm 6mm;
-  margin: 5mm 0;
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-size: 11.5pt;
-  color: var(--muted);
-  line-height: 1.55;
+.box-soft { background: var(--soft); border-left-color: var(--accent-dk); }
+.box-green { background: #edf2ed; border-left-color: var(--green); }
+.box-dark {
+  background: #f0e8dd;
+  border-left-color: var(--accent-dk);
 }
+.box-dark p, .box-dark li { color: var(--text); font-size: 9pt; margin-bottom: 2mm; }
+.box-dark h3, .box-dark h4 { color: var(--accent-dk); }
 
-/* Steps */
-.step {
-  display: flex;
-  gap: 4mm;
-  align-items: flex-start;
-  margin: 4mm 0;
-}
-.step-num {
-  width: 7mm;
-  height: 7mm;
-  min-width: 7mm;
+/* ─── TAG ─── */
+.tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   background: var(--accent);
-  color: white;
+  color: var(--dark);
+  padding: 1mm 3mm;
+  border-radius: 2px;
+  margin-bottom: 2mm;
+}
+.tag-green { background: var(--green); color: white; }
+
+/* ─── COLUMNS ─── */
+.cols2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4mm; }
+.cols-wide { display: grid; grid-template-columns: 1.6fr 1fr; gap: 5mm; }
+
+/* ─── FOOD CARDS ─── */
+.food-card {
+  background: var(--neutral);
+  border-radius: 6px;
+  padding: 4mm;
+  text-align: center;
+  border: 1px solid var(--neutral-s);
+}
+.food-card .ico { font-size: 22pt; display: block; margin-bottom: 2mm; }
+.food-card h4 { color: var(--accent-dk); font-size: 7.5pt; margin: 0 0 1mm; }
+.food-card p { font-size: 7.5pt; color: var(--muted); margin: 0; line-height: 1.4; }
+
+/* ─── STEPS ─── */
+.step { display: flex; gap: 4mm; margin-bottom: 6mm; align-items: flex-start; }
+.step-num {
+  background: var(--accent);
+  color: var(--dark);
+  font-family: var(--font-heading);
+  font-size: 15pt;
+  font-weight: 700;
+  min-width: 12mm;
+  height: 12mm;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(207,161,111,0.4);
+}
+.step-body { flex: 1; }
+.step-body h3 { margin-top: 2mm; font-size: 11pt; color: var(--accent-dk); }
+.step-body p, .step-body li { font-size: 9pt; }
+
+/* ─── TABLE ─── */
+table { width: 100%; border-collapse: collapse; margin: 3mm 0; font-size: 8.5pt; }
+th {
+  background: var(--accent);
+  color: var(--dark);
+  padding: 2.5mm 3mm;
+  text-align: left;
   font-family: var(--font-body);
-  font-size: 9pt;
   font-weight: 700;
-  margin-top: 0.5mm;
+  font-size: 7.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
-.step-body h3 { margin-top: 0; }
+td { padding: 2mm 3mm; border-bottom: 1px solid var(--neutral-s); vertical-align: top; }
+tr:nth-child(even) td { background: var(--neutral); }
 
-/* Section title */
-.stitle {
+/* ─── DAY CARDS ─── */
+.dag-card {
+  background: var(--neutral);
+  border-radius: 6px;
+  border: 1px solid var(--neutral-s);
+  border-top: 3px solid var(--accent);
+  padding: 4mm;
+}
+.dag-card h4 { color: var(--accent-dk); font-size: 8pt; margin-bottom: 2mm; text-align: center; }
+.dag-card li { font-size: 8pt; margin-bottom: 1mm; }
+
+/* ─── CHECKLIST ─── */
+.checklist { list-style: none; padding: 0; }
+.checklist li {
+  padding: 2mm 0 2mm 7mm;
   border-bottom: 1px solid var(--neutral-s);
-  padding-bottom: 2mm;
-  margin: 5mm 0 3mm;
-}
-.stitle h3 { margin: 0; }
-
-/* Page number */
-.pgnum {
-  position: absolute;
-  bottom: 9mm;
-  right: 20mm;
-  font-family: var(--font-body);
+  position: relative;
   font-size: 9pt;
-  font-weight: 600;
+}
+.checklist li::before { content: '☐'; position: absolute; left: 0; color: var(--accent); font-size: 10pt; }
+
+/* ─── MISC ─── */
+hr { border: none; border-top: 1px solid var(--neutral-s); margin: 5mm 0; }
+blockquote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 11pt;
   color: var(--accent-dk);
-  opacity: 0.9;
+  padding-left: 5mm;
+  border-left: 2px solid var(--accent);
+  margin: 5mm 0;
+}
+.highlight { color: var(--accent-dk); font-weight: 600; }
+.pill {
+  display: inline-block;
+  background: var(--soft);
+  color: var(--accent-dk);
+  font-size: 7.5pt;
+  font-family: var(--font-body);
+  font-weight: 600;
+  padding: 0.5mm 3mm;
+  border-radius: 10px;
+  margin: 0.5mm;
+}
+.disclaimer {
+  font-size: 7.5pt;
+  color: var(--muted);
+  font-style: italic;
+  border-top: 1px solid var(--neutral-s);
+  padding-top: 3mm;
+  margin-top: 5mm;
 }
 
-/* Habit rows */
+/* ─── FOOTER ─── */
+.footer {
+  position: absolute;
+  bottom: 8mm;
+  left: 20mm;
+  right: 20mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--neutral-s);
+  padding-top: 2mm;
+  font-size: 7pt;
+  color: var(--muted);
+  font-family: var(--font-body);
+}
+
+/* ─── PRINT ─── */
+@media print {
+  body { background: white; }
+  .page { margin: 0; box-shadow: none; page-break-after: always; }
+}
+
+
+/* ─── SHARED HELPERS ─── */
+.box-quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 11pt;
+  color: var(--accent-dk);
+  padding-left: 5mm;
+  border-left: 2px solid var(--accent);
+  margin: 5mm 0;
+  line-height: 1.55;
+}
 .habit-row {
   display: flex;
   align-items: flex-start;
@@ -238,8 +418,6 @@ a { color: var(--accent-dk); }
   font-size: 9.5pt;
 }
 .habit-icon { font-size: 11pt; min-width: 6mm; }
-
-/* Signature */
 .signature {
   font-family: var(--font-heading);
   font-size: 14pt;
@@ -254,6 +432,7 @@ a { color: var(--accent-dk); }
   letter-spacing: 0.5px;
   margin-top: 1mm;
 }
+.pgnum { display: none; }
 </style>
 </head>
 <body>
@@ -261,7 +440,7 @@ a { color: var(--accent-dk); }
 <!-- COVER -->
 <div class="page cover">
   <div class="cover-header">
-    <svg width="16" height="16" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="34" height="34">
       <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/>
       <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/>
       <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/>
@@ -273,11 +452,12 @@ a { color: var(--accent-dk); }
     <div class="cover-author">Emine · Lotus Moments</div>
     <h1>Zachter leven<br>met lipoedeem</h1>
     <div class="cover-rule"></div>
-    <div class="cover-subtitle">Een zachte gids</div>
+    <div class="cover-subtitle">Je zachte eerste stap</div>
     <div class="cover-tagline">Voor vrouwen die moe zijn van de strijd<br>en klaar zijn voor een andere aanpak</div>
   </div>
   <div class="cover-footer">
-    <p>Lotus Moments · Holistische Massagepraktijk · Deventer · lotusmoments.nl</p>
+    <div class="cover-footer-name">Lotus Moments &nbsp;·&nbsp; Holistische Praktijk Deventer</div>
+    <div class="cover-footer-contact">info@lotusmoments.nl &nbsp;·&nbsp; 06 83 05 95 32 &nbsp;·&nbsp; lotusmoments.nl</div>
   </div>
 </div>
 
@@ -304,6 +484,10 @@ a { color: var(--accent-dk); }
   </div>
 
   <p>Lees wat je nodig hebt. Sla over wat niet bij je past. Er is geen goede of foute manier.</p>
+
+  <div class="box box-soft" style="margin-top:5mm">
+    <p style="margin:0">Deze gids is bedoeld als zachte eerste stap. Wil je later dieper aan de slag met voeding, hormonen, lymfe en een praktisch stappenplan, dan is er ook de uitgebreide gids <em>In balans met Lipoedeem</em>.</p>
+  </div>
 
   <div style="margin-top:8mm">
     <div class="signature">Liefs, Emine</div>
@@ -335,9 +519,9 @@ a { color: var(--accent-dk); }
 
   <div class="stitle"><h3>Wat lipoedeem beïnvloedt</h3></div>
 
-  <p>Lipoedeem wordt beïnvloed door hormonen, stress, slaap, voeding en beweging. Niet één ding maakt het beter, en niet één ding maakt het slechter. Het is een samenspel.</p>
+  <p>Lipoedeem wordt beïnvloed door veel factoren: je hormonen, je stressniveau, je slaap, je voeding, je beweging en hoe veilig je je voelt in je lichaam. Dat hoeft je nu niet allemaal bezig te houden.</p>
 
-  <p>Dat is precies waarom een zachte, holistische aanpak werkt. Niet één oplossing, maar zachte aandacht voor het geheel.</p>
+  <p>In deze gids beginnen we bij de basis: rust, herkenning en kleine stappen. De verdieping komt later, als je daar ruimte voor hebt.</p>
 
   <div class="pgnum">3</div>
 </div>
@@ -350,17 +534,17 @@ a { color: var(--accent-dk); }
 
   <div class="stitle"><h3>Wat stress doet</h3></div>
 
-  <p>Wanneer je gestrest bent, ook als je het niet bewust voelt, zet je lichaam zich schrap. Je zenuwstelsel gaat in de 'aan'-stand. Je spieren spannen zich aan. En je lymfesysteem, dat overtollig vocht afvoert, werkt trager.</p>
+  <p>Wanneer je gestrest bent, ook als je het niet bewust voelt, zet je lichaam zich schrap. Je spieren spannen zich aan. Je adem wordt hoger. Je lijf gaat in de stand: volhouden.</p>
 
-  <p>Bij lipoedeem betekent meer stress: meer zwelling, meer pijn, meer vastzitten.</p>
+  <p>Bij lipoedeem kan dat extra zwaar voelen. Je benen voelen voller, je lichaam voelt minder vrij en je hoofd wordt moe van alles wat je eigenlijk zou moeten doen.</p>
 
   <div class="box box-soft" style="margin:5mm 0">
-    <p style="margin:0"><strong>Rust is geen luiheid. Rust is therapie.</strong><br>Als je lichaam in rust is, kan het zichzelf herstellen. Vocht stroomt vrijer. Ontstekingen dalen. Je voelt je lichter.</p>
+    <p style="margin:0"><strong>Rust is geen luiheid.</strong><br>Rust is een manier om je lichaam te laten merken dat het niet steeds hoeft te vechten.</p>
   </div>
 
   <div class="stitle"><h3>Waarom "harder je best doen" niet werkt</h3></div>
 
-  <p>Intensief sporten, streng diëten, jezelf dwingen, dit zet je lichaam onder extra stress. En meer stress maakt lipoedeem erger, niet beter.</p>
+  <p>Intensief sporten, streng diëten en jezelf dwingen kunnen je juist verder van je lichaam af brengen. Zeker als alles voelt als een test die je kunt halen of verpesten.</p>
 
   <p>Dat is niet zwak zijn. Dat is gewoon hoe lipoedeem werkt.</p>
 
@@ -368,7 +552,7 @@ a { color: var(--accent-dk); }
     "Je hoeft je lichaam niet te overwinnen.<br>Je mag er vrede mee sluiten."
   </div>
 
-  <p>Zachtheid, in beweging, voeding, gedachten, activeert het rustende deel van je zenuwstelsel. Dat deel dat jouw lymfe laat stromen. Dat deel dat heling mogelijk maakt.</p>
+  <p>Zachtheid is geen eindpunt. Het is het beginpunt van een andere relatie met je lichaam.</p>
 
   <div class="pgnum">4</div>
 </div>
@@ -406,7 +590,7 @@ a { color: var(--accent-dk); }
 <div class="page">
   <div class="band"><h2><span class="ch-num">05</span> 3 zachte stappen die helpen</h2></div>
 
-  <p>Dit zijn de drie dingen die ik zelf doe. Die ik aanraad aan iedere vrouw met lipoedeem. Simpel, zonder gedoe, en ze werken ook als je ze niet elke dag doet.</p>
+  <p>Dit zijn drie kleine ingangen. Geen protocol, geen vaste routine, maar manieren om je lichaam vandaag iets meer rust te geven.</p>
 
   <div class="step">
     <div class="step-num">1</div>
@@ -414,7 +598,7 @@ a { color: var(--accent-dk); }
       <h3>Ademhaling</h3>
       <p>Leg je hand op je buik. Adem langzaam in door je neus, voel je buik opkomen. Adem langzaam en volledig uit door je mond.</p>
       <p>Twee minuten. Dat is genoeg.</p>
-      <p>Diep ademhalen activeert je rustende zenuwstelsel. Het stimuleert je lymfesysteem. En het verlaagt cortisol, het stresshormoon dat lipoedeem verergert.</p>
+      <p>Je hoeft niets te bereiken. Alleen even voelen dat je er bent.</p>
       <div class="box box-soft" style="margin-top:3mm">
         <p style="margin:0;font-size:9pt"><strong>Wanneer?</strong> 's Ochtends voor je opstaat, of 's avonds in bed. Of gewoon wanneer je eraan denkt.</p>
       </div>
@@ -427,7 +611,7 @@ a { color: var(--accent-dk); }
       <h3>Benen omhoog</h3>
       <p>Ga liggen en leg je benen omhoog, tegen de muur, op een kussen, op de leuning van de bank. Wat werkt voor jou.</p>
       <p>Vijf minuten is genoeg. Tien is mooi meegenomen.</p>
-      <p>Dit helpt het lymfevocht terug omhoog te stromen. Je benen voelen lichter. Het zwellinggevoel neemt af.</p>
+      <p>Soms voelen je benen daarna iets rustiger of lichter. Soms merk je weinig. Ook dan heb je je lichaam een pauze gegeven.</p>
       <div class="box box-soft" style="margin-top:3mm">
         <p style="margin:0;font-size:9pt"><strong>Tip:</strong> Combineer met ademhaling, of luister naar een podcast. Geen aparte moeite nodig.</p>
       </div>
@@ -446,19 +630,18 @@ a { color: var(--accent-dk); }
     <div class="step-body">
       <h3>Zachte aanraking</h3>
       <p>Raak je benen zacht aan. Geen techniek nodig. Geen druk. Gewoon je handen op je huid, en rustig bewegen.</p>
-      <p>Begin bij je liezen. Maak kleine, lichte cirkelbewegingen. Werk dan langzaam naar beneden: bovenbeen → knie → onderbeen → enkel.</p>
-      <p>De druk is zo licht dat het bijna niets voelt. Dat is precies goed, lymfemassage werkt heel oppervlakkig.</p>
+      <p>Je hoeft jezelf niet te masseren alsof je iets moet oplossen. Dit gaat om contact maken met een deel van je lichaam waar misschien veel oordeel op zit.</p>
       <div class="box box-soft" style="margin-top:3mm">
-        <p style="margin:0;font-size:9pt"><strong>Wanneer?</strong> 5 minuten per been voor het slapengaan. Op de bank, in bed, het maakt niet uit.</p>
+        <p style="margin:0;font-size:9pt"><strong>Wanneer?</strong> Eén minuut is al genoeg. Op de bank, in bed, of na het douchen.</p>
       </div>
     </div>
   </div>
 
   <hr>
 
-  <div class="stitle"><h3>Wil je meer dan zelfmassage?</h3></div>
+  <div class="stitle"><h3>Wil je gedragen worden?</h3></div>
 
-  <p>Bij Lotus Moments bied ik holistische massage aan voor vrouwen met lipoedeem. Ontspanning voor je lichaam en zenuwstelsel, zonder druk of oordeel.</p>
+  <p>Bij Lotus Moments bied ik holistische massage aan voor vrouwen met lipoedeem. Een moment waarin jij niets hoeft uit te leggen, te bewijzen of vol te houden.</p>
 
   <div class="box box-soft">
     <p style="margin:0">🌸 <strong>Lotus Moments · Deventer</strong><br>
@@ -475,24 +658,21 @@ a { color: var(--accent-dk); }
   <p>Geen dagschema. Geen verplichtingen. Alleen kleine dingen die je dag wat zachter maken, als je er aan toe bent.</p>
 
   <div class="stitle"><h3>Wandelen</h3></div>
-  <p>Kort en rustig. Een blokje om, naar de winkel, door het park. Beweging stimuleert je lymfesysteem, maar alleen als het niet voelt als straf. Doe het wanneer het fijn is, laat het staan als het te veel is.</p>
+  <p>Kort en rustig. Een blokje om, naar de winkel, door het park. Niet om calorieën te verbranden, maar om weer even in beweging te komen. Doe het wanneer het fijn is, laat het staan als het te veel is.</p>
 
   <div class="stitle"><h3>Rustmomenten</h3></div>
-  <p>Gewoon even zitten. Niet scrollen, niet regelen, alleen zijn. Twee minuten mag al. Je zenuwstelsel laadt op. Je lymfe stroomt. Je hoofd wordt stiller.</p>
+  <p>Gewoon even zitten. Niet scrollen, niet regelen, alleen zijn. Twee minuten mag al. Je hoeft niet altijd door.</p>
 
   <div class="stitle"><h3>Water drinken</h3></div>
-  <p>Simpel, maar het werkt. Voldoende water helpt je lymfesysteem. Warm water met citroen 's ochtends is een zachte manier om de dag te beginnen.</p>
+  <p>Simpel, maar vaak vergeten. Een glas water kan een zachte manier zijn om weer even voor jezelf te kiezen.</p>
 
-  <div class="stitle"><h3>Voeding: zonder regels</h3></div>
-  <p>Geen dieet. Geen verboden. Alleen een paar zachte richtingen als je bewustere keuzes wilt maken:</p>
+  <div class="stitle"><h3>Voeding: zonder strijd</h3></div>
+  <p>In deze gids geef ik je geen voedingsregels. Niet omdat voeding onbelangrijk is, maar omdat je eerst uit de strijd met je lichaam mag komen.</p>
 
-  <div class="habit-row"><div class="habit-icon">🥦</div><div>Meer groenten en gezonde vetten (avocado, olijfolie, noten)</div></div>
-  <div class="habit-row"><div class="habit-icon">🐟</div><div>Vette vis, eieren of peulvruchten als basis van je maaltijd</div></div>
-  <div class="habit-row"><div class="habit-icon">🍬</div><div>Minder suiker en bewerkt eten, niet nooit, maar minder</div></div>
-  <div class="habit-row"><div class="habit-icon">🫖</div><div>Kruidenthee of warm water in plaats van veel cafeïne</div></div>
+  <p>Begin simpel: eet zittend, adem één keer rustig voor je begint en vraag jezelf af wat je lichaam vandaag nodig heeft. Meer hoeft hier nog niet.</p>
 
   <div class="box box-soft" style="margin-top:4mm">
-    <p style="margin:0">Dit zijn suggesties, geen regels. En zeker geen reden voor schuldgevoel als het een dag niet lukt.</p>
+    <p style="margin:0">Wil je later concreter aan de slag met voeding, dagmenu's en maaltijdopbouw? Dat hoort bij de uitgebreide gids <em>In balans met Lipoedeem</em>.</p>
   </div>
 
   <div class="pgnum">8</div>
@@ -514,7 +694,7 @@ a { color: var(--accent-dk); }
 
   <div class="stitle"><h3>Geen schuldgevoel</h3></div>
   <p>Je hebt lipoedeem niet verdiend. Het is er gewoon. Slechte dagen zijn geen bewijs dat je het fout doet, het zijn gewoon slechte dagen.</p>
-  <p>Eet je iets wat niet ideaal is? Geen straf. Geen reset. Gewoon de volgende maaltijd, met zachtheid.</p>
+  <p>Een keuze die niet ideaal voelt, is geen straf waard. Geen reset. Geen harde woorden. Gewoon weer terug naar zachtheid.</p>
 
   <div class="stitle"><h3>Zachter kijken</h3></div>
   <p>Probeer je lichaam eens te bekijken met de ogen die je zou gebruiken voor een goede vriendin. Wat zou je haar zeggen? Waarschijnlijk iets heel anders dan wat je normaal tegen jezelf zegt.</p>
@@ -579,6 +759,14 @@ a { color: var(--accent-dk); }
   </div>
 
   <p>Dat is wat ik jou het meest toewens. Niet perfecte benen. Niet een leven zonder klachten. Maar een leven waarin je je lichaam kunt aanraken zonder afkeer. Waarin een slechte dag geen bewijs is van falen. Waarin zachtheid vanzelf wordt.</p>
+
+  <hr>
+
+  <div class="stitle"><h3>Wil je verder verdiepen?</h3></div>
+
+  <p>Dan is <em>In balans met Lipoedeem</em> de volgende stap. In die uitgebreide gids neem ik je dieper mee in voeding, hormonen, stress, beweging, lymfe en dagelijkse keuzes.</p>
+
+  <p>Zie deze gids als je zachte start. <em>In balans met Lipoedeem</em> is er voor als je meer structuur, uitleg en praktische handvatten wilt, zonder strengheid of schuldgevoel.</p>
 
   <hr>
 

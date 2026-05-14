@@ -397,6 +397,42 @@ blockquote {
   body { background: white; }
   .page { margin: 0; box-shadow: none; page-break-after: always; }
 }
+
+
+/* ─── SHARED HELPERS ─── */
+.box-quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 11pt;
+  color: var(--accent-dk);
+  padding-left: 5mm;
+  border-left: 2px solid var(--accent);
+  margin: 5mm 0;
+  line-height: 1.55;
+}
+.habit-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 3mm;
+  margin: 3mm 0;
+  font-size: 9.5pt;
+}
+.habit-icon { font-size: 11pt; min-width: 6mm; }
+.signature {
+  font-family: var(--font-heading);
+  font-size: 14pt;
+  color: var(--accent-dk);
+  font-style: italic;
+  margin-top: 5mm;
+}
+.signature-sub {
+  font-family: var(--font-body);
+  font-size: 8pt;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  margin-top: 1mm;
+}
+.pgnum { display: none; }
 </style>
 </head>
 <body>
@@ -421,8 +457,8 @@ blockquote {
   <div class="cover-body">
     <h1>In balans<br>met Lipoedeem</h1>
     <div class="cover-rule"></div>
-    <div class="cover-subtitle">Een holistische gids</div>
-    <div class="cover-tagline">Voor vrouwen die willen vertragen en meer in verbinding<br>willen leven met hun lichaam</div>
+    <div class="cover-subtitle">De praktische verdieping</div>
+    <div class="cover-tagline">Voeding, hormonen, lymfe en dagelijkse keuzes<br>voor meer richting zonder strengheid</div>
 
   </div>
 
@@ -482,7 +518,7 @@ blockquote {
 <div class="page">
   <div class="band"><h2>Zo gebruik je deze gids</h2></div>
 
-  <p>Deze gids is uitgebreid, en dat is met opzet. Lipoedeem raakt veel kanten van je leven tegelijk: hormonen, voeding, stress, slaap, beweging, en hoe je met je lichaam omgaat. Al die onderwerpen komen aan bod.</p>
+  <p>Deze gids is de verdieping na de zachte start. Waar <em>Zachter leven met lipoedeem</em> vooral gaat over herkenning, rust en beginnen zonder druk, gaat deze gids dieper in op wat je praktisch kunt doen met voeding, hormonen, stress, slaap, beweging en behandeling.</p>
 
   <p>Maar je hoeft het niet van voor naar achter te lezen. En je hoeft het zeker niet allemaal tegelijk te doen. Lees wat je aanspreekt, sla over wat te veel voelt, en kom terug als je er aan toe bent.</p>
 
@@ -493,7 +529,7 @@ blockquote {
   <div style="display:flex;flex-direction:column;gap:3mm;margin-bottom:5mm">
     <div style="background:rgba(207,161,111,0.10);border-left:3px solid var(--accent);padding:3mm 4mm;border-radius:2px">
       <p style="margin:0;font-size:9pt"><strong>H01: Welkom &amp; mijn verhaal</strong><br>
-      Een persoonlijk begin. Wie ik ben, waarom ik dit heb gemaakt, en drie kleine dingen die je meteen kunt doen.</p>
+      Een persoonlijk begin. Wie ik ben, waarom ik dit heb gemaakt, en hoe je deze gids gebruikt als praktisch vervolg op de zachte basis.</p>
     </div>
     <div style="background:rgba(207,161,111,0.10);border-left:3px solid var(--accent);padding:3mm 4mm;border-radius:2px">
       <p style="margin:0;font-size:9pt"><strong>H02–H08: De factoren achter lipoedeem</strong><br>
@@ -505,7 +541,7 @@ blockquote {
     </div>
     <div style="background:rgba(207,161,111,0.10);border-left:3px solid var(--accent);padding:3mm 4mm;border-radius:2px">
       <p style="margin:0;font-size:9pt"><strong>H16–H18: Beweging, ademhaling &amp; welzijn</strong><br>
-      Zachte beweging, ademhalingsoefeningen en lichaamsacceptatie. De holistische kant van balans.</p>
+      Zachte beweging, ademhalingsoefeningen en lichaamsacceptatie, nu met meer uitleg over lymfe, ritme en toepassing.</p>
     </div>
     <div style="background:rgba(207,161,111,0.10);border-left:3px solid var(--accent);padding:3mm 4mm;border-radius:2px">
       <p style="margin:0;font-size:9pt"><strong>H19–H20: Behandeling &amp; vergoeding</strong><br>
@@ -514,7 +550,7 @@ blockquote {
   </div>
 
   <div class="box box-soft">
-    <p style="margin:0;font-size:9pt"><em>Begin waar jij je prettig voelt. De gids werkt in elke volgorde. Er is geen goede of foute manier om hem te lezen.</em></p>
+    <p style="margin:0;font-size:9pt"><em>Begin waar jij je prettig voelt. Deze gids geeft structuur, maar je hoeft hem niet streng te gebruiken. Het doel is richting, geen perfectie.</em></p>
   </div>
 </div>
 
@@ -526,38 +562,38 @@ blockquote {
 
   <div class="band"><span class="band-icon"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="var(--dark)" style="flex-shrink:0;opacity:0.7"><path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/><path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/><path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/><path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/></svg></span><h2><span class="ch-num">01</span> Welkom</h2></div>
 
-  <p>Deze gids is geschreven voor vrouwen met lipoedeem die voelen dat hun lichaam anders werkt, en die moe zijn van dieetschema's, strikte routines en lijstjes die zeggen "dit moet je elke dag doen".</p>
+  <p>Deze gids is geschreven voor vrouwen met lipoedeem die verder willen kijken dan losse tips. Misschien heb je al gevoeld dat zachter omgaan met je lichaam belangrijk is. Nu wil je ook begrijpen wat voeding, hormonen, stress, slaap, beweging en behandeling concreet voor je kunnen betekenen.</p>
 
-  <p>Wat als het anders kan? Wat als je lichaam niet meer regels nodig heeft, maar meer <strong>zachtheid</strong>? Deze gids is geen takenlijst. Het voelt als een warme hand. Geen druk, geen perfectie, alleen rustige, zachte stappen die jij kunt doen.</p>
+  <p>Daarom is dit geen tweede versie van de gratis gids. Dit is het praktische vervolg: meer achtergrond, meer structuur en meer houvast voor je dagelijks leven, nog steeds zonder strengheid of schuldgevoel.</p>
 
   <hr style="margin:5mm 0">
 
-  <div class="stitle"><h3>Jouw zachte startpunt: 3 dingen die al helpen</h3></div>
+  <div class="stitle"><h3>Van zachte start naar verdieping</h3></div>
 
   <div class="step">
     <div class="step-num">1</div>
     <div class="step-body">
-      <h3>Adem &amp; vertraag</h3>
-      <p>Gewoon even zitten. Hand op je buik. Adem rustig, twee minuten is genoeg. Je doet al iets goeds voor je lymfe en je zenuwstelsel.</p>
+      <h3>Begrijpen</h3>
+      <p>Je leert welke processen bij lipoedeem meespelen, zoals hormonen, ontsteking, insuline, slaap en stress. Niet om jezelf te analyseren, maar om met meer rust keuzes te maken.</p>
     </div>
   </div>
   <div class="step">
     <div class="step-num">2</div>
     <div class="step-body">
-      <h3>Benen omhoog</h3>
-      <p>Op de bank, tegen de muur, met een kussen. Wanneer je kan. Geen perfecte tijd nodig. Vijf minuten telt al mee.</p>
+      <h3>Voeden</h3>
+      <p>Je krijgt een praktische voedingsrichting met maaltijdopbouw, voorbeelden, dagmenu's en vervangers. Niet minder eten, maar beter ondersteunen.</p>
     </div>
   </div>
   <div class="step">
     <div class="step-num">3</div>
     <div class="step-body">
-      <h3>Zachte aanraking</h3>
-      <p>Gewoon even je benen rustig aanraken of licht masseren. Zonder techniek, zonder druk. Alleen zachtheid.</p>
+      <h3>Toepassen</h3>
+      <p>Je vertaalt de kennis naar beweging, ademhaling, lymfe, zelfmassage, behandelingen en een dagelijkse checklist die je helpt kiezen wat vandaag past.</p>
     </div>
   </div>
 
   <div class="box box-soft" style="margin-bottom:5mm">
-    <p style="margin:0;font-size:9.5pt"><em>Je hoeft het niet perfect te doen. Je hoeft het niet elke dag goed te doen. <strong>Alles wat je met zachtheid doet, helpt al.</strong></em></p>
+    <p style="margin:0;font-size:9.5pt"><em>De zachte basis blijft belangrijk. Alleen voegen we hier meer richting aan toe, zodat je niet hoeft te blijven zoeken.</em></p>
   </div>
 
   <hr style="margin:5mm 0">
