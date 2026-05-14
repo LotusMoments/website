@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Logo export · Lotus Moments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #c8bfb0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 3rem;
+      font-family: "Work Sans", sans-serif;
+    }
+
+    .note {
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6b5a4b;
+    }
+
+    /* The actual logo tile — 800×800 px, scales down on small viewports */
+    .logo-tile {
+      width: min(800px, 95vmin);
+      height: min(800px, 95vmin);
+      background:
+        radial-gradient(circle at 80% 20%, rgba(243, 214, 198, 0.5), transparent 55%),
+        radial-gradient(circle at 20% 80%, rgba(207, 161, 111, 0.15), transparent 55%),
+        #f5f0e8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      container-type: size;
+    }
+
+    .logo-lotus {
+      width: 25cqmin;
+      height: 25cqmin;
+      fill: #b07d4a;
+      margin-bottom: 3.5cqmin;
+    }
+
+    .logo-divider {
+      width: 15cqmin;
+      height: 0.2cqmin;
+      background: #cfa16f;
+      opacity: 0.6;
+      margin-bottom: 3.5cqmin;
+    }
+
+    .logo-name {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 9cqmin;
+      letter-spacing: 0.1em;
+      color: #3f3226;
+      line-height: 1;
+      margin-bottom: 2.5cqmin;
+    }
+
+    .logo-tagline {
+      font-family: "Work Sans", sans-serif;
+      font-weight: 300;
+      font-size: 2.8cqmin;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #6b5a4b;
+    }
+  </style>
+</head>
+<body>
+
+<p class="note">800 × 800 px — screenshot voor Instagram / WhatsApp profiel</p>
+
+<div class="logo-tile" id="logo">
+  <svg class="logo-lotus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
+    <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
+    <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
+    <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
+    <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
+  </svg>
+  <div class="logo-divider"></div>
+  <span class="logo-name">Lotus Moments</span>
+  <span class="logo-tagline">Holistische massagepraktijk</span>
+</div>
+
+
+</body>
+</html>

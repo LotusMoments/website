@@ -1,0 +1,468 @@
+---
+permalink: /insta-post/
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Instagram Post · Lotus Moments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:              #f5f0e8;
+      --cream:           #fdf8f2;
+      --paper:           #e4d9c8;
+      --ink:             #3f3226;
+      --ink-soft:        #6b5a4b;
+      --terracotta:      #cfa16f;
+      --terracotta-deep: #b07d4a;
+      --blush:           #f3d6c6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      background: #c8bfb0;
+      font-family: "Work Sans", sans-serif;
+      color: var(--ink);
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .screen-note {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6b5a4b;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       POST — 1080×1080 weergegeven op halve grootte (540×540)
+       ============================================================ */
+    .post {
+      width: 540px;
+      height: 540px;
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 24px 80px -20px rgba(44,31,20,0.45);
+
+      /* achtergrond */
+      background:
+        radial-gradient(circle at 92% 8%,  rgba(243, 214, 198, 0.65), transparent 42%),
+        radial-gradient(circle at 8%  92%,  rgba(207, 161, 111, 0.2),  transparent 45%),
+        radial-gradient(circle at 55% 50%,  rgba(243, 214, 198, 0.15), transparent 70%),
+        var(--bg);
+
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      grid-template-rows: 1fr auto;
+      padding: 36px 0 36px 40px;
+      gap: 0;
+    }
+
+    /* subtiele textuur-lijntjes */
+    .post::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 5%, var(--terracotta) 40%, transparent 95%);
+    }
+
+    /* ---- LINKER KOLOM: tekst ---- */
+    .post-text {
+      grid-column: 1;
+      grid-row: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 16px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: "Work Sans", sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--terracotta-deep);
+      margin-bottom: 14px;
+    }
+
+    .badge::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 1.5px;
+      background: var(--terracotta);
+    }
+
+    .post-heading {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .post-heading em {
+      font-style: italic;
+      color: var(--terracotta-deep);
+    }
+
+    .post-sub {
+      font-family: "Work Sans", sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--ink-soft);
+      margin-top: 14px;
+      max-width: 220px;
+    }
+
+    .post-divider {
+      width: 32px;
+      height: 1.5px;
+      background: var(--terracotta);
+      opacity: 0.5;
+      margin: 16px 0;
+    }
+
+    .post-cta {
+      font-family: "Work Sans", sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--terracotta-deep);
+    }
+
+    /* ---- RECHTER KOLOM: telefoonmockup ---- */
+    .phone-wrap {
+      grid-column: 2;
+      grid-row: 1 / 3;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 28px;
+      position: relative;
+    }
+
+    .phone {
+      width: 148px;
+      height: 300px;
+      background: #1a1208;
+      border-radius: 28px;
+      padding: 10px 7px;
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.08),
+        0 20px 60px -12px rgba(44,31,20,0.6),
+        inset 0 1px 0 rgba(255,255,255,0.12);
+      position: relative;
+      transform: rotate(3deg);
+    }
+
+    /* notch */
+    .phone::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 36px;
+      height: 5px;
+      background: #0d0906;
+      border-radius: 3px;
+      z-index: 10;
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* nep browser-balk */
+    .phone-bar {
+      height: 18px;
+      background: rgba(245,240,232,0.95);
+      border-bottom: 0.5px solid rgba(207,161,111,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      padding-top: 5px;
+    }
+
+    .phone-bar-url {
+      font-family: "Work Sans", sans-serif;
+      font-size: 5.5px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--ink-soft);
+    }
+
+    /* website-content in de telefoon */
+    .phone-content {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* header */
+    .w-header {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 8px 5px;
+      border-bottom: 0.5px solid rgba(207,161,111,0.2);
+      flex-shrink: 0;
+    }
+
+    .w-header svg {
+      width: 10px;
+      height: 10px;
+      fill: var(--terracotta-deep);
+    }
+
+    .w-header-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 7px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+    }
+
+    /* hero foto */
+    .w-hero {
+      position: relative;
+      height: 100px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .w-hero img {
+      width: 100%;
+      height: 140%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
+    }
+
+    /* hero tekst overlay */
+    .w-hero-text {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      right: 8px;
+    }
+
+    .w-hero-h {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    .w-hero-h em {
+      font-style: italic;
+      color: var(--terracotta-deep);
+    }
+
+    /* blokje onder */
+    .w-body {
+      padding: 7px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(243,214,198,0.4), transparent 60%),
+        var(--bg);
+    }
+
+    .w-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      border: 0.5px solid var(--terracotta);
+      border-radius: 10px;
+      padding: 1.5px 6px;
+      font-family: "Work Sans", sans-serif;
+      font-size: 4.5px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      width: fit-content;
+    }
+
+    .w-pill::before {
+      content: "";
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--terracotta);
+      flex-shrink: 0;
+    }
+
+    .w-heading {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    .w-heading em {
+      font-style: italic;
+      color: var(--terracotta-deep);
+    }
+
+    .w-text {
+      font-family: "Work Sans", sans-serif;
+      font-size: 5px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--ink-soft);
+    }
+
+    /* ---- ONDERBALK: logo + url ---- */
+    .post-footer {
+      grid-column: 1;
+      grid-row: 2;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-top: 20px;
+    }
+
+    .footer-logo {
+      width: 20px;
+      height: 20px;
+      fill: var(--terracotta-deep);
+      flex-shrink: 0;
+    }
+
+    .footer-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 13px;
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+    }
+
+    .footer-sep {
+      width: 1px;
+      height: 14px;
+      background: rgba(207,161,111,0.4);
+      margin: 0 6px;
+    }
+
+    .footer-url {
+      font-family: "Work Sans", sans-serif;
+      font-size: 8px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--ink-soft);
+    }
+  </style>
+</head>
+<body>
+
+<p class="screen-note">
+  Instagram post · 1080 × 1080 px<br>
+  Maak een screenshot van het vierkant hieronder en sla op als PNG
+</p>
+
+<div class="post">
+
+  <!-- TEKST LINKS -->
+  <div class="post-text">
+    <span class="badge">Nieuws</span>
+    <h1 class="post-heading">
+      Nieuwe website<br>& <em>nieuw logo</em>
+    </h1>
+    <div class="post-divider"></div>
+    <p class="post-sub">
+      Lotus Moments heeft een frisse uitstraling gekregen.
+      Warmer, rustiger en meer mezelf — net zoals de massages die ik geef.
+    </p>
+    <div class="post-divider" style="margin-top:16px;"></div>
+    <span class="post-cta">Kijk op lotusmoments.nl →</span>
+  </div>
+
+  <!-- TELEFOONMOCKUP RECHTS -->
+  <div class="phone-wrap">
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="phone-bar">
+          <span class="phone-bar-url">lotusmoments.nl</span>
+        </div>
+        <div class="phone-content">
+          <div class="w-header">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
+              <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
+              <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
+              <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
+              <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
+            </svg>
+            <span class="w-header-name">Lotus Moments</span>
+          </div>
+          <div class="w-body">
+            <span class="w-pill">Voor vrouwen</span>
+            <div class="w-heading">Vertragen,<br>voelen,<br><em>ontvouwen.</em></div>
+            <p class="w-text">Holistische massagepraktijk voor vrouwen in Deventer.</p>
+          </div>
+          <div class="w-hero">
+            <img src="/assets/emine1.jpg" alt="Emine Bayyurt">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="post-footer">
+    <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" aria-hidden="true">
+      <path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z" />
+      <path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z" />
+      <path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z" />
+      <path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z" />
+    </svg>
+    <span class="footer-name">Lotus Moments</span>
+    <div class="footer-sep"></div>
+    <span class="footer-url">@lotusmoments.nl</span>
+  </div>
+
+</div>
+
+</body>
+</html>
