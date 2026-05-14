@@ -1,0 +1,17 @@
+/* === LOTUS MOMENTS DESIGN TOKENS === */
+:root {
+  --bg:              #f5f0e8;
+  --cream:           #fdf8f2;
+  --paper:           #e4d9c8;
+  --ink:             #3f3226;
+  --ink-soft:        #6b5a4b;
+  --sage:            #cfa16f;
+  --sage-deep:       #b07d4a;
+  --terracotta:      #cfa16f;
+  --terracotta-deep: #b07d4a;
+  --gold:            #cfa16f;
+  --blush:           #f3d6c6;
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}

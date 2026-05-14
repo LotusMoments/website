@@ -1,17 +1,4 @@
-/* === DESIGN TOKENS === */
-:root {
-  --bg:              #f5f0e8;
-  --cream:           #fdf8f2;
-  --paper:           #e4d9c8;
-  --ink:             #3f3226;
-  --ink-soft:        #6b5a4b;
-  --sage:            #cfa16f;
-  --sage-deep:       #b07d4a;
-  --terracotta:      #cfa16f;
-  --terracotta-deep: #b07d4a;
-  --gold:            #cfa16f;
-  --blush:           #f3d6c6;
-}
+@import url("./tokens.css");
 
 /* === RESET === */
 *,
@@ -23,7 +10,7 @@
 /* === BASE === */
 body {
   margin: 0;
-  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-body);
   color: var(--ink);
   background: var(--bg);
   line-height: 1.7;
@@ -35,7 +22,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-weight: 400;
   color: var(--ink);
   margin: 0;
@@ -80,7 +67,7 @@ img {
   letter-spacing: .35em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
 }
 
 .mast-right {
@@ -105,7 +92,7 @@ img {
 }
 
 .mast-name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-size: 1.45rem;
   letter-spacing: .28em;
   text-transform: uppercase;
@@ -130,7 +117,7 @@ img {
   text-transform: uppercase;
   font-weight: 400;
   transition: color .2s;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
 }
 
 .nav-strip a:hover,
@@ -202,7 +189,7 @@ img {
   border: 1px solid var(--sage);
   border-radius: 999px;
   background: rgba(248, 242, 227, .65);
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
 }
 
@@ -253,7 +240,7 @@ img {
   text-transform: uppercase;
   font-weight: 500;
   transition: background .3s;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
 }
 
 .cta:hover {
@@ -363,7 +350,7 @@ img {
   text-transform: uppercase;
   color: var(--sage-deep);
   margin-bottom: 1.2rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   font-weight: 400;
   display: block;
 }
@@ -389,7 +376,7 @@ img {
 .hoework-txt p:first-of-type::first-letter,
 .detail .detail-lede::first-letter,
 .contact-intro::first-letter {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-weight: 300;
   font-size: 4.5rem;
   float: left;
@@ -434,7 +421,7 @@ img {
   letter-spacing: .32em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
 }
 
 .idx-list {
@@ -460,7 +447,7 @@ img {
 }
 
 .idx-num {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-style: italic;
   font-size: 1.4rem;
   color: var(--terracotta);
@@ -481,7 +468,7 @@ img {
   color: var(--sage-deep);
   margin-top: .3rem;
   letter-spacing: .08em;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
 }
 
 .idx-desc {
@@ -499,13 +486,13 @@ img {
   letter-spacing: .3em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   display: block;
   font-weight: 500;
 }
 
 .idx-meta .price {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-size: 1.7rem;
   color: var(--terracotta-deep);
   line-height: 1.05;
@@ -519,7 +506,7 @@ img {
   letter-spacing: .32em;
   text-transform: uppercase;
   color: var(--sage-deep);
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   display: block;
   margin-top: .5rem;
   font-weight: 500;
@@ -555,7 +542,7 @@ img {
   text-transform: uppercase;
   color: var(--sage-deep);
   margin-bottom: 1.2rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   display: block;
 }
 
@@ -595,7 +582,7 @@ img {
 }
 
 .phase-e .pn {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-style: italic;
   font-size: 1.25rem;
   color: var(--terracotta);
@@ -626,7 +613,7 @@ img {
   text-transform: uppercase;
   color: var(--ink-soft);
   font-weight: 500;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   white-space: nowrap;
 }
 
@@ -638,7 +625,7 @@ img {
 
 .price-label {
   display: block;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: .68rem;
   letter-spacing: .25em;
   text-transform: uppercase;
@@ -651,7 +638,7 @@ img {
   display: flex;
   align-items: baseline;
   gap: 1rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-size: 1.4rem;
   color: var(--terracotta-deep);
   font-style: italic;
@@ -663,7 +650,7 @@ img {
   letter-spacing: .3em;
   text-transform: uppercase;
   color: var(--ink-soft);
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   font-style: normal;
   font-weight: 500;
 }
@@ -696,7 +683,7 @@ img {
   letter-spacing: .26em;
   text-transform: uppercase;
   font-weight: 500;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   transition: background .3s;
 }
 
@@ -752,7 +739,7 @@ img {
 }
 
 .pullquote blockquote {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-size: clamp(1.9rem, 3.8vw, 3rem);
   line-height: 1.3;
   color: var(--ink);
@@ -780,7 +767,7 @@ img {
   letter-spacing: .35em;
   text-transform: uppercase;
   color: var(--sage-deep);
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   font-style: normal;
 }
 
@@ -796,7 +783,7 @@ img {
 }
 
 .reviews-head h2 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-heading);
   font-size: clamp(1.8rem, 3vw, 2.6rem);
   font-weight: 400;
   font-style: italic;
@@ -821,7 +808,7 @@ img {
 }
 
 .review-card p {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.75;
   color: var(--ink);
@@ -830,7 +817,7 @@ img {
 }
 
 .review-card footer {
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: .72rem;
   letter-spacing: .25em;
   text-transform: uppercase;
@@ -887,7 +874,7 @@ img {
   letter-spacing: .45em;
   text-transform: uppercase;
   color: var(--gold);
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
 }
 
 .ft-grid {
@@ -900,7 +887,7 @@ img {
 
 .ft-col h4 {
   color: var(--gold);
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: .7rem;
   letter-spacing: .32em;
   text-transform: uppercase;
@@ -939,7 +926,7 @@ img {
   letter-spacing: .32em;
   text-transform: uppercase;
   color: rgba(248, 242, 227, .3);
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
 }
 
 /* === PAGE HEAD === */
@@ -981,7 +968,7 @@ img {
   text-transform: uppercase;
   color: var(--sage-deep);
   margin-bottom: 1rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   display: block;
 }
 
@@ -1112,7 +1099,7 @@ img {
 }
 
 .about-sig {
-  font-family: 'Fraunces', serif;
+  font-family: var(--font-heading);
   font-style: italic;
   font-size: 1.3rem;
   color: var(--terracotta-deep) !important;
@@ -1265,7 +1252,7 @@ img {
 }
 
 .contact-card-label {
-  font-family: 'Work Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: .75rem;
   font-weight: 600;
   letter-spacing: .08em;

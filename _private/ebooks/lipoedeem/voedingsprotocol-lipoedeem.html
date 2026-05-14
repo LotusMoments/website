@@ -42,12 +42,13 @@ body {
 .page::after {
   content: counter(pgnum);
   position: absolute;
-  bottom: 10mm;
+  bottom: 9mm;
   right: 20mm;
   font-family: var(--font-body);
-  font-size: 7pt;
-  color: var(--accent);
-  opacity: 0.6;
+  font-size: 9pt;
+  font-weight: 600;
+  color: var(--accent-dk);
+  opacity: 0.9;
 }
 .cover { counter-increment: none; }
 .cover::after { content: none; }

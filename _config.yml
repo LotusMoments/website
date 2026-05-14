@@ -17,6 +17,11 @@ plugins:
 markdown: kramdown
 permalink: pretty
 
+exclude:
+  - _private/
+  - AGENTS.md
+  - CLAUDE.md
+
 goatcounter_url: "https://lotus-moments.goatcounter.com/count"
 
 social_links:
