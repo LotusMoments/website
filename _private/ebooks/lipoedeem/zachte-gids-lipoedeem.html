@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zachter leven met lipoedeem — Lotus Moments</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+<title>Zachter leven met lipoedeem | Lotus Moments</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/tokens.css">
 <style>
 :root {
-  --bg: #f5f0e8;
-  --text: #3f3226;
-  --muted: #6b5a4b;
-  --accent: #cfa16f;
-  --accent-dk: #b07d4a;
-  --soft: #f3d6c6;
-  --neutral: #fdf8f2;
-  --neutral-s: #e4d9c8;
+  --text: var(--ink);
+  --muted: var(--ink-soft);
+  --accent: var(--terracotta);
+  --accent-dk: var(--terracotta-deep);
+  --soft: var(--blush);
+  --neutral: var(--cream);
+  --neutral-s: var(--paper);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   background: #cfc5b2;
   color: var(--text);
   line-height: 1.7;
@@ -53,7 +53,7 @@ body {
 }
 .cover-header svg { fill: var(--accent-dk); }
 .cover-header span {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 10pt;
   font-weight: 600;
   letter-spacing: 3.5px;
@@ -83,7 +83,7 @@ body {
   pointer-events: none;
 }
 .cover-author {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 8pt;
   color: var(--accent);
   letter-spacing: 2.5px;
@@ -91,7 +91,7 @@ body {
   margin-bottom: 6mm;
 }
 .cover h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-size: 34pt;
   color: #8b6347;
   font-weight: 400;
@@ -106,7 +106,7 @@ body {
   margin: 5mm auto;
 }
 .cover-subtitle {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 11pt;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -114,7 +114,7 @@ body {
   margin-bottom: 5mm;
 }
 .cover-tagline {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   font-size: 10pt;
   color: var(--muted);
   line-height: 1.6;
@@ -126,7 +126,7 @@ body {
   border-top: 1px solid var(--neutral-s);
 }
 .cover-footer p {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 8pt;
   color: var(--accent);
   letter-spacing: 2px;
@@ -144,14 +144,14 @@ body {
   gap: 3mm;
 }
 .band h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-size: 15pt;
   color: var(--accent-dk);
   font-weight: 600;
   margin: 0;
 }
 .ch-num {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 9pt;
   font-weight: 600;
   opacity: 0.55;
@@ -160,7 +160,7 @@ body {
 
 /* Typography */
 p { font-size: 9.5pt; margin-bottom: 4mm; color: var(--text); }
-h3 { font-family: 'Playfair Display', serif; font-size: 12pt; color: var(--accent-dk); margin: 5mm 0 2mm; font-weight: 600; }
+h3 { font-family: var(--font-heading); font-size: 12pt; color: var(--accent-dk); margin: 5mm 0 2mm; font-weight: 600; }
 ul, ol { padding-left: 5mm; margin-bottom: 4mm; }
 li { font-size: 9.5pt; margin-bottom: 2mm; }
 hr { border: none; border-top: 1px solid var(--neutral-s); margin: 6mm 0; }
@@ -178,7 +178,7 @@ a { color: var(--accent-dk); }
   border-left: 3px solid var(--accent);
   padding: 3mm 6mm;
   margin: 5mm 0;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-style: italic;
   font-size: 11.5pt;
   color: var(--muted);
@@ -202,7 +202,7 @@ a { color: var(--accent-dk); }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 9pt;
   font-weight: 700;
   margin-top: 0.5mm;
@@ -222,7 +222,7 @@ a { color: var(--accent-dk); }
   position: absolute;
   bottom: 10mm;
   right: 20mm;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 7pt;
   color: var(--accent);
   opacity: 0.6;
@@ -240,14 +240,14 @@ a { color: var(--accent-dk); }
 
 /* Signature */
 .signature {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-size: 14pt;
   color: var(--accent-dk);
   font-style: italic;
   margin-top: 5mm;
 }
 .signature-sub {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 8pt;
   color: var(--muted);
   letter-spacing: 0.5px;
@@ -286,15 +286,15 @@ a { color: var(--accent-dk); }
 
   <p>Deze gids is voor jou gemaakt.</p>
 
-  <p>Voor de vrouwen die weten hoe het voelt om je lichaam niet te begrijpen. Die alles hebben geprobeerd. Die hard voor zichzelf zijn geweest — en toch niet de resultaten zagen die ze hoopten.</p>
+  <p>Voor de vrouwen die weten hoe het voelt om je lichaam niet te begrijpen. Die alles hebben geprobeerd. Die hard voor zichzelf zijn geweest, en toch niet de resultaten zagen die ze hoopten.</p>
 
   <p>Voor de vrouwen die ergens diep van binnen voelen: <em>het moet anders kunnen.</em></p>
 
   <hr>
 
-  <p>Ik heb lipoedeem. Ik weet hoe het voelt om elke spiegel te vermijden. Hoe vermoeiend het is om steeds opnieuw te beginnen met diëten, bewegen, proberen. En hoe anders het voelt als je stopt met vechten tegen je lichaam — en begint met luisteren.</p>
+  <p>Ik heb lipoedeem. Ik weet hoe het voelt om elke spiegel te vermijden. Hoe vermoeiend het is om steeds opnieuw te beginnen met diëten, bewegen, proberen. En hoe anders het voelt als je stopt met vechten tegen je lichaam, en begint met luisteren.</p>
 
-  <p>Dat keerpunt was voor mij het begin van alles. Niet meer harder proberen. Maar zachter worden. En vanuit die ervaring ben ik holistisch massagetherapeut geworden — om andere vrouwen te helpen datzelfde te vinden.</p>
+  <p>Dat keerpunt was voor mij het begin van alles. Niet meer harder proberen. Maar zachter worden. En vanuit die ervaring ben ik holistisch massagetherapeut geworden, om andere vrouwen te helpen datzelfde te vinden.</p>
 
   <hr>
 
@@ -316,10 +316,10 @@ a { color: var(--accent-dk); }
 <div class="page">
   <div class="band"><h2><span class="ch-num">02</span> Wat is lipoedeem?</h2></div>
 
-  <p>Lipoedeem is een chronische aandoening van het bindweefsel en de vetcellen. Het treft bijna uitsluitend vrouwen en begint vaak bij hormonale veranderingen — puberteit, zwangerschap of de overgang.</p>
+  <p>Lipoedeem is een chronische aandoening van het bindweefsel en de vetcellen. Het treft bijna uitsluitend vrouwen en begint vaak bij hormonale veranderingen, puberteit, zwangerschap of de overgang.</p>
 
   <div class="box box-soft" style="margin:5mm 0">
-    <p style="margin:0"><strong>Het is niet jouw schuld.</strong> Lipoedeem is geen gevolg van te veel eten of te weinig bewegen. Jouw lichaam werkt gewoon anders — en dat verdient begrip, geen oordeel.</p>
+    <p style="margin:0"><strong>Het is niet jouw schuld.</strong> Lipoedeem is geen gevolg van te veel eten of te weinig bewegen. Jouw lichaam werkt gewoon anders, en dat verdient begrip, geen oordeel.</p>
   </div>
 
   <div class="stitle"><h3>Wat je misschien herkent</h3></div>
@@ -334,7 +334,7 @@ a { color: var(--accent-dk); }
 
   <div class="stitle"><h3>Wat lipoedeem beïnvloedt</h3></div>
 
-  <p>Lipoedeem wordt beïnvloed door hormonen, stress, slaap, voeding en beweging. Niet één ding maakt het beter — en niet één ding maakt het slechter. Het is een samenspel.</p>
+  <p>Lipoedeem wordt beïnvloed door hormonen, stress, slaap, voeding en beweging. Niet één ding maakt het beter, en niet één ding maakt het slechter. Het is een samenspel.</p>
 
   <p>Dat is precies waarom een zachte, holistische aanpak werkt. Niet één oplossing, maar zachte aandacht voor het geheel.</p>
 
@@ -349,7 +349,7 @@ a { color: var(--accent-dk); }
 
   <div class="stitle"><h3>Wat stress doet</h3></div>
 
-  <p>Wanneer je gestrest bent — ook als je het niet bewust voelt — zet je lichaam zich schrap. Je zenuwstelsel gaat in de 'aan'-stand. Je spieren spannen zich aan. En je lymfesysteem, dat overtollig vocht afvoert, werkt trager.</p>
+  <p>Wanneer je gestrest bent, ook als je het niet bewust voelt, zet je lichaam zich schrap. Je zenuwstelsel gaat in de 'aan'-stand. Je spieren spannen zich aan. En je lymfesysteem, dat overtollig vocht afvoert, werkt trager.</p>
 
   <p>Bij lipoedeem betekent meer stress: meer zwelling, meer pijn, meer vastzitten.</p>
 
@@ -359,7 +359,7 @@ a { color: var(--accent-dk); }
 
   <div class="stitle"><h3>Waarom "harder je best doen" niet werkt</h3></div>
 
-  <p>Intensief sporten, streng diëten, jezelf dwingen — dit zet je lichaam onder extra stress. En meer stress maakt lipoedeem erger, niet beter.</p>
+  <p>Intensief sporten, streng diëten, jezelf dwingen, dit zet je lichaam onder extra stress. En meer stress maakt lipoedeem erger, niet beter.</p>
 
   <p>Dat is niet zwak zijn. Dat is gewoon hoe lipoedeem werkt.</p>
 
@@ -367,7 +367,7 @@ a { color: var(--accent-dk); }
     "Je hoeft je lichaam niet te overwinnen.<br>Je mag er vrede mee sluiten."
   </div>
 
-  <p>Zachtheid — in beweging, voeding, gedachten — activeert het rustende deel van je zenuwstelsel. Dat deel dat jouw lymfe laat stromen. Dat deel dat heling mogelijk maakt.</p>
+  <p>Zachtheid, in beweging, voeding, gedachten, activeert het rustende deel van je zenuwstelsel. Dat deel dat jouw lymfe laat stromen. Dat deel dat heling mogelijk maakt.</p>
 
   <div class="pgnum">4</div>
 </div>
@@ -383,19 +383,19 @@ a { color: var(--accent-dk); }
   </div>
 
   <div class="stitle"><h3>Vertragen</h3></div>
-  <p>We leven snel. We eten snel. We gaan snel verder. Maar jouw lichaam heeft ruimte nodig — om te verwerken, te herstellen, te bewegen. Geef het die ruimte. Niet als een taak, maar als een keuze.</p>
+  <p>We leven snel. We eten snel. We gaan snel verder. Maar jouw lichaam heeft ruimte nodig, om te verwerken, te herstellen, te bewegen. Geef het die ruimte. Niet als een taak, maar als een keuze.</p>
 
   <div class="stitle"><h3>Luisteren</h3></div>
-  <p>Wat zegt jouw lichaam vandaag? Is het moe? Gespannen? Zwaar? Begin daar. Niet met wat je 'zou moeten' voelen of doen — maar met wat er nu is.</p>
+  <p>Wat zegt jouw lichaam vandaag? Is het moe? Gespannen? Zwaar? Begin daar. Niet met wat je 'zou moeten' voelen of doen, maar met wat er nu is.</p>
   <p>Je lichaam weet veel. Het vraagt alleen om aandacht.</p>
 
   <div class="stitle"><h3>Niet pushen</h3></div>
-  <p>Als iets te veel voelt, is het te veel. Er is geen prijs voor doorzetten als je lichaam een pauze vraagt. Pauze nemen is niet opgeven — het is luisteren.</p>
+  <p>Als iets te veel voelt, is het te veel. Er is geen prijs voor doorzetten als je lichaam een pauze vraagt. Pauze nemen is niet opgeven, het is luisteren.</p>
 
   <hr>
 
   <div class="box box-soft">
-    <p style="margin:0">In de rest van deze gids laat ik je zien hoe dat er in de praktijk uit kan zien. Niet als een schema — maar als zachte suggesties, voor de dagen dat het goed gaat én de dagen dat het minder gaat.</p>
+    <p style="margin:0">In de rest van deze gids laat ik je zien hoe dat er in de praktijk uit kan zien. Niet als een schema, maar als zachte suggesties, voor de dagen dat het goed gaat én de dagen dat het minder gaat.</p>
   </div>
 
   <div class="pgnum">5</div>
@@ -405,15 +405,15 @@ a { color: var(--accent-dk); }
 <div class="page">
   <div class="band"><h2><span class="ch-num">05</span> 3 zachte stappen die helpen</h2></div>
 
-  <p>Dit zijn de drie dingen die ik zelf doe. Die ik aanraad aan iedere vrouw met lipoedeem. Simpel, zonder gedoe — en ze werken ook als je ze niet elke dag doet.</p>
+  <p>Dit zijn de drie dingen die ik zelf doe. Die ik aanraad aan iedere vrouw met lipoedeem. Simpel, zonder gedoe, en ze werken ook als je ze niet elke dag doet.</p>
 
   <div class="step">
     <div class="step-num">1</div>
     <div class="step-body">
       <h3>Ademhaling</h3>
-      <p>Leg je hand op je buik. Adem langzaam in door je neus — voel je buik opkomen. Adem langzaam en volledig uit door je mond.</p>
+      <p>Leg je hand op je buik. Adem langzaam in door je neus, voel je buik opkomen. Adem langzaam en volledig uit door je mond.</p>
       <p>Twee minuten. Dat is genoeg.</p>
-      <p>Diep ademhalen activeert je rustende zenuwstelsel. Het stimuleert je lymfesysteem. En het verlaagt cortisol — het stresshormoon dat lipoedeem verergert.</p>
+      <p>Diep ademhalen activeert je rustende zenuwstelsel. Het stimuleert je lymfesysteem. En het verlaagt cortisol, het stresshormoon dat lipoedeem verergert.</p>
       <div class="box box-soft" style="margin-top:3mm">
         <p style="margin:0;font-size:9pt"><strong>Wanneer?</strong> 's Ochtends voor je opstaat, of 's avonds in bed. Of gewoon wanneer je eraan denkt.</p>
       </div>
@@ -424,7 +424,7 @@ a { color: var(--accent-dk); }
     <div class="step-num">2</div>
     <div class="step-body">
       <h3>Benen omhoog</h3>
-      <p>Ga liggen en leg je benen omhoog — tegen de muur, op een kussen, op de leuning van de bank. Wat werkt voor jou.</p>
+      <p>Ga liggen en leg je benen omhoog, tegen de muur, op een kussen, op de leuning van de bank. Wat werkt voor jou.</p>
       <p>Vijf minuten is genoeg. Tien is mooi meegenomen.</p>
       <p>Dit helpt het lymfevocht terug omhoog te stromen. Je benen voelen lichter. Het zwellinggevoel neemt af.</p>
       <div class="box box-soft" style="margin-top:3mm">
@@ -438,17 +438,17 @@ a { color: var(--accent-dk); }
 
 <!-- H05: 3 ZACHTE STAPPEN deel 2 -->
 <div class="page">
-  <div class="band"><h2><span class="ch-num">05</span> 3 zachte stappen — vervolg</h2></div>
+  <div class="band"><h2><span class="ch-num">05</span> 3 zachte stappen: vervolg</h2></div>
 
   <div class="step">
     <div class="step-num">3</div>
     <div class="step-body">
       <h3>Zachte aanraking</h3>
-      <p>Raak je benen zacht aan. Geen techniek nodig. Geen druk. Gewoon je handen op je huid — en rustig bewegen.</p>
+      <p>Raak je benen zacht aan. Geen techniek nodig. Geen druk. Gewoon je handen op je huid, en rustig bewegen.</p>
       <p>Begin bij je liezen. Maak kleine, lichte cirkelbewegingen. Werk dan langzaam naar beneden: bovenbeen → knie → onderbeen → enkel.</p>
-      <p>De druk is zo licht dat het bijna niets voelt. Dat is precies goed — lymfemassage werkt heel oppervlakkig.</p>
+      <p>De druk is zo licht dat het bijna niets voelt. Dat is precies goed, lymfemassage werkt heel oppervlakkig.</p>
       <div class="box box-soft" style="margin-top:3mm">
-        <p style="margin:0;font-size:9pt"><strong>Wanneer?</strong> 5 minuten per been voor het slapengaan. Op de bank, in bed — het maakt niet uit.</p>
+        <p style="margin:0;font-size:9pt"><strong>Wanneer?</strong> 5 minuten per been voor het slapengaan. Op de bank, in bed, het maakt niet uit.</p>
       </div>
     </div>
   </div>
@@ -457,7 +457,7 @@ a { color: var(--accent-dk); }
 
   <div class="stitle"><h3>Wil je meer dan zelfmassage?</h3></div>
 
-  <p>Bij Lotus Moments bied ik holistische massage aan voor vrouwen met lipoedeem. Ontspanning voor je lichaam en zenuwstelsel — zonder druk of oordeel.</p>
+  <p>Bij Lotus Moments bied ik holistische massage aan voor vrouwen met lipoedeem. Ontspanning voor je lichaam en zenuwstelsel, zonder druk of oordeel.</p>
 
   <div class="box box-soft">
     <p style="margin:0">🌸 <strong>Lotus Moments · Deventer</strong><br>
@@ -471,10 +471,10 @@ a { color: var(--accent-dk); }
 <div class="page">
   <div class="band"><h2><span class="ch-num">06</span> Ondersteuning in je dag</h2></div>
 
-  <p>Geen dagschema. Geen verplichtingen. Alleen kleine dingen die je dag wat zachter maken — als je er aan toe bent.</p>
+  <p>Geen dagschema. Geen verplichtingen. Alleen kleine dingen die je dag wat zachter maken, als je er aan toe bent.</p>
 
   <div class="stitle"><h3>Wandelen</h3></div>
-  <p>Kort en rustig. Een blokje om, naar de winkel, door het park. Beweging stimuleert je lymfesysteem — maar alleen als het niet voelt als straf. Doe het wanneer het fijn is, laat het staan als het te veel is.</p>
+  <p>Kort en rustig. Een blokje om, naar de winkel, door het park. Beweging stimuleert je lymfesysteem, maar alleen als het niet voelt als straf. Doe het wanneer het fijn is, laat het staan als het te veel is.</p>
 
   <div class="stitle"><h3>Rustmomenten</h3></div>
   <p>Gewoon even zitten. Niet scrollen, niet regelen, alleen zijn. Twee minuten mag al. Je zenuwstelsel laadt op. Je lymfe stroomt. Je hoofd wordt stiller.</p>
@@ -482,16 +482,16 @@ a { color: var(--accent-dk); }
   <div class="stitle"><h3>Water drinken</h3></div>
   <p>Simpel, maar het werkt. Voldoende water helpt je lymfesysteem. Warm water met citroen 's ochtends is een zachte manier om de dag te beginnen.</p>
 
-  <div class="stitle"><h3>Voeding — zonder regels</h3></div>
+  <div class="stitle"><h3>Voeding: zonder regels</h3></div>
   <p>Geen dieet. Geen verboden. Alleen een paar zachte richtingen als je bewustere keuzes wilt maken:</p>
 
   <div class="habit-row"><div class="habit-icon">🥦</div><div>Meer groenten en gezonde vetten (avocado, olijfolie, noten)</div></div>
   <div class="habit-row"><div class="habit-icon">🐟</div><div>Vette vis, eieren of peulvruchten als basis van je maaltijd</div></div>
-  <div class="habit-row"><div class="habit-icon">🍬</div><div>Minder suiker en bewerkt eten — niet nooit, maar minder</div></div>
+  <div class="habit-row"><div class="habit-icon">🍬</div><div>Minder suiker en bewerkt eten, niet nooit, maar minder</div></div>
   <div class="habit-row"><div class="habit-icon">🫖</div><div>Kruidenthee of warm water in plaats van veel cafeïne</div></div>
 
   <div class="box box-soft" style="margin-top:4mm">
-    <p style="margin:0">Dit zijn suggesties — geen regels. En zeker geen reden voor schuldgevoel als het een dag niet lukt.</p>
+    <p style="margin:0">Dit zijn suggesties, geen regels. En zeker geen reden voor schuldgevoel als het een dag niet lukt.</p>
   </div>
 
   <div class="pgnum">8</div>
@@ -507,19 +507,19 @@ a { color: var(--accent-dk); }
     "Je lichaam werkt anders.<br>Het werkt niet verkeerd."
   </div>
 
-  <div class="stitle"><h3>Acceptatie — stap voor stap</h3></div>
+  <div class="stitle"><h3>Acceptatie: stap voor stap</h3></div>
   <p>Acceptatie betekent niet dat je blij moet zijn met lipoedeem. Het betekent dat je stopt met oorlog voeren met je eigen lichaam. Dat je de energie die je besteedde aan schaamte, teruggeeft aan jezelf.</p>
   <p>Dat gaat niet van de ene op de andere dag. Maar elke dag een klein beetje zachter kijken telt.</p>
 
   <div class="stitle"><h3>Geen schuldgevoel</h3></div>
-  <p>Je hebt lipoedeem niet verdiend. Het is er gewoon. Slechte dagen zijn geen bewijs dat je het fout doet — het zijn gewoon slechte dagen.</p>
+  <p>Je hebt lipoedeem niet verdiend. Het is er gewoon. Slechte dagen zijn geen bewijs dat je het fout doet, het zijn gewoon slechte dagen.</p>
   <p>Eet je iets wat niet ideaal is? Geen straf. Geen reset. Gewoon de volgende maaltijd, met zachtheid.</p>
 
   <div class="stitle"><h3>Zachter kijken</h3></div>
   <p>Probeer je lichaam eens te bekijken met de ogen die je zou gebruiken voor een goede vriendin. Wat zou je haar zeggen? Waarschijnlijk iets heel anders dan wat je normaal tegen jezelf zegt.</p>
 
   <div class="box box-soft" style="margin-top:4mm">
-    <p style="margin:0"><em>Jouw lichaam draagt je elke dag. Het doet zijn best. Het verdient zachtheid — van jou.</em></p>
+    <p style="margin:0"><em>Jouw lichaam draagt je elke dag. Het doet zijn best. Het verdient zachtheid, van jou.</em></p>
   </div>
 
   <div class="pgnum">9</div>
@@ -529,7 +529,7 @@ a { color: var(--accent-dk); }
 <div class="page">
   <div class="band"><h2><span class="ch-num">08</span> Jouw zachte start</h2></div>
 
-  <p>Je hebt deze gids gelezen. Misschien voel je al meer rust. Misschien ook wat overweldiging — want ook dit zijn allemaal dingen die je 'kunt doen'.</p>
+  <p>Je hebt deze gids gelezen. Misschien voel je al meer rust. Misschien ook wat overweldiging, want ook dit zijn allemaal dingen die je 'kunt doen'.</p>
 
   <p>Dus laten we het heel klein houden.</p>
 
@@ -549,7 +549,7 @@ a { color: var(--accent-dk); }
   </div>
   <div class="step">
     <div class="step-num">3</div>
-    <div class="step-body"><p style="margin:0">Zachte aanraking — even je benen rustig aanraken</p></div>
+    <div class="step-body"><p style="margin:0">Zachte aanraking, even je benen rustig aanraken</p></div>
   </div>
 
   <hr>
@@ -569,7 +569,7 @@ a { color: var(--accent-dk); }
 <div class="page">
   <div class="band"><h2><span class="ch-num">09</span> Tot slot</h2></div>
 
-  <p>Je bent aan het einde van deze gids. Maar dit is niet het einde — het is een begin.</p>
+  <p>Je bent aan het einde van deze gids. Maar dit is niet het einde, het is een begin.</p>
 
   <p>Een begin van een andere manier van omgaan met je lichaam. Zachter. Rustiger. Met meer begrip en minder oordeel.</p>
 
@@ -583,7 +583,7 @@ a { color: var(--accent-dk); }
 
   <div class="stitle"><h3>🌸 Lotus Moments</h3></div>
 
-  <p>Als je meer wilt — meer begeleiding, een gesprek, of gewoon een uur volledig voor jezelf — ben ik er.</p>
+  <p>Als je meer wilt, meer begeleiding, een gesprek, of gewoon een uur volledig voor jezelf, ben ik er.</p>
 
   <p>Bij Lotus Moments bied ik holistische massage aan voor vrouwen met lipoedeem. Geen oordeel. Geen druk. Alleen aandacht voor jouw lichaam, op jouw tempo.</p>
 
@@ -595,7 +595,7 @@ a { color: var(--accent-dk); }
   </div>
 
   <div class="box box-soft">
-    <p style="margin:0">Wil je een afspraak maken? Dat kan via <a href="https://calendly.com/emine314/30min">calendly.com/emine314/30min</a> — of stuur me gewoon een berichtje. 🌿</p>
+    <p style="margin:0">Wil je een afspraak maken? Dat kan via <a href="https://calendly.com/emine314/30min">calendly.com/emine314/30min</a>, of stuur me gewoon een berichtje. 🌿</p>
   </div>
 
   <div style="margin-top:8mm">

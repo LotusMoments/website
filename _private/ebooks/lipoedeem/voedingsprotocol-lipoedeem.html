@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>In balans met Lipoedeem — Lotus Moments</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+<title>In balans met Lipoedeem | Lotus Moments</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/css/tokens.css">
 <style>
 :root {
-  --bg: #f5f0e8;
-  --text: #3f3226;
-  --muted: #6b5a4b;
-  --accent: #cfa16f;
-  --accent-dk: #b07d4a;
-  --soft: #f3d6c6;
-  --neutral: #fdf8f2;
-  --neutral-s: #e4d9c8;
-  --dark: #2c1f14;
+  --text: var(--ink);
+  --muted: var(--ink-soft);
+  --accent: var(--terracotta);
+  --accent-dk: var(--terracotta-deep);
+  --soft: var(--blush);
+  --neutral: var(--cream);
+  --neutral-s: var(--paper);
+  --dark: var(--ink);
   --green: #5a7a5c;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; hyphens: none !important; -webkit-hyphens: none !important; -moz-hyphens: none !important; -ms-hyphens: none !important; }
 body {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   background: #cfc5b2;
   color: var(--text);
   line-height: 1.65;
@@ -44,7 +44,7 @@ body {
   position: absolute;
   bottom: 10mm;
   right: 20mm;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 7pt;
   color: var(--accent);
   opacity: 0.6;
@@ -71,7 +71,7 @@ body {
 }
 .cover-header svg { fill: var(--accent-dk); }
 .cover-header span {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 10pt;
   font-weight: 600;
   letter-spacing: 3.5px;
@@ -101,7 +101,7 @@ body {
   pointer-events: none;
 }
 .cover-author {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 8pt;
   color: var(--accent);
   letter-spacing: 2.5px;
@@ -109,7 +109,7 @@ body {
   margin-bottom: 6mm;
 }
 .cover h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-size: 34pt;
   color: #8b6347;
   font-weight: 400;
@@ -124,14 +124,14 @@ body {
   margin: 0 auto 5mm;
 }
 .cover-subtitle {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-style: italic;
   font-size: 16pt;
   color: var(--accent-dk);
   margin-bottom: 5mm;
 }
 .cover-tagline {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: var(--font-body);
   font-size: 10pt;
   color: var(--muted);
   letter-spacing: 0.2px;
@@ -149,13 +149,13 @@ body {
   border-top: 1px solid var(--neutral-s);
 }
 .cover-footer-name {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-size: 11pt;
   color: var(--text);
   font-weight: 400;
 }
 .cover-footer-contact {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 7.5pt;
   color: var(--muted);
   letter-spacing: 0.8px;
@@ -163,7 +163,7 @@ body {
 
 /* ─── TYPOGRAPHY ─── */
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-size: 17pt;
   color: var(--accent-dk);
   font-weight: 400;
@@ -171,13 +171,13 @@ h2 {
   line-height: 1.2;
 }
 h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-size: 12pt;
   color: var(--text);
   margin: 4mm 0 2.5mm;
 }
 h4 {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 8pt;
   color: var(--accent-dk);
   font-weight: 700;
@@ -202,8 +202,8 @@ em { color: var(--muted); font-style: italic; }
 }
 .toc-title { font-size: 9.5pt; color: var(--text); }
 .toc-dots { flex: 1; border-bottom: 1px dotted var(--neutral-s); margin-bottom: 1px; }
-.toc-page { font-family: 'Raleway', sans-serif; font-size: 8pt; color: var(--accent-dk); font-weight: 600; flex-shrink: 0; }
-.toc-section { font-family: 'Raleway', sans-serif; font-size: 7pt; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; margin: 5mm 0 1.5mm; }
+.toc-page { font-family: var(--font-body); font-size: 8pt; color: var(--accent-dk); font-weight: 600; flex-shrink: 0; }
+.toc-section { font-family: var(--font-body); font-size: 7pt; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; margin: 5mm 0 1.5mm; }
 
 /* ─── PAGE BAND ─── */
 .band {
@@ -219,7 +219,7 @@ em { color: var(--muted); font-style: italic; }
 .band-icon { font-size: 16pt; }
 .band .band-icon svg { fill: var(--accent-dk); opacity: 0.65; }
 .ch-num {
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 9pt;
   font-weight: 600;
   opacity: 0.55;
@@ -255,7 +255,7 @@ em { color: var(--muted); font-style: italic; }
 /* ─── TAG ─── */
 .tag {
   display: inline-block;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-size: 7pt;
   font-weight: 700;
   letter-spacing: 1px;
@@ -290,7 +290,7 @@ em { color: var(--muted); font-style: italic; }
 .step-num {
   background: var(--accent);
   color: var(--dark);
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-size: 15pt;
   font-weight: 700;
   min-width: 12mm;
@@ -313,7 +313,7 @@ th {
   color: var(--dark);
   padding: 2.5mm 3mm;
   text-align: left;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: 7.5pt;
   text-transform: uppercase;
@@ -346,7 +346,7 @@ tr:nth-child(even) td { background: var(--neutral); }
 /* ─── MISC ─── */
 hr { border: none; border-top: 1px solid var(--neutral-s); margin: 5mm 0; }
 blockquote {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-style: italic;
   font-size: 11pt;
   color: var(--accent-dk);
@@ -360,7 +360,7 @@ blockquote {
   background: var(--soft);
   color: var(--accent-dk);
   font-size: 7.5pt;
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
   font-weight: 600;
   padding: 0.5mm 3mm;
   border-radius: 10px;
@@ -388,7 +388,7 @@ blockquote {
   padding-top: 2mm;
   font-size: 7pt;
   color: var(--muted);
-  font-family: 'Raleway', sans-serif;
+  font-family: var(--font-body);
 }
 
 /* ─── PRINT ─── */
@@ -401,7 +401,7 @@ blockquote {
 <body>
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 1 — COVER
+     PAGINA 1: COVER
 ════════════════════════════════════════════ -->
 <div class="page cover">
 
@@ -435,7 +435,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 2 — INHOUDSOPGAVE
+     PAGINA 2: INHOUDSOPGAVE
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band"><span class="band-icon"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="var(--dark)" style="flex-shrink:0;opacity:0.7"><path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/><path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/><path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/><path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/></svg></span><h2>Inhoudsopgave</h2></div>
@@ -455,7 +455,7 @@ blockquote {
   <div class="toc-section">Voeding in de praktijk</div>
   <div class="toc-item"><span class="toc-title">09 &nbsp;·&nbsp; Gezonde voeding in de praktijk</span><span class="toc-dots"></span><span class="toc-page">11</span></div>
   <div class="toc-item"><span class="toc-title">10 &nbsp;·&nbsp; Opbouw van je maaltijden</span><span class="toc-dots"></span><span class="toc-page">12</span></div>
-  <div class="toc-item"><span class="toc-title">11 &nbsp;·&nbsp; Stappenplan — zo begin je</span><span class="toc-dots"></span><span class="toc-page">13</span></div>
+  <div class="toc-item"><span class="toc-title">11 &nbsp;·&nbsp; Stappenplan: zo begin je</span><span class="toc-dots"></span><span class="toc-page">13</span></div>
   <div class="toc-item"><span class="toc-title">12 &nbsp;·&nbsp; Maaltijdvoorbeelden</span><span class="toc-dots"></span><span class="toc-page">14</span></div>
   <div class="toc-item"><span class="toc-title">13 &nbsp;·&nbsp; Makkelijke dagmenu's</span><span class="toc-dots"></span><span class="toc-page">15</span></div>
   <div class="toc-item"><span class="toc-title">14 &nbsp;·&nbsp; Gezondere vervangers</span><span class="toc-dots"></span><span class="toc-page">16</span></div>
@@ -476,12 +476,12 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 3 — ZO GEBRUIK JE DEZE GIDS
+     PAGINA 3: ZO GEBRUIK JE DEZE GIDS
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band"><h2>Zo gebruik je deze gids</h2></div>
 
-  <p>Deze gids is uitgebreid — en dat is met opzet. Lipoedeem raakt veel kanten van je leven tegelijk: hormonen, voeding, stress, slaap, beweging, en hoe je met je lichaam omgaat. Al die onderwerpen komen aan bod.</p>
+  <p>Deze gids is uitgebreid, en dat is met opzet. Lipoedeem raakt veel kanten van je leven tegelijk: hormonen, voeding, stress, slaap, beweging, en hoe je met je lichaam omgaat. Al die onderwerpen komen aan bod.</p>
 
   <p>Maar je hoeft het niet van voor naar achter te lezen. En je hoeft het zeker niet allemaal tegelijk te doen. Lees wat je aanspreekt, sla over wat te veel voelt, en kom terug als je er aan toe bent.</p>
 
@@ -491,23 +491,23 @@ blockquote {
 
   <div style="display:flex;flex-direction:column;gap:3mm;margin-bottom:5mm">
     <div style="background:rgba(207,161,111,0.10);border-left:3px solid var(--accent);padding:3mm 4mm;border-radius:2px">
-      <p style="margin:0;font-size:9pt"><strong>H01 — Welkom &amp; mijn verhaal</strong><br>
+      <p style="margin:0;font-size:9pt"><strong>H01: Welkom &amp; mijn verhaal</strong><br>
       Een persoonlijk begin. Wie ik ben, waarom ik dit heb gemaakt, en drie kleine dingen die je meteen kunt doen.</p>
     </div>
     <div style="background:rgba(207,161,111,0.10);border-left:3px solid var(--accent);padding:3mm 4mm;border-radius:2px">
-      <p style="margin:0;font-size:9pt"><strong>H02–H08 — De factoren achter lipoedeem</strong><br>
-      Meer achtergrondkennis: hoe hormonen, lever, slaap, stress en darmgezondheid samenhangen met lipoedeem. Deze hoofdstukken bevatten meer medische en wetenschappelijke uitleg — interessant als je wilt begrijpen <em>waarom</em> bepaalde dingen helpen. Maar voel je vrij om dit deel over te slaan als je liever meteen praktisch aan de slag gaat.</p>
+      <p style="margin:0;font-size:9pt"><strong>H02–H08: De factoren achter lipoedeem</strong><br>
+      Meer achtergrondkennis: hoe hormonen, lever, slaap, stress en darmgezondheid samenhangen met lipoedeem. Deze hoofdstukken bevatten meer medische en wetenschappelijke uitleg, interessant als je wilt begrijpen <em>waarom</em> bepaalde dingen helpen. Maar voel je vrij om dit deel over te slaan als je liever meteen praktisch aan de slag gaat.</p>
     </div>
     <div style="background:rgba(207,161,111,0.10);border-left:3px solid var(--accent);padding:3mm 4mm;border-radius:2px">
-      <p style="margin:0;font-size:9pt"><strong>H09–H15 — Voeding in de praktijk</strong><br>
-      Hoe zet je gezonde voeding om in je dagelijks leven? Maaltijdopbouw, voorbeelden, simpele menu's en handige vervangingen — zonder streng te zijn.</p>
+      <p style="margin:0;font-size:9pt"><strong>H09–H15: Voeding in de praktijk</strong><br>
+      Hoe zet je gezonde voeding om in je dagelijks leven? Maaltijdopbouw, voorbeelden, simpele menu's en handige vervangingen, zonder streng te zijn.</p>
     </div>
     <div style="background:rgba(207,161,111,0.10);border-left:3px solid var(--accent);padding:3mm 4mm;border-radius:2px">
-      <p style="margin:0;font-size:9pt"><strong>H16–H18 — Beweging, ademhaling &amp; welzijn</strong><br>
+      <p style="margin:0;font-size:9pt"><strong>H16–H18: Beweging, ademhaling &amp; welzijn</strong><br>
       Zachte beweging, ademhalingsoefeningen en lichaamsacceptatie. De holistische kant van balans.</p>
     </div>
     <div style="background:rgba(207,161,111,0.10);border-left:3px solid var(--accent);padding:3mm 4mm;border-radius:2px">
-      <p style="margin:0;font-size:9pt"><strong>H19–H20 — Behandeling &amp; vergoeding</strong><br>
+      <p style="margin:0;font-size:9pt"><strong>H19–H20: Behandeling &amp; vergoeding</strong><br>
       Welke behandelingen bestaan er, wat werkt, en wat wordt vergoed door de zorgverzekeraar?</p>
     </div>
   </div>
@@ -519,25 +519,25 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 4 — WELKOM & MIJN VERHAAL
+     PAGINA 4: WELKOM & MIJN VERHAAL
 ════════════════════════════════════════════ -->
 <div class="page">
 
   <div class="band"><span class="band-icon"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="var(--dark)" style="flex-shrink:0;opacity:0.7"><path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/><path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/><path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/><path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/></svg></span><h2><span class="ch-num">01</span> Welkom</h2></div>
 
-  <p>Deze gids is geschreven voor vrouwen met lipoedeem die voelen dat hun lichaam anders werkt — en die moe zijn van dieetschema's, strikte routines en lijstjes die zeggen "dit moet je elke dag doen".</p>
+  <p>Deze gids is geschreven voor vrouwen met lipoedeem die voelen dat hun lichaam anders werkt, en die moe zijn van dieetschema's, strikte routines en lijstjes die zeggen "dit moet je elke dag doen".</p>
 
-  <p>Wat als het anders kan? Wat als je lichaam niet meer regels nodig heeft, maar meer <strong>zachtheid</strong>? Deze gids is geen takenlijst. Het voelt als een warme hand. Geen druk, geen perfectie — alleen rustige, zachte stappen die jij kunt doen.</p>
+  <p>Wat als het anders kan? Wat als je lichaam niet meer regels nodig heeft, maar meer <strong>zachtheid</strong>? Deze gids is geen takenlijst. Het voelt als een warme hand. Geen druk, geen perfectie, alleen rustige, zachte stappen die jij kunt doen.</p>
 
   <hr style="margin:5mm 0">
 
-  <div class="stitle"><h3>Jouw zachte startpunt — 3 dingen die al helpen</h3></div>
+  <div class="stitle"><h3>Jouw zachte startpunt: 3 dingen die al helpen</h3></div>
 
   <div class="step">
     <div class="step-num">1</div>
     <div class="step-body">
       <h3>Adem &amp; vertraag</h3>
-      <p>Gewoon even zitten. Hand op je buik. Adem rustig — twee minuten is genoeg. Je doet al iets goeds voor je lymfe en je zenuwstelsel.</p>
+      <p>Gewoon even zitten. Hand op je buik. Adem rustig, twee minuten is genoeg. Je doet al iets goeds voor je lymfe en je zenuwstelsel.</p>
     </div>
   </div>
   <div class="step">
@@ -563,19 +563,19 @@ blockquote {
 
   <div class="stitle"><h3>Mijn verhaal</h3></div>
 
-  <p>Al vanaf jonge leeftijd voelde mijn lichaam anders dan dat van anderen. Ik ben klein van stuk en heb een smalle taille, maar mijn bovenbenen en onderlichaam waren altijd voller. Wat ik ook deed, die verhouding bleef. Na mijn zwangerschap namen de klachten verder toe — pijn die dagelijks aanwezig was en me ook mentaal begon te raken.</p>
+  <p>Al vanaf jonge leeftijd voelde mijn lichaam anders dan dat van anderen. Ik ben klein van stuk en heb een smalle taille, maar mijn bovenbenen en onderlichaam waren altijd voller. Wat ik ook deed, die verhouding bleef. Na mijn zwangerschap namen de klachten verder toe, pijn die dagelijks aanwezig was en me ook mentaal begon te raken.</p>
 
-  <p>Jarenlang kreeg ik hetzelfde advies: gezonder eten, meer bewegen. En dat deed ik ook, hoe zwaar het ook was. Ik probeerde van alles — van calorieën tellen tot koolhydraatarme diëten. Tot mijn lichaam op een punt kwam waarop het simpelweg niet meer verder kon. Dat moment heeft me wakker geschud: <strong>niet alles wat snel resultaat belooft, is goed voor je lichaam.</strong></p>
+  <p>Jarenlang kreeg ik hetzelfde advies: gezonder eten, meer bewegen. En dat deed ik ook, hoe zwaar het ook was. Ik probeerde van alles, van calorieën tellen tot koolhydraatarme diëten. Tot mijn lichaam op een punt kwam waarop het simpelweg niet meer verder kon. Dat moment heeft me wakker geschud: <strong>niet alles wat snel resultaat belooft, is goed voor je lichaam.</strong></p>
 
-  <p>Pas later kreeg ik de diagnose lipoedeem. Toen viel er veel op zijn plek. Het lag niet aan discipline of doorzettingsvermogen — mijn lichaam had simpelweg een andere aanpak nodig.</p>
+  <p>Pas later kreeg ik de diagnose lipoedeem. Toen viel er veel op zijn plek. Het lag niet aan discipline of doorzettingsvermogen, mijn lichaam had simpelweg een andere aanpak nodig.</p>
 
-  <p>Na mijn diagnose ben ik me gaan verdiepen in wat echt helpt: voeding, leefstijl en behandelingen. Ik volgde een opleiding tot holistisch massagetherapeut en leerde niet alleen over het lichaam, maar vooral ook over mezelf — over voelen, vertragen en naar binnen kijken. Wat voor mij het grootste inzicht werd: het gaat niet om zo <em>min mogelijk</em> eten, maar om de <strong>juiste voeding</strong>. Gezonde vetten zijn essentieel voor je hormonen en je algehele balans.</p>
+  <p>Na mijn diagnose ben ik me gaan verdiepen in wat echt helpt: voeding, leefstijl en behandelingen. Ik volgde een opleiding tot holistisch massagetherapeut en leerde niet alleen over het lichaam, maar vooral ook over mezelf, over voelen, vertragen en naar binnen kijken. Wat voor mij het grootste inzicht werd: het gaat niet om zo <em>min mogelijk</em> eten, maar om de <strong>juiste voeding</strong>. Gezonde vetten zijn essentieel voor je hormonen en je algehele balans.</p>
 
-  <p>Ik ben misschien niet elke dag volledig tevreden met mijn lichaam, maar ik ben op een plek gekomen waar er meer zachtheid is. Meer acceptatie. Vanuit die ervaring wil ik andere vrouwen helpen — met zachtheid, begrip en zonder oordeel.</p>
+  <p>Ik ben misschien niet elke dag volledig tevreden met mijn lichaam, maar ik ben op een plek gekomen waar er meer zachtheid is. Meer acceptatie. Vanuit die ervaring wil ik andere vrouwen helpen, met zachtheid, begrip en zonder oordeel.</p>
 
   <div style="margin-top:5mm">
-    <div style="font-family:'Playfair Display',serif;font-size:14pt;color:var(--accent-dk);font-style:italic">Liefs, Emine</div>
-    <div style="font-family:'Raleway',sans-serif;font-size:8pt;color:var(--muted);letter-spacing:0.5px">Lotus Moments · Holistische massagepraktijk · Deventer</div>
+    <div style="font-family:var(--font-heading);font-size:14pt;color:var(--accent-dk);font-style:italic">Liefs, Emine</div>
+    <div style="font-family:var(--font-body);font-size:8pt;color:var(--muted);letter-spacing:0.5px">Lotus Moments · Holistische massagepraktijk · Deventer</div>
   </div>
 
   <div class="disclaimer" style="margin-top:5mm">Deze gids biedt ondersteunende informatie op basis van wetenschappelijke inzichten over lipoedeem en voeding. Het vervangt geen medisch advies. Raadpleeg bij twijfel altijd een arts of diëtist.</div>
@@ -588,7 +588,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 3 — WAT IS LIPOEDEEM?
+     PAGINA 3: WAT IS LIPOEDEEM?
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -596,7 +596,7 @@ blockquote {
     <h2><span class="ch-num">02</span> Wat is lipoedeem?</h2>
   </div>
 
-  <p>Lipoedeem is een chronische aandoening waarbij vetweefsel zich op een abnormale manier ophoopt, voornamelijk op de heupen, billen en benen — maar niet op de voeten. Het treft bijna uitsluitend vrouwen en hangt nauw samen met hormonale veranderingen in het lichaam.</p>
+  <p>Lipoedeem is een chronische aandoening waarbij vetweefsel zich op een abnormale manier ophoopt, voornamelijk op de heupen, billen en benen, maar niet op de voeten. Het treft bijna uitsluitend vrouwen en hangt nauw samen met hormonale veranderingen in het lichaam.</p>
 
   <p>De exacte oorzaak is niet volledig bekend, maar onderzoek wijst op een combinatie van genetische aanleg en verstoorde lichaamsprocessen. Wat we wél weten: <strong>voeding speelt een sleutelrol</strong> in hoe het lipoedeem zich ontwikkelt en hoe ernstig de klachten zijn.</p>
 
@@ -619,42 +619,42 @@ blockquote {
       <line x1="135" y1="122" x2="102" y2="84" stroke="#e4d9c8" stroke-width="1.5"/>
       <!-- center -->
       <circle cx="160" cy="155" r="40" fill="#b07d4a"/>
-      <text x="160" y="150" text-anchor="middle" font-family="Playfair Display" font-size="10" font-weight="700" fill="#fdf8f2">LIPOEDEEM</text>
-      <text x="160" y="163" text-anchor="middle" font-family="Source Sans 3" font-size="8" fill="#f3d6c6">factoren</text>
+      <text x="160" y="150" text-anchor="middle" font-family="Cormorant Garamond" font-size="10" font-weight="700" fill="#fdf8f2">LIPOEDEEM</text>
+      <text x="160" y="163" text-anchor="middle" font-family="Work Sans" font-size="8" fill="#f3d6c6">factoren</text>
       <!-- factor circles -->
       <circle cx="160" cy="42" r="25" fill="#f3d6c6" stroke="#cfa16f" stroke-width="1.5"/>
-      <text x="160" y="39" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#3f3226">Hormoon</text>
-      <text x="160" y="49" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#3f3226">balans</text>
+      <text x="160" y="39" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#3f3226">Hormoon</text>
+      <text x="160" y="49" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#3f3226">balans</text>
       <circle cx="226" cy="72" r="25" fill="#f3d6c6" stroke="#cfa16f" stroke-width="1.5"/>
-      <text x="226" y="69" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#3f3226">Slaap &amp;</text>
-      <text x="226" y="79" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#3f3226">bioritme</text>
+      <text x="226" y="69" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#3f3226">Slaap &amp;</text>
+      <text x="226" y="79" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#3f3226">bioritme</text>
       <circle cx="265" cy="155" r="25" fill="#f3d6c6" stroke="#cfa16f" stroke-width="1.5"/>
-      <text x="265" y="152" text-anchor="middle" font-family="Source Sans 3" font-size="7" font-weight="600" fill="#3f3226">Darm</text>
-      <text x="265" y="162" text-anchor="middle" font-family="Source Sans 3" font-size="7" font-weight="600" fill="#3f3226">gezondheid</text>
+      <text x="265" y="152" text-anchor="middle" font-family="Work Sans" font-size="7" font-weight="600" fill="#3f3226">Darm</text>
+      <text x="265" y="162" text-anchor="middle" font-family="Work Sans" font-size="7" font-weight="600" fill="#3f3226">gezondheid</text>
       <circle cx="226" cy="238" r="25" fill="#f3d6c6" stroke="#cfa16f" stroke-width="1.5"/>
-      <text x="226" y="235" text-anchor="middle" font-family="Source Sans 3" font-size="7" font-weight="600" fill="#3f3226">Insuline</text>
-      <text x="226" y="245" text-anchor="middle" font-family="Source Sans 3" font-size="7" font-weight="600" fill="#3f3226">resistentie</text>
+      <text x="226" y="235" text-anchor="middle" font-family="Work Sans" font-size="7" font-weight="600" fill="#3f3226">Insuline</text>
+      <text x="226" y="245" text-anchor="middle" font-family="Work Sans" font-size="7" font-weight="600" fill="#3f3226">resistentie</text>
       <circle cx="160" cy="268" r="25" fill="#f3d6c6" stroke="#cfa16f" stroke-width="1.5"/>
-      <text x="160" y="265" text-anchor="middle" font-family="Source Sans 3" font-size="7" font-weight="600" fill="#3f3226">Laaggradig</text>
-      <text x="160" y="275" text-anchor="middle" font-family="Source Sans 3" font-size="7" font-weight="600" fill="#3f3226">ontsteking</text>
+      <text x="160" y="265" text-anchor="middle" font-family="Work Sans" font-size="7" font-weight="600" fill="#3f3226">Laaggradig</text>
+      <text x="160" y="275" text-anchor="middle" font-family="Work Sans" font-size="7" font-weight="600" fill="#3f3226">ontsteking</text>
       <circle cx="94" cy="238" r="25" fill="#f3d6c6" stroke="#cfa16f" stroke-width="1.5"/>
-      <text x="94" y="235" text-anchor="middle" font-family="Source Sans 3" font-size="7" font-weight="600" fill="#3f3226">Bind</text>
-      <text x="94" y="245" text-anchor="middle" font-family="Source Sans 3" font-size="7" font-weight="600" fill="#3f3226">weefsel</text>
+      <text x="94" y="235" text-anchor="middle" font-family="Work Sans" font-size="7" font-weight="600" fill="#3f3226">Bind</text>
+      <text x="94" y="245" text-anchor="middle" font-family="Work Sans" font-size="7" font-weight="600" fill="#3f3226">weefsel</text>
       <circle cx="55" cy="155" r="25" fill="#f3d6c6" stroke="#cfa16f" stroke-width="1.5"/>
-      <text x="55" y="152" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#3f3226">Stress &amp;</text>
-      <text x="55" y="162" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#3f3226">emoties</text>
+      <text x="55" y="152" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#3f3226">Stress &amp;</text>
+      <text x="55" y="162" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#3f3226">emoties</text>
       <circle cx="94" cy="72" r="25" fill="#b07d4a" stroke="#b07d4a" stroke-width="1.5"/>
-      <text x="94" y="69" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#fdf8f2">Voeding</text>
-      <text x="94" y="79" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#fdf8f2">&amp; leefstijl</text>
+      <text x="94" y="69" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#fdf8f2">Voeding</text>
+      <text x="94" y="79" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#fdf8f2">&amp; leefstijl</text>
     </svg>
   </div>
 
   <div class="box-soft box" style="margin-top:2mm">
-    <p style="margin:0;font-size:9pt"><strong>Al deze factoren zijn beïnvloedbaar.</strong> Via voeding, leefstijl en bewuste keuzes kun je het samenspel positief beïnvloeden — stap voor stap, met zachtheid. Deze gids laat je zien hoe.</p>
+    <p style="margin:0;font-size:9pt"><strong>Al deze factoren zijn beïnvloedbaar.</strong> Via voeding, leefstijl en bewuste keuzes kun je het samenspel positief beïnvloeden, stap voor stap, met zachtheid. Deze gids laat je zien hoe.</p>
   </div>
 
   <div style="margin-top:4mm">
-    <p style="font-size:7pt;color:var(--muted);margin-bottom:2mm;font-family:'Raleway',sans-serif;letter-spacing:0.5px;text-transform:uppercase">Elk factor komt terug in deze gids</p>
+    <p style="font-size:7pt;color:var(--muted);margin-bottom:2mm;font-family:var(--font-body);letter-spacing:0.5px;text-transform:uppercase">Elk factor komt terug in deze gids</p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5mm 6mm;font-size:8pt">
       <span>🌸 Hormoonbalans → H03 &amp; H04</span>
       <span>😴 Slaap &amp; bioritme → H05</span>
@@ -675,7 +675,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 4 — HORMONEN & OESTROGEEN
+     PAGINA 4: HORMONEN & OESTROGEEN
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -685,7 +685,7 @@ blockquote {
 
   <div class="box box-dark" style="margin-bottom:5mm">
     <div class="tag" style="background:var(--accent)">In het kort</div>
-    <p>Lipoedeem begint rond de puberteit en verergert bij hormonale veranderingen. Oestrogeen stuurt de vetopslag op typisch vrouwelijke plaatsen aan. Een verstoorde oestrogeenbalans — te veel <em>of</em> te weinig — draagt direct bij aan lipoedeem.</p>
+    <p>Lipoedeem begint rond de puberteit en verergert bij hormonale veranderingen. Oestrogeen stuurt de vetopslag op typisch vrouwelijke plaatsen aan. Een verstoorde oestrogeenbalans, te veel <em>of</em> te weinig, draagt direct bij aan lipoedeem.</p>
   </div>
 
   <div class="stitle"><h3>De rol van oestrogeen</h3></div>
@@ -702,7 +702,7 @@ blockquote {
   <div class="cols2" style="margin:3mm 0">
     <div class="box">
       <h4>🌱 Puberteit</h4>
-      <p style="font-size:8.5pt;margin:0">Eerste aanleg van lipoedeem — oestrogeenproductie schiet omhoog</p>
+      <p style="font-size:8.5pt;margin:0">Eerste aanleg van lipoedeem, oestrogeenproductie schiet omhoog</p>
     </div>
     <div class="box">
       <h4>🤰 Zwangerschap</h4>
@@ -710,11 +710,11 @@ blockquote {
     </div>
     <div class="box">
       <h4>💊 Anticonceptie</h4>
-      <p style="font-size:8.5pt;margin:0">De pil levert kunstmatig hoge oestrogeenspiegels — kan lipoedeem verergeren</p>
+      <p style="font-size:8.5pt;margin:0">De pil levert kunstmatig hoge oestrogeenspiegels, kan lipoedeem verergeren</p>
     </div>
     <div class="box">
       <h4>🍂 Menopauze</h4>
-      <p style="font-size:8.5pt;margin:0">Oestrogeenproductie daalt — de balans kan opnieuw verschuiven</p>
+      <p style="font-size:8.5pt;margin:0">Oestrogeenproductie daalt, de balans kan opnieuw verschuiven</p>
     </div>
   </div>
 
@@ -761,7 +761,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 5 — LEVER & XENO-OESTROGENEN
+     PAGINA 5: LEVER & XENO-OESTROGENEN
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -777,12 +777,12 @@ blockquote {
     <svg viewBox="0 0 380 120" width="320" xmlns="http://www.w3.org/2000/svg">
       <!-- Oestrogeen blok -->
       <rect x="5" y="40" width="80" height="40" rx="6" fill="#b07d4a"/>
-      <text x="45" y="58" text-anchor="middle" font-family="Source Sans 3" font-size="9" font-weight="600" fill="white">OESTROGEEN</text>
-      <text x="45" y="70" text-anchor="middle" font-family="Source Sans 3" font-size="8" fill="#f3d6c6">in het bloed</text>
+      <text x="45" y="58" text-anchor="middle" font-family="Work Sans" font-size="9" font-weight="600" fill="white">OESTROGEEN</text>
+      <text x="45" y="70" text-anchor="middle" font-family="Work Sans" font-size="8" fill="#f3d6c6">in het bloed</text>
       <!-- Lever -->
       <ellipse cx="175" cy="60" rx="55" ry="35" fill="#cfa16f" opacity="0.3" stroke="#cfa16f" stroke-width="1.5"/>
-      <text x="175" y="57" text-anchor="middle" font-family="Playfair Display" font-size="11" font-weight="600" fill="#b07d4a">DE LEVER</text>
-      <text x="175" y="70" text-anchor="middle" font-family="Source Sans 3" font-size="8" fill="#6b5a4b">afbraak &amp; omzetting</text>
+      <text x="175" y="57" text-anchor="middle" font-family="Cormorant Garamond" font-size="11" font-weight="600" fill="#b07d4a">DE LEVER</text>
+      <text x="175" y="70" text-anchor="middle" font-family="Work Sans" font-size="8" fill="#6b5a4b">afbraak &amp; omzetting</text>
       <!-- Arrow in -->
       <line x1="85" y1="60" x2="118" y2="60" stroke="#b07d4a" stroke-width="2" marker-end="url(#arrow)"/>
       <!-- Arrows out -->
@@ -802,18 +802,18 @@ blockquote {
       <line x1="230" y1="85" x2="285" y2="100" stroke="#c04a3a" stroke-width="1.5" marker-end="url(#arrow-red)"/>
       <!-- Metabolieten -->
       <rect x="292" y="4" width="80" height="28" rx="4" fill="#eaf2ea" stroke="#5a7a5c" stroke-width="1"/>
-      <text x="332" y="16" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#3a5c3a">2-Hydroxyoestron</text>
-      <text x="332" y="26" text-anchor="middle" font-family="Source Sans 3" font-size="7" fill="#5a7a5c">✓ beschermend</text>
+      <text x="332" y="16" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#3a5c3a">2-Hydroxyoestron</text>
+      <text x="332" y="26" text-anchor="middle" font-family="Work Sans" font-size="7" fill="#5a7a5c">✓ beschermend</text>
       <rect x="292" y="46" width="80" height="28" rx="4" fill="#eaf2ea" stroke="#5a7a5c" stroke-width="1"/>
-      <text x="332" y="58" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#3a5c3a">4-Hydroxyoestron</text>
-      <text x="332" y="68" text-anchor="middle" font-family="Source Sans 3" font-size="7" fill="#5a7a5c">neutraal</text>
+      <text x="332" y="58" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#3a5c3a">4-Hydroxyoestron</text>
+      <text x="332" y="68" text-anchor="middle" font-family="Work Sans" font-size="7" fill="#5a7a5c">neutraal</text>
       <rect x="292" y="88" width="80" height="28" rx="4" fill="#fce8e5" stroke="#c04a3a" stroke-width="1"/>
-      <text x="332" y="100" text-anchor="middle" font-family="Source Sans 3" font-size="7.5" font-weight="600" fill="#c04a3a">16-Hydroxyoestron</text>
-      <text x="332" y="110" text-anchor="middle" font-family="Source Sans 3" font-size="7" fill="#c04a3a">⚠ schadelijk bij ophoping</text>
+      <text x="332" y="100" text-anchor="middle" font-family="Work Sans" font-size="7.5" font-weight="600" fill="#c04a3a">16-Hydroxyoestron</text>
+      <text x="332" y="110" text-anchor="middle" font-family="Work Sans" font-size="7" fill="#c04a3a">⚠ schadelijk bij ophoping</text>
     </svg>
   </div>
 
-  <p style="font-size:9pt">Een gezonde lever zorgt voor meer beschermende metabolieten. Als de lever overbelast is — door suiker, alcohol, stress of tekort aan voedingsstoffen — hopen schadelijke metabolieten zich op en versterken de klachten van lipoedeem.</p>
+  <p style="font-size:9pt">Een gezonde lever zorgt voor meer beschermende metabolieten. Als de lever overbelast is, door suiker, alcohol, stress of tekort aan voedingsstoffen, hopen schadelijke metabolieten zich op en versterken de klachten van lipoedeem.</p>
 
   <div class="cols2" style="margin-top:4mm">
     <div class="box" style="background:#fce8e5;border-left-color:#c04a3a">
@@ -866,7 +866,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 6 — SLAAP & BIORITME
+     PAGINA 6: SLAAP & BIORITME
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -876,23 +876,23 @@ blockquote {
 
   <div class="box box-dark" style="margin-bottom:5mm">
     <div class="tag">In het kort</div>
-    <p>Een goed bioritme is essentieel voor de oestrogeenbalans. Te weinig slaap verhoogt schadelijke oestrogeenmetabolieten, vergroot het risico op overgewicht en maakt het lichaam gevoeliger voor ontstekingen. Vrouwen met lipoedeem hebben vaker slaapproblemen — en dit versterkt de klachten.</p>
+    <p>Een goed bioritme is essentieel voor de oestrogeenbalans. Te weinig slaap verhoogt schadelijke oestrogeenmetabolieten, vergroot het risico op overgewicht en maakt het lichaam gevoeliger voor ontstekingen. Vrouwen met lipoedeem hebben vaker slaapproblemen, en dit versterkt de klachten.</p>
   </div>
 
   <div class="stitle"><h3>Licht stuurt je hormonen</h3></div>
-  <p>Het bioritme is afhankelijk van licht en duisternis. Licht stimuleert de aanmaak van het waakhormoon cortisol, terwijl duisternis zorgt voor melatonine — het slaaphormoon dat ook een krachtige beschermende werking heeft tegen schadelijke oestrogeenmetabolieten.</p>
-  <p>Kunstmatig licht 's avonds — beeldschermen, TL-lampen, helder interieurlicht — blokkeert de melatonineproductie en ondermijnt je slaapkwaliteit.</p>
+  <p>Het bioritme is afhankelijk van licht en duisternis. Licht stimuleert de aanmaak van het waakhormoon cortisol, terwijl duisternis zorgt voor melatonine, het slaaphormoon dat ook een krachtige beschermende werking heeft tegen schadelijke oestrogeenmetabolieten.</p>
+  <p>Kunstmatig licht 's avonds, beeldschermen, TL-lampen, helder interieurlicht, blokkeert de melatonineproductie en ondermijnt je slaapkwaliteit.</p>
 
   <div class="stitle"><h3>Tips voor een beter bioritme</h3></div>
 
   <div style="display:flex;flex-direction:column;gap:3mm;margin-top:2mm">
     <div style="display:flex;align-items:flex-start;gap:4mm">
       <div style="background:var(--accent);border-radius:50%;width:8mm;height:8mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11pt">☀️</div>
-      <p style="margin:0;font-size:9.5pt;padding-top:1mm"><strong>Ga 's morgens altijd naar buiten</strong> — het daglichtsignaal start je bioritme en produceert serotonine dat 's avonds omgezet wordt in melatonine.</p>
+      <p style="margin:0;font-size:9.5pt;padding-top:1mm"><strong>Ga 's morgens altijd naar buiten</strong>, het daglichtsignaal start je bioritme en produceert serotonine dat 's avonds omgezet wordt in melatonine.</p>
     </div>
     <div style="display:flex;align-items:flex-start;gap:4mm">
       <div style="background:var(--accent);border-radius:50%;width:8mm;height:8mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11pt">🕙</div>
-      <p style="margin:0;font-size:9.5pt;padding-top:1mm"><strong>Ga elke avond rond dezelfde tijd slapen</strong> — uiterlijk 22:30. Regelmaat is het beste wat je kunt doen voor je bioritme.</p>
+      <p style="margin:0;font-size:9.5pt;padding-top:1mm"><strong>Ga elke avond rond dezelfde tijd slapen</strong>, uiterlijk 22:30. Regelmaat is het beste wat je kunt doen voor je bioritme.</p>
     </div>
     <div style="display:flex;align-items:flex-start;gap:4mm">
       <div style="background:var(--accent);border-radius:50%;width:8mm;height:8mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11pt">📱</div>
@@ -900,11 +900,11 @@ blockquote {
     </div>
     <div style="display:flex;align-items:flex-start;gap:4mm">
       <div style="background:var(--accent);border-radius:50%;width:8mm;height:8mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11pt">🌑</div>
-      <p style="margin:0;font-size:9.5pt;padding-top:1mm"><strong>Verduister je slaapkamer</strong> volledig — ook kleine lichtbronnen verstoren de melatonineproductie.</p>
+      <p style="margin:0;font-size:9.5pt;padding-top:1mm"><strong>Verduister je slaapkamer</strong> volledig, ook kleine lichtbronnen verstoren de melatonineproductie.</p>
     </div>
     <div style="display:flex;align-items:flex-start;gap:4mm">
       <div style="background:var(--accent);border-radius:50%;width:8mm;height:8mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:11pt">🍽️</div>
-      <p style="margin:0;font-size:9.5pt;padding-top:1mm"><strong>Eet alleen tussen 7:00 en 19:00</strong> — buiten deze tijden verstoort voedsel je bioritme en beïnvloedt het de oestrogeenbalans negatief.</p>
+      <p style="margin:0;font-size:9.5pt;padding-top:1mm"><strong>Eet alleen tussen 7:00 en 19:00</strong>, buiten deze tijden verstoort voedsel je bioritme en beïnvloedt het de oestrogeenbalans negatief.</p>
     </div>
   </div>
 
@@ -922,30 +922,30 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 6 — STRESS & LIPOEDEEM
+     PAGINA 6: STRESS & LIPOEDEEM
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band"><span class="band-icon"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="var(--dark)" style="flex-shrink:0;opacity:0.7"><path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/><path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/><path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/><path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/></svg></span><h2><span class="ch-num">06</span> Stress &amp; Lipoedeem</h2></div>
 
-  <p>Stress is één van de meest onderschatte factoren bij lipoedeem. Wanneer je chronisch gestrest bent, maakt je lichaam cortisol aan — een hormoon dat directe invloed heeft op ontsteking, hormoonbalans en vochtretentie.</p>
+  <p>Stress is één van de meest onderschatte factoren bij lipoedeem. Wanneer je chronisch gestrest bent, maakt je lichaam cortisol aan, een hormoon dat directe invloed heeft op ontsteking, hormoonbalans en vochtretentie.</p>
 
   <div class="stitle">Wat cortisol doet met je lichaam</div>
   <p>Cortisol onderdrukt op korte termijn ontstekingen, maar bij langdurige stress keert het effect om: het <strong>bevordert laaggradige ontsteking</strong>, verstoort de oestrogeenbalans en maakt cellen minder gevoelig voor insuline. Precies de drie factoren die lipoedeem verergeren.</p>
 
-  <p>Bovendien beïnvloedt stress je eetgedrag. Veel vrouwen met lipoedeem herkennen het patroon: spanning → behoefte aan suiker of koolhydraten → schuldgevoel → meer spanning. Dit is geen gebrek aan wilskracht — het is biologie.</p>
+  <p>Bovendien beïnvloedt stress je eetgedrag. Veel vrouwen met lipoedeem herkennen het patroon: spanning → behoefte aan suiker of koolhydraten → schuldgevoel → meer spanning. Dit is geen gebrek aan wilskracht, het is biologie.</p>
 
   <div class="stitle">Wat helpt</div>
   <ul>
-    <li><strong>Adem bewust.</strong> Zelfs drie minuten langzaam uitademen activeren je parasympathisch zenuwstelsel — de "rust en herstel"-modus van je lichaam.</li>
+    <li><strong>Adem bewust.</strong> Zelfs drie minuten langzaam uitademen activeren je parasympathisch zenuwstelsel, de "rust en herstel"-modus van je lichaam.</li>
     <li><strong>Beweeg rustig.</strong> Een wandeling van 20 minuten verlaagt cortisol effectiever dan intensief sporten bij stress.</li>
-    <li><strong>Bescherm je avond.</strong> Schermen, prikkels en takenlijstjes vlak voor het slapen verhogen cortisol. Bouw een avondritueel in — ook al is het maar 15 minuten.</li>
+    <li><strong>Bescherm je avond.</strong> Schermen, prikkels en takenlijstjes vlak voor het slapen verhogen cortisol. Bouw een avondritueel in, ook al is het maar 15 minuten.</li>
     <li><strong>Zeg vaker nee.</strong> Grenzen stellen is geen luxe. Het is een onderdeel van je behandelplan.</li>
     <li><strong>Holistische massage.</strong> Manuele lymfedrainage en holistische massage activeren het parasympathisch zenuwstelsel, verlagen cortisol en ondersteunen de lymfestroom direct.</li>
   </ul>
 
   <div class="info-box">
     <strong>Wist je dat?</strong><br>
-    Vrouwen met lipoedeem hebben vaker een overactief zenuwstelsel. Niet omdat ze "te gevoelig" zijn, maar omdat chronische pijn en onbegrip van de omgeving een blijvende stressprikkel zijn. Erkenning — van jezelf én van anderen — is ook therapie.
+    Vrouwen met lipoedeem hebben vaker een overactief zenuwstelsel. Niet omdat ze "te gevoelig" zijn, maar omdat chronische pijn en onbegrip van de omgeving een blijvende stressprikkel zijn. Erkenning, van jezelf én van anderen, is ook therapie.
   </div>
 
   <div class="footer-strip">
@@ -956,7 +956,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 7 — DISBALANSEN: ONTSTEKING & INSULINE
+     PAGINA 7: DISBALANSEN: ONTSTEKING & INSULINE
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -964,11 +964,11 @@ blockquote {
     <h2><span class="ch-num">07</span> Disbalansen bij lipoedeem</h2>
   </div>
 
-  <div class="stitle"><h3>Laaggradig ontsteking — de stille verstoorder</h3></div>
+  <div class="stitle"><h3>Laaggradig ontsteking: de stille verstoorder</h3></div>
 
   <div class="box box-dark" style="margin-bottom:4mm">
     <div class="tag">In het kort</div>
-    <p>Bij lipoedeem is er vrijwel altijd sprake van een <strong>sluimerende, laaggradige ontsteking</strong> — niet zichtbaar of voelbaar als een gewone ontsteking, maar constant aanwezig. Dit tast het bindweefsel aan, blokkeert vetverbranding, put je energie uit en versterkt alle andere onderliggende verstoringen.</p>
+    <p>Bij lipoedeem is er vrijwel altijd sprake van een <strong>sluimerende, laaggradige ontsteking</strong>, niet zichtbaar of voelbaar als een gewone ontsteking, maar constant aanwezig. Dit tast het bindweefsel aan, blokkeert vetverbranding, put je energie uit en versterkt alle andere onderliggende verstoringen.</p>
   </div>
 
   <p>Een laaggradig ontsteking is een probleem bij lipoedeem vanwege de slechte lymfafvoer en de zwakke bindweefselstructuren. Het immuunsysteem staat voortdurend in een licht verhoogde staat van activiteit, wat energie kost en vetopslag stimuleert.</p>
@@ -1000,11 +1000,11 @@ blockquote {
 
   <hr>
 
-  <div class="stitle"><h3>Insulineresistentie — vetverbranding geblokkeerd</h3></div>
+  <div class="stitle"><h3>Insulineresistentie: vetverbranding geblokkeerd</h3></div>
 
   <div class="box box-dark" style="margin-bottom:4mm">
     <div class="tag">In het kort</div>
-    <p>Insuline is het hormoon dat door voeding wordt aangemaakt. Wanneer je te veel koolhydraten eet — vooral suiker en geraffineerde producten — stijgt insuline chronisch. Dit blokkeert de vetverbranding volledig en stimuleert nieuwe vetopslag. Bij lipoedeem is de vetopslag op de aangedane plekken extra gevoelig voor insuline.</p>
+    <p>Insuline is het hormoon dat door voeding wordt aangemaakt. Wanneer je te veel koolhydraten eet, vooral suiker en geraffineerde producten, stijgt insuline chronisch. Dit blokkeert de vetverbranding volledig en stimuleert nieuwe vetopslag. Bij lipoedeem is de vetopslag op de aangedane plekken extra gevoelig voor insuline.</p>
   </div>
 
   <p>Een <strong>laagkoolhydraat voedingspatroon</strong> is het krachtigste gereedschap om insulineresistentie aan te pakken. Meerdere studies tonen aan dat vrouwen met lipoedeem significant meer profiteren van een laagkoolhydraat of ketogeen dieet dan van een caloriebeperking.</p>
@@ -1033,7 +1033,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 8 — BINDWEEFSEL & DARMGEZONDHEID
+     PAGINA 8: BINDWEEFSEL & DARMGEZONDHEID
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -1048,7 +1048,7 @@ blockquote {
     <p>Bindweefsel is het steunweefsel dat alle delen van het lichaam met elkaar verbindt. Bij lipoedeem is dit weefsel vaak te zwak en te weinig elastisch, waardoor vetcellen zich ophopen en vocht vastgehouden wordt. <strong>Goede voeding is de belangrijkste bouwstof voor gezond bindweefsel.</strong></p>
   </div>
 
-  <p>Bindweefsel bestaat uit 22 aminozuren — vooral glycine, proline en hydroxyproline — die je uitsluitend via voeding binnenkrijgt. Het lichaam kan bindweefsel aanmaken, maar heeft daarvoor de juiste bouwstoffen nodig.</p>
+  <p>Bindweefsel bestaat uit 22 aminozuren, vooral glycine, proline en hydroxyproline, die je uitsluitend via voeding binnenkrijgt. Het lichaam kan bindweefsel aanmaken, maar heeft daarvoor de juiste bouwstoffen nodig.</p>
 
   <div class="cols2" style="margin:3mm 0">
     <div>
@@ -1075,9 +1075,9 @@ blockquote {
 
   <hr>
 
-  <div class="stitle"><h3>Darmgezondheid — de basis van alles</h3></div>
+  <div class="stitle"><h3>Darmgezondheid: de basis van alles</h3></div>
 
-  <p>70% van je immuunsysteem zit in de darmen. De samenstelling van de darmflora (microbioom) wordt grotendeels bepaald door wat je eet. Een verstoorde darmflora — dysbiose — kan zorgen voor meer ontsteking, een verstoorde oestrogeenbalans en een verhoogde darmdoorlaatbaarheid.</p>
+  <p>70% van je immuunsysteem zit in de darmen. De samenstelling van de darmflora (microbioom) wordt grotendeels bepaald door wat je eet. Een verstoorde darmflora, dysbiose, kan zorgen voor meer ontsteking, een verstoorde oestrogeenbalans en een verhoogde darmdoorlaatbaarheid.</p>
 
   <div class="cols3" style="margin-top:3mm">
     <div class="food-card">
@@ -1110,7 +1110,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 9 — GEZONDE VOEDING IN DE PRAKTIJK
+     PAGINA 9: GEZONDE VOEDING IN DE PRAKTIJK
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -1118,10 +1118,10 @@ blockquote {
     <h2><span class="ch-num">09</span> Gezonde voeding in de praktijk</h2>
   </div>
 
-  <p>Voeding heeft directe invloed op alle onderliggende verstoringen bij lipoedeem. Het doel is niet om zo min mogelijk te eten — het is om de <strong>juiste voedingsmiddelen</strong> te kiezen die je lichaam ondersteunen in plaats van belasten.</p>
+  <p>Voeding heeft directe invloed op alle onderliggende verstoringen bij lipoedeem. Het doel is niet om zo min mogelijk te eten, het is om de <strong>juiste voedingsmiddelen</strong> te kiezen die je lichaam ondersteunen in plaats van belasten.</p>
 
   <div class="stitle"><h3>Wat mag altijd op je bord?</h3></div>
-  <p style="font-size:9pt;color:var(--muted);margin-bottom:4mm">Deze voedingsmiddelen zijn de basis van je voedingspatroon — eet er royaal van:</p>
+  <p style="font-size:9pt;color:var(--muted);margin-bottom:4mm">Deze voedingsmiddelen zijn de basis van je voedingspatroon, eet er royaal van:</p>
 
   <div class="cols3" style="margin-bottom:4mm">
     <div class="food-card">
@@ -1157,12 +1157,12 @@ blockquote {
     <div class="food-card">
       <span class="ico">🫐</span>
       <h4>Bessen &amp; fruit</h4>
-      <p>Bessen, appel, peer, mandarijn. Max 2 porties per dag — kies laagglycemisch</p>
+      <p>Bessen, appel, peer, mandarijn. Max 2 porties per dag, kies laagglycemisch</p>
     </div>
     <div class="food-card">
       <span class="ico">🍗</span>
       <h4>Gevogelte</h4>
-      <p>Kip, kalkoen, eend — bij voorkeur biologisch of vrije uitloop. Dagelijkse eiwitbron</p>
+      <p>Kip, kalkoen, eend, bij voorkeur biologisch of vrije uitloop. Dagelijkse eiwitbron</p>
     </div>
     <div class="food-card">
       <span class="ico">🫒</span>
@@ -1197,7 +1197,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 10 — OPBOUW VAN JE MAALTIJDEN
+     PAGINA 10: OPBOUW VAN JE MAALTIJDEN
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -1221,21 +1221,21 @@ blockquote {
     <tbody>
       <tr>
         <td><strong>Koolhydraten</strong></td>
-        <td style="font-family:'Playfair Display',serif;font-size:12pt;color:var(--accent);font-weight:700">~20%</td>
+        <td style="font-family:var(--font-heading);font-size:12pt;color:var(--accent);font-weight:700">~20%</td>
         <td>400 kcal</td>
         <td>~100g</td>
         <td style="font-size:8pt">Groente, paddenstoelen, beetje fruit</td>
       </tr>
       <tr>
         <td><strong>Eiwitten</strong></td>
-        <td style="font-family:'Playfair Display',serif;font-size:12pt;color:var(--accent);font-weight:700">~25%</td>
+        <td style="font-family:var(--font-heading);font-size:12pt;color:var(--accent);font-weight:700">~25%</td>
         <td>500 kcal</td>
         <td>~125g</td>
         <td style="font-size:8pt">Gevogelte, vis, schaaldieren, eieren, noten, zaden</td>
       </tr>
       <tr>
         <td><strong>Vetten</strong></td>
-        <td style="font-family:'Playfair Display',serif;font-size:12pt;color:var(--accent);font-weight:700">~55%</td>
+        <td style="font-family:var(--font-heading);font-size:12pt;color:var(--accent);font-weight:700">~55%</td>
         <td>1100 kcal</td>
         <td>~122g</td>
         <td style="font-size:8pt">Avocado, noten, zaden, olijfolie, kokos, vette vis</td>
@@ -1248,7 +1248,7 @@ blockquote {
     <div>
       <div class="stitle"><h3>Zo ziet een ideaal bord eruit</h3></div>
       <p style="font-size:9.5pt">Vul <strong>minimaal de helft van je bord met groente</strong> en een beetje fruit. Iets minder dan een kwart bestaat uit eiwitrijke voeding (vis, kip, eieren, noten). Het resterende kwart zijn gezonde vetten (avocado, olijfolie, noten, kokos).</p>
-      <p style="font-size:9.5pt">Zet de <strong>zetmeelbron altijd als laatste</strong> op je bord — dit zijn de minst belangrijke voedingsmiddelen. Bouw dit rustig op als je energiebehoeften dat vragen.</p>
+      <p style="font-size:9.5pt">Zet de <strong>zetmeelbron altijd als laatste</strong> op je bord, dit zijn de minst belangrijke voedingsmiddelen. Bouw dit rustig op als je energiebehoeften dat vragen.</p>
     </div>
     <!-- Plate SVG -->
     <div style="display:flex;justify-content:center">
@@ -1265,13 +1265,13 @@ blockquote {
         <!-- center wit -->
         <circle cx="120" cy="120" r="28" fill="white"/>
         <!-- labels -->
-        <text x="75" y="65" text-anchor="middle" font-family="Source Sans 3" font-size="9" font-weight="700" fill="white">Groente</text>
-        <text x="75" y="76" text-anchor="middle" font-family="Source Sans 3" font-size="9" font-weight="700" fill="white">&amp; fruit</text>
-        <text x="75" y="88" text-anchor="middle" font-family="Source Sans 3" font-size="9" fill="rgba(255,255,255,0.85)">~50%</text>
-        <text x="55" y="178" text-anchor="middle" font-family="Source Sans 3" font-size="9" font-weight="700" fill="white">Eiwit</text>
-        <text x="55" y="190" text-anchor="middle" font-family="Source Sans 3" font-size="8.5" fill="rgba(255,255,255,0.85)">~25%</text>
-        <text x="185" y="185" text-anchor="middle" font-family="Source Sans 3" font-size="9" font-weight="700" fill="white">Vetten</text>
-        <text x="185" y="197" text-anchor="middle" font-family="Source Sans 3" font-size="8.5" fill="rgba(255,255,255,0.85)">~25%</text>
+        <text x="75" y="65" text-anchor="middle" font-family="Work Sans" font-size="9" font-weight="700" fill="white">Groente</text>
+        <text x="75" y="76" text-anchor="middle" font-family="Work Sans" font-size="9" font-weight="700" fill="white">&amp; fruit</text>
+        <text x="75" y="88" text-anchor="middle" font-family="Work Sans" font-size="9" fill="rgba(255,255,255,0.85)">~50%</text>
+        <text x="55" y="178" text-anchor="middle" font-family="Work Sans" font-size="9" font-weight="700" fill="white">Eiwit</text>
+        <text x="55" y="190" text-anchor="middle" font-family="Work Sans" font-size="8.5" fill="rgba(255,255,255,0.85)">~25%</text>
+        <text x="185" y="185" text-anchor="middle" font-family="Work Sans" font-size="9" font-weight="700" fill="white">Vetten</text>
+        <text x="185" y="197" text-anchor="middle" font-family="Work Sans" font-size="8.5" fill="rgba(255,255,255,0.85)">~25%</text>
         <!-- bestek -->
         <rect x="9" y="60" width="3" height="75" rx="1.5" fill="#e4d9c8"/>
         <rect x="5" y="60" width="3" height="28" rx="1.5" fill="#e4d9c8"/>
@@ -1282,7 +1282,7 @@ blockquote {
     </div>
   </div>
 
-  <div class="stitle" style="margin-top:4mm"><h3>Eetvenster: 7:00 — 19:00</h3></div>
+  <div class="stitle" style="margin-top:4mm"><h3>Eetvenster: 7:00: 19:00</h3></div>
   <p style="font-size:9.5pt">Eet alleen binnen dit venster van 12 uur. Dit ondersteunt je bioritme, geeft de lever rust voor herstel en verbetert de insulinegevoeligheid. Buiten deze tijden alleen water, kruidenthee of zwarte koffie.</p>
 
   <div class="footer">
@@ -1293,12 +1293,12 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 11 — STAPPENPLAN
+     PAGINA 11: STAPPENPLAN
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
     <span class="band-icon"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="var(--dark)" style="flex-shrink:0;opacity:0.7"><path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/><path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/><path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/><path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/></svg></span>
-    <h2><span class="ch-num">11</span> Stappenplan — zo begin je</h2>
+    <h2><span class="ch-num">11</span> Stappenplan: zo begin je</h2>
   </div>
 
   <p style="margin-bottom:5mm">Begin niet met alles tegelijk. Dit stappenplan helpt je om rustig te veranderen zonder je overweldigd te voelen. Elke stap voegt iets toe zonder iets weg te nemen waar je nog niet klaar voor bent.</p>
@@ -1366,7 +1366,7 @@ blockquote {
     <div class="step-body">
       <h3>Voeg fruit en zetmeel toe op de juiste momenten</h3>
       <p>Voeg <strong>1 portie fruit toe bij ontbijt en bij lunch</strong> (1 appel, 1 banaan, 2 mandarijnen, ½ mango, 1 kommetje bosbessen).</p>
-      <p style="font-size:9pt">Bij de <strong>derde maaltijd</strong> (avondeten) kun je 1 gezonde zetmeelbron toevoegen: 200g pastinaak, 250g gamba's, 125g maïsmeel, 50g zoete aardappel of naakte haver. <em>Consumptie van meer dan 100g koolhydraten per dag wordt afgeraden — dit helpt de hormoonbalans te herstellen.</em></p>
+      <p style="font-size:9pt">Bij de <strong>derde maaltijd</strong> (avondeten) kun je 1 gezonde zetmeelbron toevoegen: 200g pastinaak, 250g gamba's, 125g maïsmeel, 50g zoete aardappel of naakte haver. <em>Consumptie van meer dan 100g koolhydraten per dag wordt afgeraden, dit helpt de hormoonbalans te herstellen.</em></p>
     </div>
   </div>
 
@@ -1378,7 +1378,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 12 — MAALTIJDVOORBEELDEN
+     PAGINA 12: MAALTIJDVOORBEELDEN
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -1386,7 +1386,7 @@ blockquote {
     <h2><span class="ch-num">12</span> Maaltijdvoorbeelden</h2>
   </div>
 
-  <p style="margin-bottom:4mm">Hieronder vind je vier dagvoorbeelden waarbij de voedingsverdeling overeenkomt met het ebook. Gebruik ze als inspiratie — varieer vrij met wat je lekker vindt.</p>
+  <p style="margin-bottom:4mm">Hieronder vind je vier dagvoorbeelden waarbij de voedingsverdeling overeenkomt met het ebook. Gebruik ze als inspiratie, varieer vrij met wat je lekker vindt.</p>
 
   <div class="cols2" style="margin-bottom:5mm">
     <div class="dag-card">
@@ -1473,12 +1473,12 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 13 — MAKKELIJKE DAGMENU'S
+     PAGINA 13: MAKKELIJKE DAGMENU'S
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band"><span class="band-icon"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="var(--dark)" style="flex-shrink:0;opacity:0.7"><path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/><path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/><path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/><path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/></svg></span><h2><span class="ch-num">13</span> Makkelijke Dagmenu's</h2></div>
 
-  <p style="margin-bottom:5mm">Vijf complete dagmenu's die lekker en makkelijk zijn — en je lichaam ondersteunen. Gebruik ze als inspiratie en wissel gerust van dag.</p>
+  <p style="margin-bottom:5mm">Vijf complete dagmenu's die lekker en makkelijk zijn, en je lichaam ondersteunen. Gebruik ze als inspiratie en wissel gerust van dag.</p>
 
   <div style="display:grid;gap:4mm">
 
@@ -1542,7 +1542,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 14 — VERVANGERS
+     PAGINA 14: VERVANGERS
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -1550,7 +1550,7 @@ blockquote {
     <h2><span class="ch-num">14</span> Gezondere vervangers</h2>
   </div>
 
-  <p style="margin-bottom:5mm">Je hoeft niet alles in één keer te veranderen. Begin met één vervanging per week en bouw rustig op. Je smaak past zich aan — wat nu nog wennen is, wordt vanzelf normaal.</p>
+  <p style="margin-bottom:5mm">Je hoeft niet alles in één keer te veranderen. Begin met één vervanging per week en bouw rustig op. Je smaak past zich aan, wat nu nog wennen is, wordt vanzelf normaal.</p>
 
   <table>
     <thead>
@@ -1582,7 +1582,7 @@ blockquote {
       </tr>
       <tr>
         <td><strong>Aardappelen</strong></td>
-        <td>Pastinaak, wortel, pompoen, bataat (zoete aardappel), knolselderij — gebakken of gekookt</td>
+        <td>Pastinaak, wortel, pompoen, bataat (zoete aardappel), knolselderij, gebakken of gekookt</td>
       </tr>
       <tr>
         <td><strong>Yoghurt / kwark</strong></td>
@@ -1620,15 +1620,15 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 15 — MINDFUL ETEN
+     PAGINA 15: MINDFUL ETEN
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band"><span class="band-icon"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="var(--dark)" style="flex-shrink:0;opacity:0.7"><path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/><path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/><path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/><path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/></svg></span><h2><span class="ch-num">15</span> Mindful Eten</h2></div>
 
-  <p>Wat je eet is belangrijk — maar <em>hoe</em> je eet is minstens zo bepalend. Mindful eten gaat niet over perfectionisme of strikte regels. Het gaat over aanwezig zijn bij je maaltijd, zodat je lichaam de signalen kan verwerken die het nodig heeft.</p>
+  <p>Wat je eet is belangrijk, maar <em>hoe</em> je eet is minstens zo bepalend. Mindful eten gaat niet over perfectionisme of strikte regels. Het gaat over aanwezig zijn bij je maaltijd, zodat je lichaam de signalen kan verwerken die het nodig heeft.</p>
 
   <div class="stitle">Waarom het verschil maakt</div>
-  <p>Wanneer je gehaast, gestrest of afgeleid eet, staat je lichaam in "vecht of vlucht"-modus. In die staat wordt spijsvertering vertraagd, worden voedingsstoffen minder goed opgenomen en wordt het verzadigingssignaal later of helemaal niet gevoeld. Je eet dan meer dan je nodig hebt — niet door honger, maar door stress.</p>
+  <p>Wanneer je gehaast, gestrest of afgeleid eet, staat je lichaam in "vecht of vlucht"-modus. In die staat wordt spijsvertering vertraagd, worden voedingsstoffen minder goed opgenomen en wordt het verzadigingssignaal later of helemaal niet gevoeld. Je eet dan meer dan je nodig hebt, niet door honger, maar door stress.</p>
 
   <div class="stitle">Praktische gewoonten</div>
   <ul>
@@ -1636,11 +1636,11 @@ blockquote {
     <li><strong>Kauw bewust.</strong> Streef naar 20–30 keer kauwen per hap. Dit klinkt veel, maar het ontlast de darmen enorm en vertraagt de opname van suikers.</li>
     <li><strong>Pauzeer halverwege.</strong> Leg halverwege je maaltijd je vork neer en vraag jezelf: hoe vol voel ik me? Verzadiging heeft 15–20 minuten nodig om bij je hersenen aan te komen.</li>
     <li><strong>Eet op vaste tijden.</strong> Ritme geeft je spijsvertering rust. Je lichaam bereidt zich voor op een maaltijd als het weet wanneer die komt.</li>
-    <li><strong>Geen strenge regels.</strong> Een maaltijd die "niet perfect" was, is geen reden voor schuldgevoel. Eén maaltijd maakt geen verschil — het patroon over de week wel.</li>
+    <li><strong>Geen strenge regels.</strong> Een maaltijd die "niet perfect" was, is geen reden voor schuldgevoel. Eén maaltijd maakt geen verschil, het patroon over de week wel.</li>
   </ul>
 
   <div class="stitle">Een zachte maaltijdroutine</div>
-  <p>Begin elke maaltijd met een moment van rust — een paar diepe ademhalingen, even je handen wassen en bewust aan tafel gaan zitten. Dit kleine ritueel signaleert aan je zenuwstelsel dat het veilig is om te eten en te verteren.</p>
+  <p>Begin elke maaltijd met een moment van rust, een paar diepe ademhalingen, even je handen wassen en bewust aan tafel gaan zitten. Dit kleine ritueel signaleert aan je zenuwstelsel dat het veilig is om te eten en te verteren.</p>
 
   <div class="footer">
     <span>Lotus Moments · In balans met Lipoedeem</span>
@@ -1650,7 +1650,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 16 — BEWEGING
+     PAGINA 16: BEWEGING
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -1665,25 +1665,25 @@ blockquote {
     <p>Beweging wordt vaak gekoppeld aan het verbranden van calorieën. Maar bij lipoedeem is dat niet de primaire reden om te bewegen. <strong>Beweging heeft direct effect op je insulinegevoeligheid, hormonale balans, darmgezondheid en lymfafvoer.</strong></p>
   </div>
 
-  <p>Wanneer je te weinig beweegt, raakt je brein voortdurend in de "spaarstand" — het gaat ervan uit dat je energiereserves schaars zijn en gaat energie vasthouden. Dit stimuleert vetopslag en blokkeert vetverbranding. De sleutel is: <strong>regelmatig bewegen, verspreid over de dag.</strong></p>
+  <p>Wanneer je te weinig beweegt, raakt je brein voortdurend in de "spaarstand", het gaat ervan uit dat je energiereserves schaars zijn en gaat energie vasthouden. Dit stimuleert vetopslag en blokkeert vetverbranding. De sleutel is: <strong>regelmatig bewegen, verspreid over de dag.</strong></p>
 
   <div class="stitle"><h3>Beweging voor gezonde lymfevaten</h3></div>
-  <p>Het lymfesysteem werkt anders dan de bloedsomloop — het heeft geen hart als pomp. Het lymfevocht beweegt uitsluitend door spierbewegingen. Bij lipoedeem zijn de lymfevaten al zwakker, waardoor vocht en afvalstoffen makkelijker ophopen. Beweging helpt letterlijk om je lymfesysteem te laten stromen.</p>
+  <p>Het lymfesysteem werkt anders dan de bloedsomloop, het heeft geen hart als pomp. Het lymfevocht beweegt uitsluitend door spierbewegingen. Bij lipoedeem zijn de lymfevaten al zwakker, waardoor vocht en afvalstoffen makkelijker ophopen. Beweging helpt letterlijk om je lymfesysteem te laten stromen.</p>
 
   <div class="cols2" style="margin:4mm 0">
     <div class="food-card" style="text-align:left">
       <span class="ico" style="text-align:center;display:block">🏋️</span>
       <h4>Krachttraining</h4>
-      <p>Gebruik van spieren produceert lactaat — een universele energiebron voor vrijwel alle cellen. Heeft sterk ontstekingsremmende werking en ondersteunt de lymfafvoer.</p>
+      <p>Gebruik van spieren produceert lactaat, een universele energiebron voor vrijwel alle cellen. Heeft sterk ontstekingsremmende werking en ondersteunt de lymfafvoer.</p>
     </div>
     <div class="food-card" style="text-align:left">
       <span class="ico" style="text-align:center;display:block">🚶‍♀️</span>
       <h4>Dagelijkse wandelingen</h4>
-      <p>Korte wandelingen in de pauze, 5 minuten traplopen — al dit soort kleine bewegingen tellen mee en houden je lymfesysteem actief.</p>
+      <p>Korte wandelingen in de pauze, 5 minuten traplopen, al dit soort kleine bewegingen tellen mee en houden je lymfesysteem actief.</p>
     </div>
   </div>
 
-  <div class="stitle"><h3>Sitting breaks — de nieuwe noodzaak</h3></div>
+  <div class="stitle"><h3>Sitting breaks: de nieuwe noodzaak</h3></div>
   <p>Lang zitten is schadelijk voor de lymfevaten. Zorg dat je elk half uur even beweegt:</p>
 
   <div class="box">
@@ -1708,14 +1708,14 @@ blockquote {
 
   <div class="stitle" style="margin-top:4mm"><h3>Bewegingsadviezen per week</h3></div>
   <ul>
-    <li><strong>1× per week</strong> — onderbreek zittende tijd elke 30 min door 2 min intensief te bewegen</li>
-    <li><strong>2× per week</strong> — beweeg minimaal 30 minuten in een nuchtere staat (bijv. voor de eerste maaltijd)</li>
-    <li><strong>Ten minste 1× per week</strong> — beweeg 1 uur door stevig te stappen, fietsen of andere activiteit naar keuze</li>
+    <li><strong>1× per week</strong>, onderbreek zittende tijd elke 30 min door 2 min intensief te bewegen</li>
+    <li><strong>2× per week</strong>, beweeg minimaal 30 minuten in een nuchtere staat (bijv. voor de eerste maaltijd)</li>
+    <li><strong>Ten minste 1× per week</strong>, beweeg 1 uur door stevig te stappen, fietsen of andere activiteit naar keuze</li>
   </ul>
 
   <div class="box box-soft" style="margin-top:4mm">
     <h4>🧘 In combinatie met massage</h4>
-    <p style="font-size:9.5pt;margin:0">Regelmatige holistische massage ondersteunt de lymfafvoer, verlicht de pijn in het bindweefsel en helpt het lichaam ontspannen. Beweging en massage versterken elkaar — samen zorgen ze voor optimale lymfcirculatie en herstel van het weefsel.</p>
+    <p style="font-size:9.5pt;margin:0">Regelmatige holistische massage ondersteunt de lymfafvoer, verlicht de pijn in het bindweefsel en helpt het lichaam ontspannen. Beweging en massage versterken elkaar, samen zorgen ze voor optimale lymfcirculatie en herstel van het weefsel.</p>
   </div>
 
   <div class="footer">
@@ -1726,27 +1726,27 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 17 — ADEMHALING ALS TOOL
+     PAGINA 17: ADEMHALING ALS TOOL
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band"><span class="band-icon"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="var(--dark)" style="flex-shrink:0;opacity:0.7"><path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/><path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/><path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/><path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/></svg></span><h2><span class="ch-num">17</span> Ademhaling als Dagelijks Tool</h2></div>
 
-  <p>Ademhaling is het enige lichaamsfunctie dat zowel automatisch als bewust verloopt. Dat maakt het een directe toegang tot je zenuwstelsel — en daarmee tot je hormoonbalans, ontsteking en lymfestroom.</p>
+  <p>Ademhaling is het enige lichaamsfunctie dat zowel automatisch als bewust verloopt. Dat maakt het een directe toegang tot je zenuwstelsel, en daarmee tot je hormoonbalans, ontsteking en lymfestroom.</p>
 
   <div class="stitle">Hoe ademhaling je lymfesysteem ondersteunt</div>
-  <p>Het lymfesysteem heeft geen eigen pomp zoals het hart. Het is afhankelijk van beweging én van de drukwisselingen in je borstkas tijdens het ademen. <strong>Diepe buikademhaling</strong> creëert een soort masserende werking op de lymfevaten rondom je organen en bevordert zo de lymfestroom — ook in je benen.</p>
+  <p>Het lymfesysteem heeft geen eigen pomp zoals het hart. Het is afhankelijk van beweging én van de drukwisselingen in je borstkas tijdens het ademen. <strong>Diepe buikademhaling</strong> creëert een soort masserende werking op de lymfevaten rondom je organen en bevordert zo de lymfestroom, ook in je benen.</p>
 
   <div class="stitle">De 4-7-8 ademhaling</div>
   <p>Een eenvoudige techniek om je zenuwstelsel te kalmeren:</p>
   <ol>
-    <li>Adem in door je neus — tel tot <strong>4</strong></li>
-    <li>Houd vast — tel tot <strong>7</strong></li>
-    <li>Adem langzaam uit door je mond — tel tot <strong>8</strong></li>
+    <li>Adem in door je neus, tel tot <strong>4</strong></li>
+    <li>Houd vast, tel tot <strong>7</strong></li>
+    <li>Adem langzaam uit door je mond, tel tot <strong>8</strong></li>
     <li>Herhaal 4 keer</li>
   </ol>
   <p>Doe dit bij het opstaan, voor een maaltijd, of op een moment van spanning. Drie minuten is genoeg om een merkbaar verschil te voelen.</p>
 
-  <div class="stitle">Buikademhaling — de basis</div>
+  <div class="stitle">Buikademhaling: de basis</div>
   <p>Veel mensen ademen oppervlakkig, vanuit de borst. Oefen buikademhaling door een hand op je buik te leggen: bij inademing moet je buik omhoog komen, niet je schouders. Dit activeert het parasympathisch zenuwstelsel en ondersteunt de spijsvertering.</p>
 
   <div class="stitle">Ademhaling &amp; slaap</div>
@@ -1760,12 +1760,12 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 18 — LICHAAMSACCEPTATIE & ZELFCOMPASSIE
+     PAGINA 18: LICHAAMSACCEPTATIE & ZELFCOMPASSIE
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band"><span class="band-icon"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="var(--dark)" style="flex-shrink:0;opacity:0.7"><path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/><path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/><path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/><path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/></svg></span><h2><span class="ch-num">18</span> Lichaamsacceptatie &amp; Zelfcompassie</h2></div>
 
-  <p>Leven met lipoedeem betekent leven met een lichaam dat anders reageert dan de wereld verwacht. Dat is niet altijd makkelijk. Misschien herken je het gevoel dat je "alles goed doet" maar het resultaat uitblijft — of dat je moe bent van uitleggen, van niet gezien worden, van je eigen lichaam.</p>
+  <p>Leven met lipoedeem betekent leven met een lichaam dat anders reageert dan de wereld verwacht. Dat is niet altijd makkelijk. Misschien herken je het gevoel dat je "alles goed doet" maar het resultaat uitblijft, of dat je moe bent van uitleggen, van niet gezien worden, van je eigen lichaam.</p>
 
   <p>Lichaamsacceptatie is geen eindbestemming. Het is een dagelijkse oefening in vriendelijkheid naar jezelf.</p>
 
@@ -1774,15 +1774,15 @@ blockquote {
 
   <div class="stitle">Kleine oefeningen voor dagelijks gebruik</div>
   <ul>
-    <li><strong>Schrijf drie dingen op</strong> die je lichaam vandaag voor je heeft gedaan — hoe klein ook. Ademhalen, bewegen, voelen.</li>
-    <li><strong>Spreek vriendelijk.</strong> Let op de taal die je gebruikt over je lichaam — ook in je hoofd. "Mijn benen zijn zwaar" is iets anders dan "ik haat mijn benen".</li>
-    <li><strong>Zoek verbinding.</strong> Lotgenotencontact — online of offline — met andere vrouwen met lipoedeem kan enorm opluchten. Jij bent niet de enige.</li>
+    <li><strong>Schrijf drie dingen op</strong> die je lichaam vandaag voor je heeft gedaan, hoe klein ook. Ademhalen, bewegen, voelen.</li>
+    <li><strong>Spreek vriendelijk.</strong> Let op de taal die je gebruikt over je lichaam, ook in je hoofd. "Mijn benen zijn zwaar" is iets anders dan "ik haat mijn benen".</li>
+    <li><strong>Zoek verbinding.</strong> Lotgenotencontact, online of offline, met andere vrouwen met lipoedeem kan enorm opluchten. Jij bent niet de enige.</li>
     <li><strong>Vier vooruitgang op gevoel.</strong> Niet op de weegschaal. Hoe voel je je in je kleding? Heb je meer energie? Slaap je beter? Dat zijn échte signalen.</li>
   </ul>
 
   <div class="info-box">
     <strong>Een woord van Emine</strong><br>
-    Ik werk dagelijks met vrouwen die moe zijn van hun eigen lichaam. Wat ik keer op keer zie: zodra vrouwen stoppen met strijden tégen hun lichaam en beginnen te werken mét hun lichaam, verandert er iets. Niet alleen fysiek — ook van binnen.
+    Ik werk dagelijks met vrouwen die moe zijn van hun eigen lichaam. Wat ik keer op keer zie: zodra vrouwen stoppen met strijden tégen hun lichaam en beginnen te werken mét hun lichaam, verandert er iets. Niet alleen fysiek, ook van binnen.
   </div>
 
   <div class="footer-strip">
@@ -1793,7 +1793,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 19 — BEHANDELINGEN LIPOEDEEM
+     PAGINA 19: BEHANDELINGEN LIPOEDEEM
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -1803,7 +1803,7 @@ blockquote {
 
   <p>Lipoedeem is niet te genezen, maar de klachten zijn goed te verminderen en de progressie te vertragen. Een combinatie van <strong>conservatieve (conservatieve) behandelingen</strong> en een gezonde leefstijl vormt de basis. In ernstigere gevallen kan een operatieve behandeling worden overwogen.</p>
 
-  <div class="stitle"><h3>Conservatieve behandelingen — de basis</h3></div>
+  <div class="stitle"><h3>Conservatieve behandelingen: de basis</h3></div>
 
   <div class="cols2" style="margin-bottom:4mm">
     <div class="food-card" style="text-align:left">
@@ -1819,12 +1819,12 @@ blockquote {
     <div class="food-card" style="text-align:left">
       <span class="ico" style="display:block;text-align:center">🌸</span>
       <h4>Holistische massage</h4>
-      <p>Ondersteunt het hele lichaam — niet alleen het aangedane weefsel. Vermindert stresshormonen, bevordert de lymfcirculatie, verlicht pijn in het bindweefsel en helpt het lichaam ontspannen. Dit is de kern van mijn praktijk bij Lotus Moments.</p>
+      <p>Ondersteunt het hele lichaam, niet alleen het aangedane weefsel. Vermindert stresshormonen, bevordert de lymfcirculatie, verlicht pijn in het bindweefsel en helpt het lichaam ontspannen. Dit is de kern van mijn praktijk bij Lotus Moments.</p>
     </div>
     <div class="food-card" style="text-align:left">
       <span class="ico" style="display:block;text-align:center">🏊‍♀️</span>
       <h4>Wateraerobics / zwemmen</h4>
-      <p>Beweging in water is ideaal bij lipoedeem: het waterdruk werkt als een natuurlijk compressiekous, terwijl bewegen de lymfafvoer stimuleert — zonder extra belasting van de gewrichten.</p>
+      <p>Beweging in water is ideaal bij lipoedeem: het waterdruk werkt als een natuurlijk compressiekous, terwijl bewegen de lymfafvoer stimuleert, zonder extra belasting van de gewrichten.</p>
     </div>
     <div class="food-card" style="text-align:left">
       <span class="ico" style="display:block;text-align:center">🥗</span>
@@ -1838,18 +1838,18 @@ blockquote {
     </div>
   </div>
 
-  <div class="stitle"><h3>Zelfmassage thuis — zachte ondersteuning</h3></div>
+  <div class="stitle"><h3>Zelfmassage thuis: zachte ondersteuning</h3></div>
 
-  <p>Naast professionele behandelingen kun je thuis ook iets doen voor je lymfesysteem. Zachte zelfmassage is eenvoudig en kan dagelijks — ook zonder speciale kennis.</p>
+  <p>Naast professionele behandelingen kun je thuis ook iets doen voor je lymfesysteem. Zachte zelfmassage is eenvoudig en kan dagelijks, ook zonder speciale kennis.</p>
 
   <div class="cols2" style="margin:3mm 0 4mm">
     <div>
       <h4>Hoe doe je het</h4>
       <ol style="font-size:8.5pt">
         <li>Ga liggen met benen licht omhoog</li>
-        <li>Begin bij de <strong>liezen</strong> — maak 5 zachte cirkelbewegingen (lymfeklieren openen)</li>
+        <li>Begin bij de <strong>liezen</strong>, maak 5 zachte cirkelbewegingen (lymfeklieren openen)</li>
         <li>Werk daarna van boven naar beneden: bovenbeen → knie → onderbeen → enkel</li>
-        <li>Gebruik <strong>zeer lichte druk</strong> — de huid schuift nauwelijks, geen kneden</li>
+        <li>Gebruik <strong>zeer lichte druk</strong>, de huid schuift nauwelijks, geen kneden</li>
         <li>5–10 minuten per been is voldoende</li>
       </ol>
     </div>
@@ -1859,7 +1859,7 @@ blockquote {
         <li>'s Avonds wanneer je benen het zwaarst zijn</li>
         <li>Combineer met benen omhoog liggen (kussen onder kuiten)</li>
         <li>Massageolie is niet verplicht maar aangenaam</li>
-        <li>Doe het langzaam — haast werkt averechts</li>
+        <li>Doe het langzaam, haast werkt averechts</li>
       </ul>
     </div>
   </div>
@@ -1873,7 +1873,7 @@ blockquote {
 
   <div class="box box-soft">
     <h4>Liposuctie (tumescente techniek)</h4>
-    <p style="font-size:9.5pt">De enige behandeling die het lipoedeem vetweefsel daadwerkelijk verwijdert. Bij de tumescente techniek wordt de huid eerst gevuld met een vloeistof waarna het vet voorzichtig wordt weggezogen — zonder beschadiging van de lymfevaten. Na de ingreep zijn er minder pijn, minder zwelling en een betere lichaamsvorm. <strong>Het is geen cosmetische ingreep</strong>, maar een medische behandeling voor lipoedeem stadium 2 of 3.</p>
+    <p style="font-size:9.5pt">De enige behandeling die het lipoedeem vetweefsel daadwerkelijk verwijdert. Bij de tumescente techniek wordt de huid eerst gevuld met een vloeistof waarna het vet voorzichtig wordt weggezogen, zonder beschadiging van de lymfevaten. Na de ingreep zijn er minder pijn, minder zwelling en een betere lichaamsvorm. <strong>Het is geen cosmetische ingreep</strong>, maar een medische behandeling voor lipoedeem stadium 2 of 3.</p>
     <p style="font-size:9pt;margin:0;color:var(--muted)">Let op: operatie lost de onderliggende oorzaken niet op. Voeding en leefstijl blijven essentieel, ook na een liposuctie.</p>
   </div>
 
@@ -1885,7 +1885,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 20 — VERGOEDING ZORGVERZEKERAAR
+     PAGINA 20: VERGOEDING ZORGVERZEKERAAR
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -1916,7 +1916,7 @@ blockquote {
       </tr>
       <tr>
         <td><strong>Fysiotherapie / oedeemtherapie</strong></td>
-        <td>Eerste 20 sessies per jaar niet vergoed vanuit basis (eigen risico). Daarna vergoed bij chronische aandoening op de lijst — lipoedeem staat hierop. Vraag je huisarts om een verwijzing.</td>
+        <td>Eerste 20 sessies per jaar niet vergoed vanuit basis (eigen risico). Daarna vergoed bij chronische aandoening op de lijst, lipoedeem staat hierop. Vraag je huisarts om een verwijzing.</td>
       </tr>
       <tr>
         <td><strong>Consult internist / dermatoloog</strong></td>
@@ -1943,29 +1943,29 @@ blockquote {
 
   <div class="box" style="background:#fce8e5;border-left-color:#c04a3a">
     <ul style="font-size:9pt;margin:0">
-      <li><strong>Liposuctie bij lipoedeem</strong> — zit niet in het basispakket. Volgens het Zorginstituut Nederland ontbreekt voldoende wetenschappelijk bewijs. Aanvragen op basis van medische noodzaak worden in de praktijk bijna altijd afgewezen. Kosten: doorgaans €4.000–€6.000 per sessie.</li>
-      <li><strong>Holistische massage / ontspanningsmassage</strong> — valt niet onder medische behandeling in de basisverzekering</li>
-      <li><strong>Voedingssupplementen</strong> — worden nooit vergoed, ook niet bij lipoedeem</li>
-      <li><strong>Sportschool of zwemlessen</strong> — tenzij via een erkend beweegprogramma op verwijzing</li>
+      <li><strong>Liposuctie bij lipoedeem</strong>, zit niet in het basispakket. Volgens het Zorginstituut Nederland ontbreekt voldoende wetenschappelijk bewijs. Aanvragen op basis van medische noodzaak worden in de praktijk bijna altijd afgewezen. Kosten: doorgaans €4.000–€6.000 per sessie.</li>
+      <li><strong>Holistische massage / ontspanningsmassage</strong>, valt niet onder medische behandeling in de basisverzekering</li>
+      <li><strong>Voedingssupplementen</strong>, worden nooit vergoed, ook niet bij lipoedeem</li>
+      <li><strong>Sportschool of zwemlessen</strong>, tenzij via een erkend beweegprogramma op verwijzing</li>
     </ul>
   </div>
 
   <div class="box box-soft" style="margin-top:4mm">
     <h4>💡 Liposuctie: belastingaftrek en ontwikkelingen</h4>
-    <p style="font-size:9pt;margin:0">Hoewel liposuctie bij lipoedeem in Nederland niet wordt vergoed, kunnen de kosten in sommige gevallen <strong>fiscaal aftrekbaar zijn</strong> als specifieke zorgkosten bij de belastingaangifte. Informeer hiernaar bij een belastingadviseur. Let ook op: in Duitsland is liposuctie bij lipoedeem onder voorwaarden wél opgenomen in de wettelijke ziektekostenverzekering — een ontwikkeling die de discussie in Nederland beïnvloedt.</p>
+    <p style="font-size:9pt;margin:0">Hoewel liposuctie bij lipoedeem in Nederland niet wordt vergoed, kunnen de kosten in sommige gevallen <strong>fiscaal aftrekbaar zijn</strong> als specifieke zorgkosten bij de belastingaangifte. Informeer hiernaar bij een belastingadviseur. Let ook op: in Duitsland is liposuctie bij lipoedeem onder voorwaarden wél opgenomen in de wettelijke ziektekostenverzekering, een ontwikkeling die de discussie in Nederland beïnvloedt.</p>
   </div>
 
   <div class="box box-soft" style="margin-top:3mm">
     <h4>💡 Praktisch advies</h4>
-    <p style="font-size:9pt;margin:0">Zorg eerst voor een <strong>officiële diagnose van lipoedeem</strong> via je huisarts of internist — zonder diagnose wordt niets vergoed. Vraag daarna om een verwijzing naar een fysiotherapeut of oedeemtherapeut. Bewaar alle facturen en documenteer je klachten: dit helpt bij eventuele bezwaarprocedures.</p>
+    <p style="font-size:9pt;margin:0">Zorg eerst voor een <strong>officiële diagnose van lipoedeem</strong> via je huisarts of internist, zonder diagnose wordt niets vergoed. Vraag daarna om een verwijzing naar een fysiotherapeut of oedeemtherapeut. Bewaar alle facturen en documenteer je klachten: dit helpt bij eventuele bezwaarprocedures.</p>
   </div>
 
   <div class="box box-soft" style="margin-top:3mm">
     <h4>👥 Je hoeft het niet alleen te dragen</h4>
-    <p style="font-size:9pt;margin-bottom:2mm">Lipoedeem kan eenzaam aanvoelen — zeker als mensen om je heen het niet begrijpen. Praten met vrouwen die hetzelfde meemaken kan enorm opluchten. Herkenning, steun, praktische tips van mensen die het van binnenuit kennen. Er zijn actieve Facebookgroepen waar lotgenoten elkaar vinden:</p>
+    <p style="font-size:9pt;margin-bottom:2mm">Lipoedeem kan eenzaam aanvoelen, zeker als mensen om je heen het niet begrijpen. Praten met vrouwen die hetzelfde meemaken kan enorm opluchten. Herkenning, steun, praktische tips van mensen die het van binnenuit kennen. Er zijn actieve Facebookgroepen waar lotgenoten elkaar vinden:</p>
     <ul style="font-size:9pt;margin:0">
-      <li><strong>Gezond en fit met lipoedeem</strong> — een brede gemeenschap voor vrouwen met lipoedeem die ervaringen, voeding en leefstijltips met elkaar delen</li>
-      <li><strong>Liposuctie bij lipoedeem</strong> — specifiek voor vrouwen die liposuctie overwegen of een ingreep gepland hebben; ervaringen, vragen en persoonlijke verhalen rondom de procedure</li>
+      <li><strong>Gezond en fit met lipoedeem</strong>, een brede gemeenschap voor vrouwen met lipoedeem die ervaringen, voeding en leefstijltips met elkaar delen</li>
+      <li><strong>Liposuctie bij lipoedeem</strong>, specifiek voor vrouwen die liposuctie overwegen of een ingreep gepland hebben; ervaringen, vragen en persoonlijke verhalen rondom de procedure</li>
     </ul>
   </div>
 
@@ -1977,7 +1977,7 @@ blockquote {
 
 
 <!-- ═══════════════════════════════════════════
-     PAGINA 21 — SAMENVATTING & CHECKLIST
+     PAGINA 21: SAMENVATTING & CHECKLIST
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band">
@@ -1990,24 +1990,24 @@ blockquote {
       <div class="stitle"><h3>De vijf pijlers</h3></div>
       <div style="display:flex;flex-direction:column;gap:2mm">
         <div style="display:flex;align-items:center;gap:3mm">
-          <div style="background:var(--accent);border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9pt;font-weight:700;font-family:'Playfair Display',serif;color:var(--dark)">1</div>
-          <p style="margin:0;font-size:9pt"><strong>Hormoonbalans</strong> — vermijd suiker, xeno-oestrogenen, ondersteun de lever</p>
+          <div style="background:var(--accent);border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9pt;font-weight:700;font-family:var(--font-heading);color:var(--dark)">1</div>
+          <p style="margin:0;font-size:9pt"><strong>Hormoonbalans</strong>, vermijd suiker, xeno-oestrogenen, ondersteun de lever</p>
         </div>
         <div style="display:flex;align-items:center;gap:3mm">
-          <div style="background:var(--accent);border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9pt;font-weight:700;font-family:'Playfair Display',serif;color:var(--dark)">2</div>
-          <p style="margin:0;font-size:9pt"><strong>Slaap &amp; bioritme</strong> — uiterlijk 22:30 slapen, schermen weg, eetvenster 7–19u</p>
+          <div style="background:var(--accent);border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9pt;font-weight:700;font-family:var(--font-heading);color:var(--dark)">2</div>
+          <p style="margin:0;font-size:9pt"><strong>Slaap &amp; bioritme</strong>, uiterlijk 22:30 slapen, schermen weg, eetvenster 7–19u</p>
         </div>
         <div style="display:flex;align-items:center;gap:3mm">
-          <div style="background:var(--accent);border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9pt;font-weight:700;font-family:'Playfair Display',serif;color:var(--dark)">3</div>
-          <p style="margin:0;font-size:9pt"><strong>Laagkoolhydraat eten</strong> — max 100g KH/dag, geen suiker of geraffineerd zetmeel</p>
+          <div style="background:var(--accent);border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9pt;font-weight:700;font-family:var(--font-heading);color:var(--dark)">3</div>
+          <p style="margin:0;font-size:9pt"><strong>Laagkoolhydraat eten</strong>, max 100g KH/dag, geen suiker of geraffineerd zetmeel</p>
         </div>
         <div style="display:flex;align-items:center;gap:3mm">
-          <div style="background:var(--accent);border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9pt;font-weight:700;font-family:'Playfair Display',serif;color:var(--dark)">4</div>
-          <p style="margin:0;font-size:9pt"><strong>Darmgezondheid</strong> — 500g groente/dag, gevarieerd, prebiotica, geen additieven</p>
+          <div style="background:var(--accent);border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9pt;font-weight:700;font-family:var(--font-heading);color:var(--dark)">4</div>
+          <p style="margin:0;font-size:9pt"><strong>Darmgezondheid</strong>, 500g groente/dag, gevarieerd, prebiotica, geen additieven</p>
         </div>
         <div style="display:flex;align-items:center;gap:3mm">
-          <div style="background:var(--accent);border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9pt;font-weight:700;font-family:'Playfair Display',serif;color:var(--dark)">5</div>
-          <p style="margin:0;font-size:9pt"><strong>Bewegen &amp; lymfe</strong> — regelmatig, verspreid over de dag, ook korte momenten tellen</p>
+          <div style="background:var(--accent);border-radius:50%;width:7mm;height:7mm;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:9pt;font-weight:700;font-family:var(--font-heading);color:var(--dark)">5</div>
+          <p style="margin:0;font-size:9pt"><strong>Bewegen &amp; lymfe</strong>, regelmatig, verspreid over de dag, ook korte momenten tellen</p>
         </div>
       </div>
     </div>
@@ -2041,7 +2041,7 @@ blockquote {
     <li>Ik heb geen voeding of dranken buiten het eetvenster genuttigd</li>
   </ul>
 
-  <blockquote style="margin-top:6mm">"Elk gezond gerecht dat je kiest is een cadeau aan je lichaam — niet een beperking."</blockquote>
+  <blockquote style="margin-top:6mm">"Elk gezond gerecht dat je kiest is een cadeau aan je lichaam, niet een beperking."</blockquote>
 
   <div style="margin-top:5mm;text-align:center">
     <svg width="24" height="18" viewBox="0 0 180 130" xmlns="http://www.w3.org/2000/svg">
@@ -2054,10 +2054,10 @@ blockquote {
         <path d="M-60,22 Q0,16 60,22" stroke="#cfa16f" stroke-width="2" fill="none"/>
       </g>
     </svg>
-    <div style="font-family:'Raleway',sans-serif;font-size:7.5pt;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:2mm">Lotus Moments · info@lotusmoments.nl · 06 83 05 95 32</div>
+    <div style="font-family:var(--font-body);font-size:7.5pt;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-top:2mm">Lotus Moments · info@lotusmoments.nl · 06 83 05 95 32</div>
   </div>
 
-  <div class="disclaimer" style="margin-top:4mm">Deze gids is opgesteld als ondersteunende informatie en vervangt geen medisch advies of begeleiding door een geregistreerde diëtist. Raadpleeg bij klachten of onduidelijkheden altijd een zorgprofessional. © Lotus Moments — Emine. Niet openbaar te verspreiden zonder toestemming.</div>
+  <div class="disclaimer" style="margin-top:4mm">Deze gids is opgesteld als ondersteunende informatie en vervangt geen medisch advies of begeleiding door een geregistreerde diëtist. Raadpleeg bij klachten of onduidelijkheden altijd een zorgprofessional. © Lotus Moments, Emine. Niet openbaar te verspreiden zonder toestemming.</div>
 
   <div class="footer">
     <span>Lotus Moments · In balans met Lipoedeem</span>
