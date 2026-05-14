@@ -197,13 +197,13 @@ em { color: var(--muted); font-style: italic; }
   justify-content: space-between;
   align-items: baseline;
   gap: 3mm;
-  padding: 2.5mm 0;
+  padding: 1.5mm 0;
   border-bottom: 1px dotted var(--neutral-s);
 }
-.toc-title { font-size: 9.5pt; color: var(--text); }
+.toc-title { font-size: 9pt; color: var(--text); }
 .toc-dots { flex: 1; border-bottom: 1px dotted var(--neutral-s); margin-bottom: 1px; }
 .toc-page { font-family: 'Raleway', sans-serif; font-size: 8pt; color: var(--accent-dk); font-weight: 600; flex-shrink: 0; }
-.toc-section { font-family: 'Raleway', sans-serif; font-size: 7pt; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; margin: 5mm 0 1.5mm; }
+.toc-section { font-family: 'Raleway', sans-serif; font-size: 7pt; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; margin: 3.5mm 0 0.8mm; }
 
 /* ─── PAGE BAND ─── */
 .band {
@@ -393,6 +393,7 @@ blockquote {
 
 /* ─── PRINT ─── */
 @media print {
+  @page { size: A4; margin: 0; }
   body { background: white; }
   .page { margin: 0; box-shadow: none; page-break-after: always; }
 }
@@ -439,6 +440,8 @@ blockquote {
 ════════════════════════════════════════════ -->
 <div class="page">
   <div class="band"><span class="band-icon"><svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="var(--dark)" style="flex-shrink:0;opacity:0.7"><path d="M64 20c-8 16-8 28 0 36 8-8 8-20 0-36z"/><path d="M32 34c0 18 8 28 32 34-6-16-16-26-32-34z"/><path d="M96 34c-16 8-26 18-32 34 24-6 32-16 32-34z"/><path d="M22 72c18 6 36 6 84 0-32 24-52 24-84 0z"/></svg></span><h2>Inhoudsopgave</h2></div>
+
+  <p style="font-size:9pt;color:var(--muted);margin-bottom:4mm">Deze gids is opgebouwd in vijf delen. Lees wat je aanspreekt — er is geen goede of foute volgorde.</p>
 
   <div class="toc-section">Introductie</div>
   <div class="toc-item"><span class="toc-title">01 &nbsp;·&nbsp; Welkom &amp; Mijn verhaal</span><span class="toc-dots"></span><span class="toc-page">3</span></div>
